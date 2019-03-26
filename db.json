@@ -1,0 +1,31 @@
+{
+    "Categories": [
+        {
+            "id": 1,
+            "name": "Economics",
+            "books": [
+                {
+                    "id": 1,
+                    "name": "b1",
+                    "author": "a1"
+                },
+                {
+                    "id": 2,
+                    "name": "b2",
+                    "author": "a3"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Sprots",
+            "books": [
+                {
+                    "id": 2,
+                    "name": "b2",
+                    "author": "a2"
+                }
+            ]
+        }
+    ]
+}
