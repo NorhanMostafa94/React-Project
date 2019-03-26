@@ -15,8 +15,12 @@ import './App.css';
 export const Context = React.createContext();
 
 class App extends Component {
+  constructor(){
+    super()
+    this.getCategories = this.getCategories.bind(this)
+  }
   state = {
-    categories: ''
+    categories: []
   }
   // componentDidMount(){
   //   fetch('http://localhost:3000/Categories',{method:'GET'})
@@ -25,8 +29,11 @@ class App extends Component {
   //     this.setState({categories:json})
   //   })
   // }
-  getCategories = (categories) => {
-    this.setState({ categories })
+  
+  getCategories(categories){
+    // console.log(1)
+    this.setState({ categories:categories })
+    console.log(this.state.categories)
   }
   render() {
     const value = {
@@ -47,7 +54,7 @@ class App extends Component {
             </Navbar.Collapse>
           </Navbar>
           <Switch>
-            <Route path='/categories/:id' component={Category} />
+            <Route path='/categories/:id' component={Category} render={()=>this.get(value.getCategories)}/>
             <Route path='/categories' component={CategoriesList} />
           </Switch>
         </BrowserRouter>

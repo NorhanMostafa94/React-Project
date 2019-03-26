@@ -4,21 +4,29 @@ import { Link } from 'react-router-dom';
 
 
 class CategoriesList extends Component {
-    get = (getCategories) =>{
-        
+    // componentDidMount() {
+    //     fetch('http://localhost:3000/Categories', { method: 'GET' })
+    //         .then(res => res.json())
+    //         .then(json => {
+    //             this.setState({ categories: json })
+    //         })
+    // }
+
+    get = (getCategories)  => {
         fetch('http://localhost:3000/Categories', { method: 'GET' })
-            .then(res => res.json())
-            .then(json => {
-                getCategories('s')
-                // console.log(json)
-            })
-    }
+          .then(res =>res.json())
+          .then(json => {
+            // console.log(json)
+            getCategories(json)
+          })
+      }
     render() {
         return (
             <Context.Consumer>
                 {
                     value => (
                         this.get(value.getCategories)
+                        
                         // value.state.categories.map(d => <Link to={`/categories/${d.id}`} key={d.id}><div>{d.name}</div></Link>)
                     )
                 }
