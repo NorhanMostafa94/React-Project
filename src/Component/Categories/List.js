@@ -12,22 +12,22 @@ class CategoriesList extends Component {
     //         })
     // }
 
-    get = (getCategories)  => {
+    get = (getCategories) => () => {
         fetch('http://localhost:3000/Categories', { method: 'GET' })
-          .then(res =>res.json())
-          .then(json => {
-            // console.log(json)
-            getCategories(json)
-          })
-      }
+            .then(res => res.json())
+            .then(json => {
+                const data = json
+                getCategories(data)
+            })
+    }
     render() {
         return (
             <Context.Consumer>
                 {
                     value => (
-                        this.get(value.getCategories)
-                        
-                        // value.state.categories.map(d => <Link to={`/categories/${d.id}`} key={d.id}><div>{d.name}</div></Link>)
+                        this.get(value.getCategories)(),
+
+                        value.state.categories.map(d => <Link to={`/categories/${d.id}`} key={d.id}><div>{d.name}</div></Link>)
                     )
                 }
             </Context.Consumer>

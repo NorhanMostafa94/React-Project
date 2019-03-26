@@ -15,25 +15,13 @@ import './App.css';
 export const Context = React.createContext();
 
 class App extends Component {
-  constructor(){
-    super()
-    this.getCategories = this.getCategories.bind(this)
-  }
   state = {
     categories: []
   }
-  // componentDidMount(){
-  //   fetch('http://localhost:3000/Categories',{method:'GET'})
-  //   .then(res => res.json())
-  //   .then(json=>{
-  //     this.setState({categories:json})
-  //   })
-  // }
   
-  getCategories(categories){
+  getCategories=(categories)=>{
     // console.log(1)
     this.setState({ categories:categories })
-    console.log(this.state.categories)
   }
   render() {
     const value = {
