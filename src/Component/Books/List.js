@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Context } from '../../App';
 import { Link } from 'react-router-dom';
+import { Container, Row } from 'react-bootstrap';
 
 
 class BooksList extends Component {
