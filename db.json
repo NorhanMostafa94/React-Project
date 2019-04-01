@@ -27,5 +27,98 @@
                 }
             ]
         }
+    ],
+    "AllBooks": [
+        {
+            "id": 1,
+            "cover": "https://images.gr-assets.com/books/1474154022s/3.jpg",
+            "title": "Harry Potter and the Sorcerer's Stone ",
+            "author": "Rowling, J.K.*",
+            "avgrating": "4.6",
+            "rating": "5 stars",
+            "status": "to-read"
+        },
+        {
+            "id": 2,
+            "cover": "https://images.gr-assets.com/books/1433182986s/25644601.jpg",
+            "title": "Fifty Shades ",
+            "author": "James, E.L.*",
+            "avgrating": "3.76",
+            "rating": "3 stars",
+            "status": "to-read"
+        },
+        {
+            "id": 3,
+            "cover": "https://images.gr-assets.com/books/1507662994s/32024902.jpg",
+            "title": "Darker ",
+            "author": "James, E.L.*",
+            "avgrating": "4.11",
+            "rating": "3.5 stars",
+            "status": "read"
+        },
+        {
+            "id": 4,
+            "cover": "https://images.gr-assets.com/books/1535002553s/32075671.jpg",
+            "title": "The Hate U Give",
+            "author": "Thomas, Angie *",
+            "avgrating": "4.54",
+            "rating": "4 stars",
+            "status": "currently-reading"
+        },
+        {
+            "id": 5,
+            "cover": "https://images.gr-assets.com/books/1388519019s/60510.jpg",
+            "title": "Poison Study",
+            "author": "Snyder, Maria V. *",
+            "avgrating": "4.54",
+            "rating": "4 stars",
+            "status": "currently-reading"
+        },
+        {
+            "id": 6,
+            "cover": "https://images.gr-assets.com/books/1328559506s/13335037.jpg",
+            "title": "Divergent",
+            "author": "Roth, Veronica ",
+            "avgrating": "4.54",
+            "rating": "4 stars",
+            "status": "currently-reading"
+        },
+        {
+            "id": 7,
+            "cover": "https://images.gr-assets.com/books/1359823945s/6004909.jpg",
+            "title": "حلقة الرعب",
+            "author": "احمد خالد توفيق",
+            "avgrating": "4.54",
+            "rating": "4 stars",
+            "status": "read"
+        },
+        {
+            "id": 8,
+            "cover": "https://images.gr-assets.com/books/1545930757s/43373530.jpg",
+            "title": "قبر من الملح",
+            "author": "امل العلي",
+            "avgrating": "4.54",
+            "rating": "4 stars",
+            "status": "read"
+        },
+        {
+            "id": 9,
+            "cover": "https://images.gr-assets.com/books/1400091510s/22087871.jpg",
+            "title": "المعذبون في الأرض",
+            "author": "طه حسين",
+            "avgrating": "4.54",
+            "rating": "4 stars",
+            "status": "to-read"
+        },
+        {
+            "id": 10,
+            "cover": "https://images.gr-assets.com/books/1492239430s/19486412.jpg",
+            "title": "Big Little Lies",
+            "author": "Moriarty, Liane *",
+            "avgrating": "4.54",
+            "rating": "4 stars",
+            "status": "to-read",
+            "description":"Big Little Lies follows three women, each at a crossroads:Madeline is a force to be reckoned with. She’s funny and biting, passionate, she remembers everything and forgives no one. Her ex-husband and his yogi new wife have moved into her beloved beachside community, and their daughter is in the same kindergarten class as Madeline’s youngest (how is this possible?). And to top it all off, Madeline’s teenage daughter seems to be choosing Madeline’s ex-husband over her. (How. Is. This. Possible?)."
+        }
     ]
 }

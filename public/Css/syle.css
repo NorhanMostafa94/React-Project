@@ -1,0 +1,49 @@
+.books-header {
+
+    border-bottom: 0.1px solid lightgray;
+    margin-bottom: 1rem;
+    /* margin-left: 7.8rem; */
+}
+
+.books_title-header {
+    font-family: "Merriweather";
+}
+
+.bookshelves {
+    /* margin-top: 1rem; */
+    /* margin-left: 8.3rem; */
+}
+
+.listing{
+    margin-left: 1px;
+}
+
+.books-link {
+    background: none;
+    border: none;
+}
+
+.books-link:hover {
+    text-decoration: underline;
+}
+
+.table_header {
+    font-family: cursive;
+    font-size: 20px;
+}
+
+.table__title {
+    width: 11rem;
+}
+
+.rating {
+    color: #F5A623;
+}
+
+.table thead th {
+    border-bottom: none !important;
+    border-top: none !important;
+}
+.paging{
+    margin-left: 17rem;
+}
