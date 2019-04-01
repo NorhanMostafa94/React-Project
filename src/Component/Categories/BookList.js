@@ -1,27 +1,35 @@
 import React, { Component } from 'react';
 import { Container, Row, Card } from 'react-bootstrap';
 
-class BookList extends Component {
+import {Link} from 'react-router-dom'
+
+import img from '../../assets/images/1.jpg'
+
+class Books extends Component {
     generateBooks = ({ books }) => {
         if (books) {
             return (
-                books.map(t =>
-                    <Container key={t.id}>
-                        <Row className="justify-content-md-center">
-                            <Card style={{ width: '50rem', marginTop: '20px' }}>
+                <Container className="card-container" >
+                    <Row className="justify-content-md-center">
+                        {books.map(t =>
+                            <Card className="card-item" key={t.id} >
+                            <Card.Img variant="top" src={img} />
                                 <Card.Body>
-                                    <Card.Text>{t.name}</Card.Text>
-                                    <Card.Text>{t.author}</Card.Text>
+                                    <Link to='/authors/:id' style={{textDecoration:'none',color:'black',fontSize:'20px'}}>{t.author}</Link>
+                                    <div>
+                                    <Link className="link-btn" to='/books/:id' style={{textDecoration:'none'}}>{t.name}</Link>
+                                    </div>
                                 </Card.Body>
                             </Card>
-                        </Row>
-                    </Container>
-                )
+                        )}
+                    </Row>
+                </Container>
             )
         }
     }
 
     render() {
+        console.log(this.props)
         return (
             <div>
                 {this.generateBooks(this.props)}
@@ -30,4 +38,4 @@ class BookList extends Component {
     }
 }
 
-export default BookList;
+export default Books;

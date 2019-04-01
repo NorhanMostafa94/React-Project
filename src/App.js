@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
-// import Routing from './Routing/Routing'
+
+import '../src/CSS/style.css'
+
 import { Navbar, Nav } from 'react-bootstrap';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import MainPage from '../src/Component/MyBooks/MainPage'
@@ -12,6 +14,13 @@ import BookDetails from '../src/Component/Books/BookDetails';
 import CategoriesList from './Component/Categories/List';
 import Category from './Component/Categories/Category';
 
+import AuthorsList from './Component/Authors/List';
+
+import BooksList from './Component/Books/List';
+
+import { categories, authors, books } from './data';
+
+
 import './App.css';
 
 
@@ -19,12 +28,16 @@ export const Context = React.createContext();
 
 class App extends Component {
   state = {
-    categories: []
+    categories: categories,
+    authors: authors,
+    books: books
   }
 
   getCategories = (categories) => {
     // console.log(1)
+    // debugger
     this.setState({ categories: categories })
+    console.log(this.state.categories)
   }
   render() {
     const value = {
@@ -32,29 +45,29 @@ class App extends Component {
       getCategories: this.getCategories
     }
     return (
-      <>
-        <BookDetails />
-      </>
-
-      /*
-  <Context.Provider value={value}>
-     <BrowserRouter>
-      <Navbar bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand>My First React-App</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Link to="/categories" style={{ color: '#F8F9FA', textDecoration: 'none' }}>categories</Link>
-            <Nav.Link></Nav.Link><Link to="/users" style={{ color: '#F8F9FA', textDecoration: 'none' }}>Profile</Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      <Switch>
-        <Route path='/categories/:id' component={Category} render={()=>this.get(value.getCategories)}/>
-        <Route path='/categories' component={CategoriesList} />
-      </Switch>
-    </BrowserRouter> 
-  </Context.Provider>*/
+      <Context.Provider value={value}>
+        <BrowserRouter>
+          <Navbar bg="dark" variant="dark" expand="lg">
+            <Navbar.Brand>My First React-App</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto">
+                <Link to="/categories" style={{ color: '#F8F9FA', textDecoration: 'none' }}>categories</Link>
+                <Nav.Link></Nav.Link><Link to="/authors" style={{ color: '#F8F9FA', textDecoration: 'none' }}>Authors</Link>
+                <Nav.Link></Nav.Link><Link to="/books" style={{ color: '#F8F9FA', textDecoration: 'none' }}>Books</Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+          <Switch>
+            <Route path='/categories/:id' component={Category} />
+            <Route path='/books/:id' component={BooksList} />
+            <Route path='/authors/:id' component={BooksList} />
+            <Route path='/categories' component={CategoriesList} />
+            <Route path='/authors' component={AuthorsList} />
+            <Route path='/books' component={BooksList} />
+          </Switch>
+        </BrowserRouter>
+      </Context.Provider>
     );
   }
 }
