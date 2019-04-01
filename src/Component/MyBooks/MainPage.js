@@ -72,7 +72,7 @@ class MainPage extends Component {
                         <button onClick={this.handleClick} name="to-read" className="books-link">Want to read</button>
                     </div>
                     <div className="col-9 listing">
-                        {<Listing books={this.state.books} key={this.state.books.id}></Listing>}
+                        {<Listing books={this.state.books} ></Listing>}
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@
     /* margin-left: 8.3rem; */
 }
 
-.listing{
+.listing {
     margin-left: 1px;
 }
 
@@ -40,13 +40,54 @@
     color: #F5A623;
 }
 
+.image-listing {
+    width: 50px;
+}
+
 .table thead th {
     border-bottom: none !important;
     border-top: none !important;
 }
-.paging{
+
+.paging {
     margin-left: 17rem;
 }
-/* .book-img{
-    width: 19rem;
-} */
+
+.book-details-block {
+    margin-top: 4rem;
+    margin-left: 12.1rem !important;
+}
+
+.book-img {
+    /* width: 291px; */
+    width: 211px;
+}
+
+.desc-block {
+    margin-left: -46px;
+}
+
+.book-details-dropdwn {
+    width: 194px;
+    margin-top: 11px;
+    margin-left: 9px;
+}
+
+.bookTitle {
+    font-weight: 700;
+    font-family: "Merriweather";
+}
+
+.avgRate {
+    margin-left: 10px;
+
+}
+
+.rate-header {
+    margin-left: 52px;
+}
+
+.book-details-stars {
+    margin-left: 3.5rem;
+    color: lightgray;
+}

@@ -5,6 +5,14 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Paging from './Pagination';
 const Listing = (props) => {
 
+    const rating = (rating) => {
+        let stars = [];
+        for (let index = 0; index < rating; index++) {
+            stars.push( <i className="fas fa-star rating"></i>)
+
+        }
+        return stars
+    }
     const displayBooks = ({ books }) => {
         if ({ books }) {
 
@@ -12,20 +20,17 @@ const Listing = (props) => {
                 return (
                     <>
                         <tr>
-                            <td><img src={el.cover} alt="" /></td>
+                            <td><img src={el.cover} alt=""  className="image-listing"/></td>
                             <td>{el.title}</td>
                             <td>{el.author}</td>
                             <td>{el.avgrating}</td>
                             <td>
-                                <i className="fas fa-star rating"></i>
-                                <i className="fas fa-star rating"></i>
-                                <i className="fas fa-star rating"></i>
-                                <i className="fas fa-star rating"></i>
+                                {rating(el.rating)}
                             </td>
                             <td>
                                 <Dropdown>
                                     <Dropdown.Toggle variant="success" id="dropdown-basic">
-
+                                        Want to Read
                                     </Dropdown.Toggle>
 
                                     <Dropdown.Menu>

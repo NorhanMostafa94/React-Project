@@ -45,8 +45,9 @@ class App extends Component {
       getCategories: this.getCategories
     }
     return (
-      
-      <Context.Provider value={value}>
+      <BookDetails />
+      //<MainPage />
+      /*<Context.Provider value={value}>
         <BrowserRouter>
           <Navbar bg="dark" variant="dark" expand="lg">
             <Navbar.Brand>My First React-App</Navbar.Brand>
@@ -68,7 +69,7 @@ class App extends Component {
             <Route path='/books' component={BooksList} />
           </Switch>
         </BrowserRouter>
-      </Context.Provider>
+      </Context.Provider>*/
     );
   }
 }
