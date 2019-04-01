@@ -25,12 +25,13 @@ const Listing = (props) => {
                             <td>
                                 <Dropdown>
                                     <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                        Want to Read
+
                                     </Dropdown.Toggle>
 
                                     <Dropdown.Menu>
                                         <Dropdown.Item href="#/action-1">Currently Reading</Dropdown.Item>
                                         <Dropdown.Item href="#/action-2">Read</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Want to Read</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </td>
