@@ -45,6 +45,7 @@ class App extends Component {
       getCategories: this.getCategories
     }
     return (
+      
       <Context.Provider value={value}>
         <BrowserRouter>
           <Navbar bg="dark" variant="dark" expand="lg">
