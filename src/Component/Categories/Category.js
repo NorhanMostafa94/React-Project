@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Context } from '../../App';
 
-import Book from './BookList'
+import Book from '../Books/BookItem'
 import { categories } from '../../data';
 
 
@@ -36,7 +36,7 @@ class CategoryItem extends Component {
                         value.state.categories.filter(e => e.id === Number(id)).map(t =>
                             <div key={t.id}>
                                 <h1>{t.name}</h1>
-                                <Book books={t.books}></Book>
+                                {t.books.map(c=><Book key={c.id} {...c}></Book>)}
                             </div>
                         )
                     )

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Context } from '../../App';
-import { Link } from 'react-router-dom';
-import { Container, Row } from 'react-bootstrap';
+import Book from './BookItem'
 
 
 class BooksList extends Component {
@@ -11,7 +10,7 @@ class BooksList extends Component {
             <Context.Consumer>
                 {
                     value => (
-                        value.state.books.map(d => <Link to={`/books/${d.id}`} key={d.id}><div>{d.name}<br/>{d.author}</div></Link>)
+                        value.state.books.map(d => <Book key={d.id} {...d}></Book>)
                     )
                 }
             </Context.Consumer>

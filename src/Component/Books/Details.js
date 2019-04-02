@@ -39,7 +39,7 @@ class BookDetails extends Component {
                 <div className="container book-details-block">
                     <div className="row">
                         <div className="col-3">
-                            <img src={this.state.book.cover} className="book-img"></img>
+                            <img src={this.state.book.cover} className="book-img" alt={this.state.book.cover}></img>
                             <Dropdown>
                                 <Dropdown.Toggle variant="success" id="dropdown-basic" className="book-details-dropdwn">
                                     Want to Read
