@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter} from 'react-router-dom';
-
+// import '../public/Css/syle.css'
 import '../src/CSS/style.css'
-
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-// import MainPage from '../src/Component/MyBooks/MainPage'
-// import BookDetails from '../src/Component/Books/BookDetails';
+import MainPage from '../src/Component/MyBooks/MainPage'
+import BookDetails from './Component/Books/Details';
 
 //Json
 // import DB from './db'
@@ -19,7 +18,6 @@ import { categories, authors, books ,users} from './data';
 
 import './App.css';
 import SearchBar from './Component/Search/Search';
-
 
 export const Context = React.createContext();
 
@@ -47,8 +45,9 @@ class App extends Component {
       getCategories: this.getCategories
     }
     return (
-      // <BookDetails />
+       //<BookDetails />
       //<MainPage />
+      
       <Context.Provider value={value}>
         <BrowserRouter>
           <NavBar></NavBar>

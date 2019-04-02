@@ -3,29 +3,24 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Table from 'react-bootstrap/Table';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Paging from './Pagination';
+import Rating from '../Books/Rating';
 const Listing = (props) => {
 
-    const rating = (rating) => {
-        let stars = [];
-        for (let index = 0; index < rating; index++) {
-            stars.push( <i className="fas fa-star rating"></i>)
-
-        }
-        return stars
-    }
+    
     const displayBooks = ({ books }) => {
         if ({ books }) {
 
-            return books.map((el) => {
+            return books.map((book) => {
                 return (
                     <>
                         <tr>
-                            <td><img src={el.cover} alt=""  className="image-listing"/></td>
-                            <td>{el.title}</td>
-                            <td>{el.author}</td>
-                            <td>{el.avgrating}</td>
+                            <td><img src={book.cover} alt=""  className="image-listing"/></td>
+                            <td>{book.title}</td>
+                            <td>{book.author}</td>
+                            <td>{book.avgrating}</td>
                             <td>
-                                {rating(el.rating)}
+                               {/* {rating(book.rating)} */}
+                                {<Rating rating={book.rating} />}
                             </td>
                             <td>
                                 <Dropdown>

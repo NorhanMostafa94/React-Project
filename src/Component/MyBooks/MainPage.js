@@ -1,29 +1,15 @@
 import React, { Component } from 'react';
 import Listing from './Listing'
-const URL_ALL_BOOKS = ' http://localhost:3004/AllBooks';
+import {AllBooks} from '../../data'
+// const URL_ALL_BOOKS = ' http://localhost:3004/AllBooks';
 
 class MainPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            books: [{}],
-            data: [{}]
+            books: AllBooks,
+            data: AllBooks
         }
-    }
-    componentDidMount() {
-
-        fetch(URL_ALL_BOOKS, {
-            method: 'GET'
-        })
-            .then(reponse => reponse.json())
-            .then(json => {
-                console.log(json)
-
-                this.setState({
-                    books: json,
-                    data: json
-                })
-            })
     }
     handleClick = (event) => {
         event.preventDefault();
