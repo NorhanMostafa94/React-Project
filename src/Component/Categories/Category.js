@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Context } from '../../App';
 
-import Book from './BookItem'
+import Book from '../Books/BookItem'
 import { categories } from '../../data';
 
 

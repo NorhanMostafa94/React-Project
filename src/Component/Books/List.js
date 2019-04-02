@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Context } from '../../App';
-import Book from '../Categories/BookItem'
+import Book from './BookItem'
 
 
 class BooksList extends Component {
