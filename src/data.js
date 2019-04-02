@@ -5,22 +5,22 @@ export const categories = [
         books: [
             {
                 id: 1,
-                name: 'b1',
+                title: 'b1',
                 author: 'a1'
             },
             {
                 id: 2,
-                name: 'b2',
+                title: 'b2',
                 author: 'a2'
             },
             {
                 id: 3,
-                name: 'b3',
+                title: 'b3',
                 author: 'a3'
             },
             {
                 id: 4,
-                name: 'b4',
+                title: 'b4',
                 author: 'a4'
             }
         ]
@@ -31,22 +31,22 @@ export const categories = [
         books: [
             {
                 id: 1,
-                name: 'sports',
+                title: 'sports',
                 author: 'a1'
             },
             {
                 id: 2,
-                name: 'b2',
+                title: 'b2',
                 author: 'a2'
             },
             {
                 id: 3,
-                name: 'b3',
+                title: 'b3',
                 author: 'a3'
             },
             {
                 id: 4,
-                name: 'b4',
+                title: 'b4',
                 author: 'a4'
             }
         ]
@@ -80,6 +80,7 @@ export const categories = [
 export const authors = [
     {
         id: 1,
+<<<<<<< HEAD
         name: "احمد خالد توفيق",
         Born: "June 10, 1962 ",
         Website: "http://aktowfik.blogspot.com/",
@@ -106,6 +107,11 @@ export const authors = [
                 status: "to-read"
             }
         ]
+=======
+        name: 'a1',
+        cover: "https://images.gr-assets.com/books/1474154022s/3.jpg",
+        bio: "dfghjkl;'rtyuiop[cvbjkldfghjklrtyuio"
+>>>>>>> 7c07f60ffc2fa93cf3851509aefe3ad9ad6c6d61
     },
     {
         id: 2,
@@ -122,7 +128,7 @@ export const books = [
         id: 1,
         title: 'Harry Potter and the Sorcerer Stone',
         author: 'Rowling, J.K.',
-        cover: "https://images.gr-assets.com/books/1474154022s/3.jpg",
+        cover: "http://booklovers.ancorathemes.com/wp-content/uploads/2016/04/books7.jpg",
     },
     {
         id: 2,
@@ -145,7 +151,8 @@ export const books = [
     {
         id: 5,
         title: 'The Hate U Give',
-        author: 'Thomas, Angie'
+        author: 'Thomas, Angie',
+        cover: 'http://booklovers.ancorathemes.com/wp-content/uploads/2016/04/book5.jpg'
     },
     {
         id: 11,
@@ -290,4 +297,10 @@ export const AllBooks = [
             }
         ]
     }
+]
+
+export const users=[
+    {firstname:'Sarah',lastname:'Refaat', password:'12345',admin : true,id:1}
+    ,
+     {firstname:'Mohammad',lastname:'Refaat', password:'1234',admin : false,id:2},
 ]

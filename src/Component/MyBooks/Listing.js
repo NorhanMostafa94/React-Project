@@ -12,15 +12,15 @@ const Listing = (props) => {
 
             return books.map((book) => {
                 return (
-                    <>
-                        <tr>
+                    
+                        <tr key={book.id} >
                             <td><img src={book.cover} alt=""  className="image-listing"/></td>
                             <td>{book.title}</td>
                             <td>{book.author}</td>
                             <td>{book.avgrating}</td>
                             <td>
                                {/* {rating(book.rating)} */}
-                                {<Rating rating={book.rating} />}
+                                {<Rating key={book.id} rating={book.rating} />}
                             </td>
                             <td>
                                 <Dropdown>
@@ -37,7 +37,7 @@ const Listing = (props) => {
                             </td>
                         </tr>
 
-                    </>
+                    
 
                 )
             })

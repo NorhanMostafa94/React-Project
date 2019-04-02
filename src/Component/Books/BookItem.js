@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
-import { Container, Row, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
+import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
+import noImage from '../../assets/images/noimg.png'
 
 
 class Book extends Component {
     render() {
-        const { id, title, author } = this.props;
+        const { id, title, author, cover } = this.props;
         // console.log(this.props)
         return (
-            <Container className="card-container" >
-                <Row className="justify-content-md-center">
-                    <Card className="card-item" key={id} >
-                        <Card.Img variant="top" />
-                        <Card.Body>
-                            <Link to='/authors/:id' style={{ textDecoration: 'none', color: 'black', fontSize: '20px' }}>{author}</Link>
-                            <div>
-                                <Link className="link-btn" to={`/books/${id}`} style={{ textDecoration: 'none' }}>{title}</Link>
-                            </div>
-                        </Card.Body>
-                    </Card>
-                </Row>
-            </Container>
+            <Card className="card-item" key={id} >
+                <Card.Body>
+                    <Card.Img style={{height:'300px',boxShadow: '0px 3px 5px 0px #adadab'}} variant="top" src={cover === undefined ? noImage : cover} />
+
+                    <div style={{paddingTop:'20px'}}>
+                        <Link to='/authors/:id' style={{ textDecoration: 'none', color: 'black', fontSize: '20px' }}>{author}</Link>
+                        <Link className="link-btn" to={`/books/${id}`} style={{ textDecoration: 'none' }}>{title}</Link>
+                    </div>
+                </Card.Body>
+            </Card>
         );
     }
 }
