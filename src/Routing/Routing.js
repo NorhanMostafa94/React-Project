@@ -9,6 +9,8 @@ import AuthorsList from '../Component/Authors/List';
 import AuthorDetails from '../Component/Authors/Details'
 
 import BooksList from '../Component/Books/List';
+import BookDetails from '../Component/Books/Details';
+
 import SearchBar from '../Component/Search/Search';
 import Login from '../Component/Forms/login';
 
