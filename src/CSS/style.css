@@ -1,4 +1,4 @@
-.card-container{
+.card-container {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -6,7 +6,7 @@
     flex-wrap: wrap;
 }
 
-.card-item{
+.card-item {
     position: absolute;
     width: 18rem;
     height: 20rem;
@@ -15,12 +15,13 @@
     text-align: center;
     transition: 0.3 all 0s;
 }
-.card-item:hover{
+
+.card-item:hover {
     margin-top: -5px;
     transition: 0.3 all 0s;
 }
 
-.link-btn{
+.link-btn {
     background-color: #FC6377;
     border-radius: 50px;
     padding: 8px 50px 8px 50px;
@@ -60,7 +61,7 @@
 .books-link:hover {
     outline: none;
     text-decoration: underline;
-    
+
 }
 
 .table_header {
@@ -126,4 +127,42 @@
 .book-details-stars {
     margin-left: 3.5rem;
     color: lightgray;
+}
+
+/***********/
+.author-bio {
+    margin-left: 5.1rem !important;
+}
+
+.author-web {
+    margin-left: 4rem !important;
+}
+
+.book_title {
+    margin-left: 1rem;
+    position: absolute;
+}
+
+.book_author {
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+}
+
+.author_rating {
+    position: absolute;
+    top: 3.5rem;
+    left: 1.4rem;
+}
+
+.book_avg {
+    position: absolute;
+    left: 11rem;
+    top: 3.5rem;
+}
+
+.author_drodwn {
+    position: absolute;
+    top: -4.1rem;
+    left: 18rem;
 }
