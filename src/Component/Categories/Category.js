@@ -43,6 +43,7 @@ class CategoryItem extends Component {
                 }
             </Context.Consumer>
         )
+        
     }
 }
 
