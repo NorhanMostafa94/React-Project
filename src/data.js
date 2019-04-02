@@ -95,17 +95,27 @@ export const authors = [
 export const books = [
     {
         id: 1,
-        name: 'b1',
-        author: 'a1'
+        name: 'Harry Potter and the Sorcerer Stone',
+        author: 'Rowling, J.K.'
     },
     {
         id: 2,
-        name: 'b2',
-        author: 'a2'
+        name: 'Fifty Shades',
+        author: 'James, E.L.'
     },
     {
         id: 3,
-        name: 'b3',
-        author: 'a3'
+        name: 'The Hate U Give',
+        author: 'Thomas, Angie'
+    },
+    {
+        id: 4,
+        name: 'Poison Study',
+        author: 'Snyder, Maria V.'
+    },
+    {
+        id: 5,
+        name: 'The Hate U Give',
+        author: 'Thomas, Angie'
     }
 ]
