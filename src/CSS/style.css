@@ -127,3 +127,43 @@
     margin-left: 3.5rem;
     color: lightgray;
 }
+
+
+/*--------------------*/
+/*login*/
+.login-cont{
+    width: 50% !important;
+    justify-self: center !important;
+    /* margin-left: 5rem !important ; */
+}
+.container{
+    display: flex;
+    justify-items: center !important;
+    align-self: center !important;
+    
+}
+.avatar{
+    
+    height: 2.5rem;
+    background-color: #282c34;
+    border: 1px solid green;
+    border-radius: 50%;
+  }
+  .log-btn{
+  width: 5rem;
+  justify-self: center !important;
+  background-color: #61dafb;
+  color: black;
+  border-bottom-left-radius: 20%;
+  border-top-right-radius: 20%;
+  
+  }
+  .log-btn:hover{
+  background-color: pink;
+  }
+  /*signup*/
+  .btn-sign{
+      background-color: #FC6377;
+     
+    /* width:50%; */
+  }
