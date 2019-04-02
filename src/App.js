@@ -11,8 +11,13 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // Component
 import NavBar from './Component/Navbar/Navbar';
 import Routing from './Routing/Routing';
-import { categories, authors, books } from './data';
+
+
+import { categories, authors, books ,users} from './data';
+
+
 import './App.css';
+import SearchBar from './Component/Search/Search';
 
 export const Context = React.createContext();
 
@@ -20,7 +25,8 @@ class App extends Component {
   state = {
     categories: categories,
     authors: authors,
-    books: books
+    books: books,
+    users:users
   }
 
   getCategories = (categories) => {
@@ -29,6 +35,10 @@ class App extends Component {
     this.setState({ categories: categories })
     console.log(this.state.categories)
   }
+  addUser=(user)=>{
+    const  userData  = this.state.userData;
+    this.setState({ userData: userData.concat(user) })
+   }
   render() {
     const value = {
       state: this.state,
@@ -41,6 +51,7 @@ class App extends Component {
       <Context.Provider value={value}>
         <BrowserRouter>
           <NavBar></NavBar>
+          
          <Routing></Routing>
         </BrowserRouter>
       </Context.Provider>

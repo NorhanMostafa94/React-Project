@@ -268,3 +268,9 @@ export const AllBooks = [
         ]
     }
 ]
+
+export const users=[
+    {firstname:'Sarah',lastname:'Refaat', password:'12345',admin : true,id:1}
+    ,
+     {firstname:'Mohammad',lastname:'Refaat', password:'1234',admin : false,id:2},
+]

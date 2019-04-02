@@ -9,7 +9,9 @@ import AuthorsList from '../Component/Authors/List';
 import AuthorDetails from '../Component/Authors/Details'
 
 import BooksList from '../Component/Books/List';
-import BookDetails from '../Component/Books/Details'
+import SearchBar from '../Component/Search/Search';
+import Login from '../Component/Forms/login';
+
 
 const Routing = () => {
 
@@ -25,6 +27,9 @@ const Routing = () => {
             <Route path='/authors' component={AuthorsList} />
             <Route path='/books' component={BooksList} />
             <Route path='/mybooks' component={MainPage} />
+            <Route path='/login' component={Login} />
+            <Route path='/' component={SearchBar} />
+            
         </Switch>
     )
 }
