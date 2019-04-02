@@ -1,5 +1,5 @@
 body{
-    background-color: #f8faff !important;
+    /* background-color: #f8faff !important; */
 }
 
 nav{
@@ -20,16 +20,19 @@ a{
 
 .card-item{
     position: absolute;
-    width: 220px;
-    height: 250px;
-    margin: 12px;
+    width: 250px;
+    height: 450px;
+    margin: 2px;
     overflow: hidden;
     text-align: center;
-    transition: 0.3s all 0s ease-in-out;
+    /* transition: 0.3s all 0s ease-in-out; */
+    border: 0 !important;
+    /* background-color: transparent !important; */
+    
 }
 .card-item:hover{
-    margin-top: -5px;
-    transition: 0.3s all 0s ease-in-out;
+    /* margin-top: -5px; */
+    /* transition: 0.3s all 0s ease-in-out; */
 }
 
 .link-btn{

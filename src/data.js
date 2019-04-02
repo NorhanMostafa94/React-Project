@@ -122,7 +122,8 @@ export const books = [
     {
         id: 5,
         title: 'The Hate U Give',
-        author: 'Thomas, Angie'
+        author: 'Thomas, Angie',
+        cover: 'http://booklovers.ancorathemes.com/wp-content/uploads/2016/04/book5.jpg'
     },
     {
         id: 11,
