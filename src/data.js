@@ -5,22 +5,22 @@ export const categories = [
         books: [
             {
                 id: 1,
-                name: 'b1',
+                title: 'b1',
                 author: 'a1'
             },
             {
                 id: 2,
-                name: 'b2',
+                title: 'b2',
                 author: 'a2'
             },
             {
                 id: 3,
-                name: 'b3',
+                title: 'b3',
                 author: 'a3'
             },
             {
                 id: 4,
-                name: 'b4',
+                title: 'b4',
                 author: 'a4'
             }
         ]
@@ -31,22 +31,22 @@ export const categories = [
         books: [
             {
                 id: 1,
-                name: 'sports',
+                title: 'sports',
                 author: 'a1'
             },
             {
                 id: 2,
-                name: 'b2',
+                title: 'b2',
                 author: 'a2'
             },
             {
                 id: 3,
-                name: 'b3',
+                title: 'b3',
                 author: 'a3'
             },
             {
                 id: 4,
-                name: 'b4',
+                title: 'b4',
                 author: 'a4'
             }
         ]
@@ -80,9 +80,33 @@ export const categories = [
 export const authors = [
     {
         id: 1,
-        name: 'a1',
-        cover: "https://images.gr-assets.com/books/1474154022s/3.jpg",
-        bio:"dfghjkl;'rtyuiop[cvbjkldfghjklrtyuio"
+        name: "احمد خالد توفيق",
+        Born: "June 10, 1962 ",
+        Website: "http://aktowfik.blogspot.com/",
+        Genre: "Fantasy, Horror, Science Fiction",
+        cover: "https://images.gr-assets.com/authors/1316682283p5/1479015.jpg",
+        bio: "احمد خالد توفيق فراج طبيب وأديب مصري، ويعتبر أول كاتب عربي في مجال أدب الرعب و الأشهر في مجال أدب الشباب والفانتازيا والخيال العلمي ويلقب بالعراب,ولد بمدينة طنطا عاصمة محافظة الغربية فى اليوم العاشر من شهر يونيو عام 1962، وتخرج من كلية الطب عام 1985، كما حصل على الدكتوراة فى طب المناطق الحارة عام 1997. متزوج من د منال أخصائية صدر في كلية طب طنطا – وهي من المنوفية - ولديه من الأبناء (محمد) و(مريم). بدأ أحمد خالد العمل فى المؤسسة العربية الحديثة عام 1992 ككاتب رعب لسلسلة (ما وراء الطبيعة) حيث تقدم بأولى رواياته (أسطورة مصاص الدماء) ولم تلق في البدء قبولاً في المؤسسة .يعدّ د. أحمد من الكتاب العرب النادرين الذين يكتبون في هذا المجال بمثل هذا التخصص - إن لم يكن أولهم - ( ما وراء الطبيعة ) .. تلك السلسلة التي عشقناها جميعاً ببطلها (رفعت إسماعيل) الساخر العجوز، والذى أظهر لنا د. (أحمد) عن طريقه مدى اعتزازه بعروبته، ومدى تدينه وإلتزامه وعبقريته أيضاً، بعد ذلك أخرج لنا د. (أحمد ) سلسلة (فانتازيا) الرائعة ببطلتها (عبير)، وهذه بينت لنا كم أن د. (أحمد خيالي يكره الواقع. تلتهما سلسلة (سافاري) ببطلها علاء عبد العظيم، وعرفنا من خلال تلك السلسلة المتميزة مدى حب أحمد لمهنته كطبيب، ومدى عشقه وولعه بها.",
+        authorBooks: [
+            {
+                id: 1,
+                cover: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1214056271i/3503947._SX50_.jpg",
+                title: "يوتوبيا ",
+                author: " أحمد خالد توفيق",
+                avgrating: "3.91",
+                rating: "4",
+                status: "to-read"
+            },
+            {
+                id: 2,
+                cover: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1349778839i/16076787._SY75_.jpg",
+                title: "السنجة",
+                author: " أحمد خالد توفيق",
+                avgrating: "3.81",
+                rating: "3 ",
+                status: "to-read"
+            }
+        ]
+       
     },
     {
         id: 2,
@@ -99,7 +123,7 @@ export const books = [
         id: 1,
         title: 'Harry Potter and the Sorcerer Stone',
         author: 'Rowling, J.K.',
-        cover: "https://images.gr-assets.com/books/1474154022s/3.jpg",
+        cover: "http://booklovers.ancorathemes.com/wp-content/uploads/2016/04/books7.jpg",
     },
     {
         id: 2,
@@ -122,7 +146,8 @@ export const books = [
     {
         id: 5,
         title: 'The Hate U Give',
-        author: 'Thomas, Angie'
+        author: 'Thomas, Angie',
+        cover: 'http://booklovers.ancorathemes.com/wp-content/uploads/2016/04/book5.jpg'
     },
     {
         id: 11,
