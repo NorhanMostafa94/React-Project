@@ -1,3 +1,15 @@
+body{
+    background-color: #f8faff !important;
+}
+
+nav{
+    background-color: white;
+    padding: 30px !important;
+}
+a{
+    color: #404044 !important;
+}
+
 .card-container{
     position: relative;
     display: flex;
@@ -8,23 +20,122 @@
 
 .card-item{
     position: absolute;
-    width: 18rem;
-    height: 20rem;
+    width: 220px;
+    height: 250px;
     margin: 12px;
     overflow: hidden;
     text-align: center;
-    transition: 0.3 all 0s;
+    transition: 0.3s all 0s ease-in-out;
 }
 .card-item:hover{
     margin-top: -5px;
-    transition: 0.3 all 0s;
+    transition: 0.3s all 0s ease-in-out;
 }
 
 .link-btn{
-    background-color: #FC6377;
-    border-radius: 50px;
-    padding: 8px 50px 8px 50px;
-    width: 50px !important;
-    font-size: 18px;
+    /* background-color: #FC6377; */
+    /* border-radius: 50px; */
+    /* padding: 8px 50px 8px 50px; */
+    /* width: 50px !important; */
+    /* font-size: 18px; */
     color: white;
+}
+
+
+.books-header {
+
+    border-bottom: 0.1px solid lightgray;
+    margin-bottom: 1rem;
+    /* margin-left: 7.8rem; */
+}
+
+.books_title-header {
+    font-family: "Merriweather";
+}
+
+.bookshelves {
+    /* margin-top: 1rem; */
+    /* margin-left: 8.3rem; */
+}
+
+.listing {
+    margin-left: 1px;
+}
+
+.books-link {
+    background: none;
+    border: none;
+    outline: none;
+
+}
+
+.books-link:hover {
+    outline: none;
+    text-decoration: underline;
+    
+}
+
+.table_header {
+    font-family: cursive;
+    font-size: 20px;
+}
+
+.table__title {
+    width: 11rem;
+}
+
+.rating {
+    color: #F5A623;
+}
+
+.image-listing {
+    width: 50px;
+}
+
+.table thead th {
+    border-bottom: none !important;
+    border-top: none !important;
+}
+
+.paging {
+    margin-left: 17rem;
+}
+
+.book-details-block {
+    margin-top: 4rem;
+    margin-left: 12.1rem !important;
+}
+
+.book-img {
+    /* width: 291px; */
+    width: 211px;
+}
+
+.desc-block {
+    margin-left: -46px;
+}
+
+.book-details-dropdwn {
+    width: 194px;
+    margin-top: 11px;
+    margin-left: 9px;
+}
+
+.bookTitle {
+    font-weight: 700;
+    font-family: "Merriweather";
+}
+
+.avgRate {
+    margin-left: 10px;
+
+}
+
+.rate-header {
+    margin-left: 52px;
+}
+
+.book-details-stars {
+    margin-left: 3.5rem;
+    color: lightgray;
 }

@@ -9,10 +9,11 @@ const Reviews = (props) => {
                 return (
                     <>
                         <h6>{review.name}</h6>
-                        <img src={review.cover}></img>
-                        <span className="book-details-stars">
+                        <img src={review.cover} alt={review.cover}></img>
+                        <span className="book-details-stars ">
                             <span>rate it </span>
-                            {<Rating rating={review.rating} />}
+                            
+                            {<Rating rating={review.rate} />}
                         </span>
                         <p>
                             {review.review}

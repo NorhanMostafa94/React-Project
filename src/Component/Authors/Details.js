@@ -1,31 +1,29 @@
 import React, { Component } from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Dropdown from 'react-bootstrap/Dropdown';
-import Rating from './Rating';
-import Reviews from './Reviews'
-import { books } from '../../data';
-// const BDETAILS_URL = ' http://localhost:3004/AllBooks';
-class BookDetails extends Component {
+import { authors } from '../../data';
+
+class AuthorDetails extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            books: books,
-            book: {}
+            authors: authors,
+            author: {}
         }
     }
 
 
     componentDidMount() {
         const ID = this.props.match.params.id;
-        const foundedBook = this.state.books.filter((book) => {
-            return book.id === Number(ID)
+        const foundedAuthor = this.state.authors.filter((author) => {
+            return author.id === Number(ID)
         })
-       
+
         this.setState(
-            { book: foundedBook[0] }
+            { author: foundedAuthor[0] }
         )
     }
- 
+
 
     render() {
         return (
@@ -33,7 +31,7 @@ class BookDetails extends Component {
                 <div className="container book-details-block">
                     <div className="row">
                         <div className="col-3">
-                            <img src={this.state.book.cover} className="book-img" alt={this.state.book.cover}></img>
+                            <img src={this.state.author.cover} className="book-img" alt={this.state.author.cover}></img>
                             <Dropdown>
                                 <Dropdown.Toggle variant="success" id="dropdown-basic" className="book-details-dropdwn">
                                     Want to Read
@@ -57,24 +55,14 @@ class BookDetails extends Component {
                             </span>
                         </div>
                         <div className="col-7 desc-block">
-                            <h5 className="bookTitle">{this.state.book.title}</h5>
-                            <h6>{this.state.book.author}</h6>
-                            <h6>{this.state.book.category}</h6>
-                            <span>
-                                {<Rating rating={this.state.book.rating} />}
-                                <span className="avgRate">{this.state.book.avgrating}</span>
-                            </span>
+                            <h5 className="bookTitle">{this.state.author.title}</h5>
+                            <h6>{this.state.author.name}</h6>
                             <p>
-                                {this.state.book.description}
+                                {this.state.author.bio}
                             </p>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-12">
-                            {<Reviews reviews={this.state.book.reviews} />}
 
-                        </div>
-                    </div>
                 </div>
 
 
@@ -82,4 +70,4 @@ class BookDetails extends Component {
         )
     }
 }
-export default BookDetails;
+export default AuthorDetails;

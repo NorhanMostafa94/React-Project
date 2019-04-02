@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Container, Row } from 'react-bootstrap';
+
 import { Context } from '../../App';
 
 import Book from '../Books/BookItem'
@@ -36,14 +38,18 @@ class CategoryItem extends Component {
                         value.state.categories.filter(e => e.id === Number(id)).map(t =>
                             <div key={t.id}>
                                 <h1>{t.name}</h1>
-                                {t.books.map(c=><Book key={c.id} {...c}></Book>)}
+                                <Container className="card-container" >
+                                    <Row className="justify-content-md-center">
+                                        {t.books.map(c => <Book key={c.id} {...c}></Book>)}
+                                    </Row>
+                                </Container>
                             </div>
                         )
                     )
                 }
             </Context.Consumer>
         )
-        
+
     }
 }
 
