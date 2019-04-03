@@ -54,7 +54,7 @@ a {
 
 /* Category */
 .cat-btn {
-    background-color: #76323F;
+    background-color: #C09F80;;
     border-radius: 50px;
     padding: 10px 50px 10px 50px;
     width: 250px !important;
@@ -70,7 +70,7 @@ a {
     background-size: cover 100% 100%;
     height: 605px;
     text-align: center;
-    color: white;
+    color: #C09F80;
 }
 
 .cat-header-text {
