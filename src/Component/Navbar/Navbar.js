@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
+import SearchBar from '../Search/Search';
 
 const NavBar = () => {
     return (
@@ -15,6 +16,7 @@ const NavBar = () => {
                     <Nav.Link></Nav.Link><Link to="/mybooks" >My Books</Link>
                 </Nav>
             </Navbar.Collapse>
+            <SearchBar/>
         </Navbar>
     )
 }

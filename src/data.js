@@ -7,17 +7,22 @@ export const categories = [
                 id: 7,
                 title: "حلقة الرعب",
                 author: "احمد خالد توفيق",
-
+                authorID: 1,
+                cover: "https://upload.wikimedia.org/wikipedia/ar/7/7a/%D8%AD%D9%84%D9%82%D8%A9_%D8%A7%D9%84%D8%B1%D8%B9%D8%A8_-_%D8%A7%D9%84%D8%B9%D8%AF%D8%AF_%D8%A7%D9%84%D8%B9%D8%A7%D8%B4%D8%B1_%D9%85%D8%A7_%D9%88%D8%B1%D8%A7%D8%A1_%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D8%A9.png",
             },
             {
                 id: 8,
                 title: "يوتوبيا ",
                 author: "احمد خالد توفيق",
+                authorID: 1,
+                cover: "https://images.gr-assets.com/books/1510693763l/36595963.jpg",
             },
             {
                 id: 9,
                 title: "السنجة",
                 author: "احمد خالد توفيق",
+                authorID: 1,
+                cover: "https://images.gr-assets.com/books/1349778839l/16076787.jpg",
             }
         ]
     },
@@ -28,17 +33,23 @@ export const categories = [
             {
                 id: 1,
                 title: 'Gingerbread',
-                author: 'Helen Oyeyemi'
+                author: 'Helen Oyeyemi',
+                authorID: 2,
+                cover: "https://images.gr-assets.com/books/1549556368l/40634915.jpg",
             },
             {
                 id: 2,
                 title: 'The Once and Future King',
-                author: 'Helen Oyeyemi'
+                author: 'Helen Oyeyemi',
+                authorID: 2,
+                cover: "https://images.gr-assets.com/books/1338741283l/43545.jpg",
             },
             {
                 id: 3,
                 title: 'The Bird King',
-                author: 'Helen Oyeyemi'
+                author: 'Helen Oyeyemi',
+                authorID: 2,
+                cover: "https://images.gr-assets.com/books/1530540458l/40642333.jpg",
             },
         ]
     },
@@ -50,16 +61,23 @@ export const categories = [
                 id: 4,
                 title: 'Superman: Dawnbreaker',
                 author: 'Matt de la Pena ',
+                authorID: 3,
+                cover: 'https://images.gr-assets.com/books/1529962084l/29749094.jpg',
             },
             {
                 id: 5,
                 title: 'Poison Study',
                 author: 'Matt de la Pena',
+                authorID: 3,
+                cover: "https://images.gr-assets.com/books/1535002553s/32075671.jpg",
             },
             {
                 id: 6,
                 title: "Sharp Objects",
                 author: 'Matt de la Pena',
+                authorID: 3,
+                cover: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1475695315i/18045891._SY180_.jpg",
+
             }
         ]
     },
@@ -78,7 +96,7 @@ export const authors = [
         authorBooks: [
             {
                 id: 8,
-                cover: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1214056271i/3503947._SX50_.jpg",
+                cover: "https://images.gr-assets.com/books/1510693763l/36595963.jpg",
                 title: "يوتوبيا ",
                 author: " أحمد خالد توفيق",
                 authorID: 1,
@@ -90,7 +108,7 @@ export const authors = [
             },
             {
                 id: 9,
-                cover: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1349778839i/16076787._SY75_.jpg",
+                cover: "https://images.gr-assets.com/books/1349778839l/16076787.jpg",
                 title: "السنجة",
                 author: " أحمد خالد توفيق",
                 authorID: 1,
@@ -102,7 +120,7 @@ export const authors = [
             },
             {
                 id: 7,
-                cover: "https://images.gr-assets.com/books/1359823945s/6004909.jpg",
+                cover: "https://upload.wikimedia.org/wikipedia/ar/7/7a/%D8%AD%D9%84%D9%82%D8%A9_%D8%A7%D9%84%D8%B1%D8%B9%D8%A8_-_%D8%A7%D9%84%D8%B9%D8%AF%D8%AF_%D8%A7%D9%84%D8%B9%D8%A7%D8%B4%D8%B1_%D9%85%D8%A7_%D9%88%D8%B1%D8%A7%D8%A1_%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D8%A9.png",
                 title: "حلقة الرعب",
                 author: "احمد خالد توفيق",
                 authorID: 1,
@@ -300,7 +318,7 @@ export const books = [
     },
     {
         id: 7,
-        cover: "https://images.gr-assets.com/books/1359823945s/6004909.jpg",
+        cover: "https://upload.wikimedia.org/wikipedia/ar/7/7a/%D8%AD%D9%84%D9%82%D8%A9_%D8%A7%D9%84%D8%B1%D8%B9%D8%A8_-_%D8%A7%D9%84%D8%B9%D8%AF%D8%AF_%D8%A7%D9%84%D8%B9%D8%A7%D8%B4%D8%B1_%D9%85%D8%A7_%D9%88%D8%B1%D8%A7%D8%A1_%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D8%A9.png",
         title: "حلقة الرعب",
         author: "احمد خالد توفيق",
         authorID: 1,
@@ -312,7 +330,7 @@ export const books = [
     },
     {
         id: 8,
-        cover: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1214056271i/3503947._SX50_.jpg",
+        cover: "https://images.gr-assets.com/books/1510693763l/36595963.jpg",
         title: "يوتوبيا ",
         author: " أحمد خالد توفيق",
         authorID: 1,
@@ -324,7 +342,7 @@ export const books = [
     },
     {
         id: 9,
-        cover: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1349778839i/16076787._SY75_.jpg",
+        cover: "https://images.gr-assets.com/books/1349778839l/16076787.jpg",
         title: "السنجة",
         author: " أحمد خالد توفيق",
         authorID: 1,
