@@ -4,40 +4,47 @@ import Table from 'react-bootstrap/Table';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Paging from './Pagination';
 import Rating from '../Books/Rating';
+import {Link} from 'react-router-dom'
 const Listing = (props) => {
 
-    
+
     const displayBooks = ({ books }) => {
         if ({ books }) {
 
             return books.map((book) => {
                 return (
-                    
-                        <tr key={book.id} >
-                            <td><img src={book.cover} alt=""  className="image-listing"/></td>
-                            <td>{book.title}</td>
-                            <td>{book.author}</td>
-                            <td>{book.avgrating}</td>
-                            <td>
-                               {/* {rating(book.rating)} */}
-                                {<Rating key={book.id} rating={book.rating} />}
-                            </td>
-                            <td>
-                                <Dropdown>
-                                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                        Want to Read
+
+                    <tr key={book.id} >
+                        <td><img src={book.cover} alt="" className="image-listing" /></td>
+                        {/* <td>{book.title}</td> */}
+                        <td>
+                            <Link to={`/books/${book.id}`} style={{ textDecoration: 'none', color: 'black', fontSize: '20px' }}>{book.title}</Link>
+                        </td>
+                        {/* <td>{book.author}</td> */}
+                        <td>
+                            <Link to={`/authors/${book.authorID}`} style={{ textDecoration: 'none', color: 'black', fontSize: '20px' }}>{book.author}</Link>
+                        </td>
+                        <td>{book.avgrating}</td>
+                        <td>
+                            {/* {rating(book.rating)} */}
+                            {<Rating key={book.id} rating={book.rating} />}
+                        </td>
+                        <td>
+                            <Dropdown>
+                                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                    Want to Read
                                     </Dropdown.Toggle>
 
-                                    <Dropdown.Menu>
-                                        <Dropdown.Item href="#/action-1">Currently Reading</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2">Read</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Want to Read</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                </Dropdown>
-                            </td>
-                        </tr>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Currently Reading</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Read</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Want to Read</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </td>
+                    </tr>
 
-                    
+
 
                 )
             })

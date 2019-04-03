@@ -96,7 +96,7 @@ class Login extends Component {
             <Context.Consumer>
                 {
                     value => (
-                        <div className="container text-center">
+                        <div className="login-container text-center">
                         <form className="  card  text-center m-5 login-cont" action="/action_page.php" onSubmit={this.handleSubmit(value.state.users)}>
                         <div className="card-title">Welcome To Admin Panel</div>
                         <div className="imgcontainer m-2"><img src={img} className="avatar" alt="login"/></div>
