@@ -9,9 +9,9 @@ class Author extends Component {
         return (
             <Card className="card-item" key={id} >
                 <Card.Body>
-                    <Card.Img style={{ height: '300px', boxShadow: '0px 3px 5px 0px #adadab' }} variant="top" src={cover} />
+                    <Card.Img style={{ height: '250px', boxShadow: '0px 3px 5px 0px #adadab' }} variant="top" src={cover} />
                     <div>
-                        <Link className="link-btn" to={`/authors/${id}`} style={{ textDecoration: 'none' }}>{name}</Link>
+                        <Link className="author-details-bok-title" to={`/authors/${id}`} style={{ textDecoration: 'none' }}>{name}</Link>
                     </div>
                 </Card.Body>
             </Card>
