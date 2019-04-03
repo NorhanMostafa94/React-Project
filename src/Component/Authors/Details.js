@@ -32,23 +32,23 @@ class AuthorDetails extends Component {
             <>
                 <div className="container book-details-block">
                     <div className="row">
-                        <div className="col-3">
+                        <div className="col-lg-3 col-sm-12">
                             <img src={this.state.author.cover} className="book-img" alt={this.state.author.cover}></img>
 
                         </div>
-                        <div className="col-7 desc-block">
-                            <h6>{this.state.author.name}</h6>
+                        <div className="col-lg-7 col-sm-12 desc-block">
+                            <h6 className="bookTitle">{this.state.author.name}</h6>
                             <p>
-                                <span>Born:</span>
-                                <span className="author-bio">{this.state.author.Born}</span>
+                                <span className="title">Born:</span>
+                                <span className="author-bio title">{this.state.author.Born}</span>
                             </p>
                             <p>
-                                <span>Website:</span>
-                                <span className="author-web">{this.state.author.Website}</span>
+                                <span className="title">Website:</span>
+                                <span className="author-web title">{this.state.author.Website}</span>
                             </p>
-                            <span>Genre:</span>
-                            <span className="author-bio">{this.state.author.Genre}</span>
-                            <p>
+                            <span className="title">Genre:</span>
+                            <span className="author-bio title">{this.state.author.Genre}</span>
+                            <p className="bio">
                                 {this.state.author.bio}
                             </p>
                         </div>

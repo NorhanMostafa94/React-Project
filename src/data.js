@@ -246,7 +246,7 @@ export const books = [
         authorID: 2,
         category: "Fantasy",
         categoryID: 2,
-        cover: "https://images.gr-assets.com/books/1549556368l/40634915.jpg",
+        cover: "https://images.gr-assets.com/books/1338741283l/43545.jpg",
         avgrating: "4.54",
         rating: "5",
         description: "Influenced by the mysterious place gingerbread holds in classic children's stories--equal parts wholesome and uncanny, from the tantalizing witch's house in 'Hansel and Gretel' to the man-shaped confection who one day decides to run as fast as he can--beloved novelist Helen Oyeyemi invites readers into a delightful tale of a surprising family legacy, in which the inheritance is a recipe."
