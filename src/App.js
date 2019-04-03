@@ -25,9 +25,9 @@ class App extends Component {
     categories: categories,
     authors: authors,
     books: books,
-    users:users,
-    searchResult:[]
-  }
+    users: users,
+    searchResult: []
+  };
 
   getCategories = categories => {
     // console.log(1)
@@ -37,20 +37,19 @@ class App extends Component {
   };
   addUser = user => {
     //const  userData  = this.state.users;
-   // this.setState({ userData: userData.concat(user) })
-   this.setState({ users: users.concat(user) })
-   }
-    SearchRes=(books)=>{
-
-    this.setState({searchResult:books})
-  }
+    // this.setState({ userData: userData.concat(user) })
+    this.setState({ users: users.concat(user) });
+  };
+  SearchRes = books => {
+    this.setState({ searchResult: books });
+  };
   render() {
     const value = {
       state: this.state,
       getCategories: this.getCategories,
-      addUser:this.addUser,
-      SearchRes:this.SearchRes
-    }
+      addUser: this.addUser,
+      SearchRes: this.SearchRes
+    };
     return (
       //<BookDetails />
       //<MainPage />

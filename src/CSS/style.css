@@ -59,13 +59,9 @@ a {
     /* color: white; */
 }
 
-
-
-
 /* Category */
 .cat-btn {
-    background-color: #C09F80;
-    ;
+    background-color: #c09f80;
     border-radius: 50px;
     padding: 10px 50px 10px 50px;
     width: 250px !important;
@@ -81,7 +77,7 @@ a {
     background-size: cover 100% 100%;
     height: 605px;
     text-align: center;
-    color: #C09F80;
+    color: #c09f80;
 }
 
 .cat-header-text {
@@ -90,14 +86,12 @@ a {
 }
 
 .books-header {
-
     border-bottom: 0.1px solid lightgray;
     margin-bottom: 1rem;
     /* margin-left: 7.8rem; */
 }
 
 .books_title-header {
-
     font-weight: 700;
     color: #76323F;
     font-family: 'Indie Flower', cursive;
@@ -109,10 +103,10 @@ a {
 }
 
 .bookshelves-title {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 509;
     font-size: 17px;
-    color: #76323F;
+    color: #76323f;
     margin-top: 9px;
     margin-bottom: 10px;
 }
@@ -125,31 +119,29 @@ a {
     background: none;
     border: none;
     outline: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 500;
     /* font-size: 17px; */
-    color: #76323F;
-
+    color: #76323f;
 }
 
 .books-link:hover {
     outline: none;
     text-decoration: underline;
-
 }
 
 .table_header {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #76323F !important;
+    color: #76323f !important;
 }
 
 .myBook-bokTitle {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 400;
     font-size: 13px;
-    color: #76323F !important;
+    color: #76323f !important;
 }
 
 .table__title {
@@ -157,18 +149,18 @@ a {
 }
 
 .rating {
-    color: #F5A623;
+    color: #f5a623;
     font-size: 10px;
 }
 
 .drobDWON {
-    background: #C09F80 !important;
-    border-color: #C09F80 !important;
+    background: #c09f80 !important;
+    border-color: #c09f80 !important;
     font-size: 13px !important;
 }
 
 .btn-success:focus {
-    box-shadow: 0 0 0 0.2rem #C09F80 !important;
+    box-shadow: 0 0 0 0.2rem #c09f80 !important;
 }
 
 .image-listing {
@@ -178,7 +170,6 @@ a {
 .table thead th {
     border-bottom: none !important;
     border-top: none !important;
-
 }
 
 .paging {
@@ -186,8 +177,8 @@ a {
 }
 
 .page-item.active .page-link {
-    background: #C09F80 !important;
-    border-color: #C09F80 !important;
+    background: #c09f80 !important;
+    border-color: #c09f80 !important;
 }
 
 .book-details-block {
@@ -202,39 +193,36 @@ a {
 
 .book-category {
     margin-right: 31px;
-    color: #C09F80 !important;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700
+    color: #c09f80 !important;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
 }
 
 .book-details-dropdwn {
     width: 194px;
     margin-top: 11px;
     margin-left: 14px;
-
 }
 
 .bookTitle {
     font-weight: 800;
-    font-family: 'Raleway', sans-serif;
-    color: #76323F !important;
+    font-family: "Raleway", sans-serif;
+    color: #76323f !important;
 }
 
 .author-name {
-    color: #76323F !important;
-
+    color: #76323f !important;
 }
 
 .avgRate {
     margin-left: 10px;
-
 }
 
 .rate-header {
     margin-left: 72px;
     margin-top: 10px;
-    color: #76323F;
-    font-family: 'Raleway', sans-serif;
+    color: #76323f;
+    font-family: "Raleway", sans-serif;
 }
 
 .book-details-stars {
@@ -242,7 +230,6 @@ a {
     color: lightgray;
     font-size: 11px;
 }
-
 
 /*--------------------*/
 /*login*/
@@ -256,11 +243,9 @@ a {
     display: flex;
     justify-items: center !important;
     align-self: center !important;
-
 }
 
 .avatar {
-
     height: 2.5rem;
     background-color: #282c34;
     border: 1px solid green;
@@ -274,7 +259,6 @@ a {
     color: black;
     border-bottom-left-radius: 20%;
     border-top-right-radius: 20%;
-
 }
 
 .log-btn:hover {
@@ -283,14 +267,13 @@ a {
 
 /*signup*/
 .btn-sign {
-    background-color: #FC6377;
+    background-color: #fc6377;
 
     /* width:50%; */
 }
 
 .sign-cont {
     /* background-color: #404044; */
-
 }
 
 .search-cont {
@@ -301,7 +284,7 @@ a {
 .sch-result {
     /* z-index:500; */
     background: white;
-    border: 1px solid #80B6E1;
+    border: 1px solid #80b6e1;
     padding: 4px;
     /* float:bottom; */
     /* margin-top:5px; */
@@ -353,14 +336,14 @@ a {
 .author-details-bok-title {
     font-size: 20px;
     font-weight: 600;
-    font-family: 'Raleway', sans-serif;
-    color: #76323F !important;
+    font-family: "Raleway", sans-serif;
+    color: #76323f !important;
 }
 
 .author-details-author-title {
     font-size: 16px;
-    font-family: 'Raleway', sans-serif;
-    color: #76323F !important;
+    font-family: "Raleway", sans-serif;
+    color: #76323f !important;
 }
 
 .author-details-book-rating {
@@ -373,22 +356,29 @@ a {
 }
 
 .title {
-    font-family: 'Raleway', sans-serif;
-    color: #76323F !important;
+    font-family: "Raleway", sans-serif;
+    color: #76323f !important;
 }
 
 .bio {
     margin-top: 10px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
+}
+
+.tdFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .reviews-header {
     font-size: 14px;
     /* font-family: 'Indie Flower', cursive; */
-    font-family: 'Raleway', sans-serif;
-    color: #76323F;
+    font-family: "Raleway", sans-serif;
+    color: #76323f;
     font-weight: 700;
-    MARGIN-TOP: 38px;
+    margin-top: 38px;
     border-bottom: 1px solid lightgrey;
     margin-bottom: 20px;
 }
@@ -407,4 +397,63 @@ a {
 }
 .authors-list{
     margin-top: 16px;
+}
+/* author card */
+.card-team-section{
+  margin-top: 50px;
+}
+.card-team {
+    width: 15rem;
+    height: 25rem;
+    background-color: #ffffff;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    transition: all 0.3s ease-out 0s;
+    -webkit-box-shadow: 0 0px 20px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.14);
+}
+
+.card-team:hover {
+    -ms-transform: translate(0, -10px);
+    /* IE 9 */
+    -webkit-transform: translate(0, -10px);
+    /* Safari */
+    transform: translate(0, -10px);
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.14);
+}
+
+
+.card-team:hover img {
+    -ms-transform: scale(1.25);
+    /* IE 9 */
+    -webkit-transform: scale(1.25);
+    /* Safari 3-8 */
+    transform: scale(1.25);
+}
+
+.card-team__body {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-team__body img {
+    /* width: 210px; */
+    width: 100%;
+    height: 300px;
+    transition: all 0.3s ease-out 0s;
+    text-align: center;
+}
+
+.card-team__footer {
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    line-height: 23px;
+}
+
+.card-team__footer .footer__title {
+    color: #191919;
 }

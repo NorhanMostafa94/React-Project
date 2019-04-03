@@ -40,8 +40,6 @@ class AddEditCategoryForm extends Component {
   }
 
   handleShow() {
-    //here should get state from the props and then add it in state, then make sure that the right entery
-    //in the input is right
     this.setState({
       newCategory: this.props.newCategory,
       category: this.props.category,
@@ -57,8 +55,6 @@ class AddEditCategoryForm extends Component {
     if (isNaN(id)) {
       this.state.categories.map(cat => {
         if (cat.name === this.state.category.name) {
-          console.log(cat.name);
-          console.log(this.state.category.name);
           this.state.validated = "false";
         } else {
           this.setState(
@@ -77,12 +73,6 @@ class AddEditCategoryForm extends Component {
       });
     } else {
       const exist = this.state.categories.find(category => {
-        console.log(
-          category.name,
-          category.id,
-          this.state.category.name,
-          this.state.category.id
-        );
         if (this.state.category.id === category.id) {
           category.name = this.state.category.name;
           return true;
@@ -114,13 +104,10 @@ class AddEditCategoryForm extends Component {
     e.persist();
     const name = e.target.name;
     const value = e.target.value;
-    this.setState(
-      {
-        newCategory: false,
-        category: { [name]: value }
-      },
-      () => console.log(this.state.category)
-    );
+    this.setState({
+      newCategory: false,
+      category: { [name]: value }
+    });
   }
 
   render() {

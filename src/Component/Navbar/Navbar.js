@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar, Nav } from 'react-bootstrap';
-import SearchBar from '../Search/Search';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Navbar, Nav } from "react-bootstrap";
+import SearchBar from "../Search/Search";
 
 const NavBar = () => {
     return (
