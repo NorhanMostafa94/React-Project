@@ -20,7 +20,7 @@ class BookCard extends Component {
             <Context.Consumer>
                 {
                     value => (
-                        <Card className="col-md-2 m-4" key={this.state.id}>
+                        <Card className="col-md-3 m-4" key={this.state.id}>
                         <Card.Img  src={this.state.src} />
                         <Card.Body>
                         <Link to ={`/books/${this.state.id}`}> <Card.Title>{this.state.title}</Card.Title></Link>

@@ -92,102 +92,103 @@ handleSubmit =(addUser)=> (e) => {
             <Context.Consumer>
                 {
                     value => (
-                       <>
-                        
-                        {console.log(value.state.popBooks)}
+                        <>
+                            <div className="row mt-5">
+                                <div className="col-md-7 popular text-center mx-3 ">
+                                    {console.log(value.state.popBooks)}
+                                    <div className="col-md-12 ml-1 popular" >
 
-                        <div className="row">
-                        <div className="col-md-6 ml-1">
-                            { value.state.popBooks.map(
 
-                                e => 
-                               
-                                <BookCard key={e.id} title={e.title} id={e.id} src={e.cover}  />
-                               
-                                            )}
-                            </div> 
-                           
+                                        <div className="pop-title ">Popular Books</div>
+                                        {value.state.popBooks.map(
 
-                        
-                        <form  onSubmit={this.handleSubmit(value.addUser)} className="col-md-4 m-3 text-center">
-                        <div className="form-group ">
-                        <h4><div className="card-title mb-4">Sign Up</div></h4>
-                            <div>
-                                
-                                <input
-                                className="form-control my-2"
-                                    type="text"
-                                    name="firstname"
-                                    placeholder="First Name"
-                                    value={this.state.firstname}
-                                    onChange={this.handleChange}
-                                />
-                                
+                                            e =>
+                                                <BookCard key={e.id} title={e.title} id={e.id} src={e.cover} />
+
+                                        )}
+                                    </div>
+                                </div>
+                                <form onSubmit={this.handleSubmit(value.addUser)} className="col-md-4 mr-3  text-center  ">
+
+                                    <div className="form-group sign-cont p-4 ">
+                                        <h4><div className="card-title mb-4">Sign Up</div></h4>
+                                        <div>
+
+                                            <input
+                                                className="form-control my-2"
+                                                type="text"
+                                                name="firstname"
+                                                placeholder="First Name"
+                                                value={this.state.firstname}
+                                                onChange={this.handleChange}
+                                            />
+
+                                        </div>
+                                        <div style={{ fontSize: 12, color: "red" }}>
+                                            {this.state.fnameErr}
+                                        </div>
+                                        <div>
+                                            <input
+                                                className="form-control my-2"
+                                                type="text"
+                                                name="lastname"
+                                                placeholder="Last Name"
+                                                value={this.state.lastname}
+                                                onChange={this.handleChange}
+                                            />
+
+                                        </div>
+                                        <div style={{ fontSize: 12, color: "red" }}>
+                                            {this.state.lnameErr}
+                                        </div>
+                                        <div>
+                                            <input
+                                                className="form-control my-2"
+                                                type="text"
+                                                name="email"
+                                                placeholder="E-mail"
+                                                value={this.state.email}
+                                                onChange={this.handleChange}
+                                            />
+
+                                        </div>
+                                        <div style={{ fontSize: 12, color: "red" }}>
+                                            {this.state.emailErr}
+                                        </div>
+                                        <div>
+                                            <input
+                                                className="form-control my-2"
+                                                type="password"
+                                                name="password"
+                                                placeholder="password"
+                                                value={this.state.password}
+                                                onChange={this.handleChange}
+                                            />
+
+                                        </div>
+                                        <div style={{ fontSize: 12, color: "red" }}>
+                                            {this.state.PwErr}
+                                        </div>
+                                        <div>
+                                            <input
+                                                className="form-control my-2"
+                                                type="password"
+                                                name="ConfirmPassword"
+                                                placeholder="confirm password"
+                                                value={this.state.ConfirmPassword}
+                                                onChange={this.handleChange}
+                                            />
+
+                                        </div>
+                                        <div style={{ fontSize: 12, color: "red" }}>
+                                            {this.state.CPwErr}
+                                        </div>
+                                        <button type="submit" className="btn btn-secondary">Sign up</button>
+                                    </div>
+                                </form>
                             </div>
-                            <div style={{ fontSize: 12, color: "red" }}>
-                                {this.state.fnameErr}
-                            </div>
-                            <div>
-                           <input
-                                    className="form-control my-2"
-                                    type="text"
-                                    name="lastname"
-                                    placeholder="Last Name"
-                                    value={this.state.lastname}
-                                    onChange={this.handleChange}
-                                />
-                             
-                            </div>
-                            <div style={{ fontSize: 12, color: "red" }}>
-                                {this.state.lnameErr}
-                            </div>
-                            <div>
-                           <input
-                                    className="form-control my-2"
-                                    type="text"
-                                    name="email"
-                                    placeholder="E-mail"
-                                    value={this.state.email}
-                                    onChange={this.handleChange}
-                                />
-                                
-                            </div>
-                            <div style={{ fontSize: 12, color: "red" }}>
-                                {this.state.emailErr}
-                            </div>
-                            <div>
-                             <input
-                                    className="form-control my-2"
-                                    type="password"
-                                    name="password"
-                                    placeholder="password"
-                                    value={this.state.password}
-                                    onChange={this.handleChange}
-                                />
-                                
-                            </div>
-                            <div style={{ fontSize: 12, color: "red" }}>
-                                {this.state.PwErr}
-                            </div>
-                            <div>
-                            <input
-                                    className="form-control my-2"
-                                    type="password"
-                                    name="ConfirmPassword"
-                                    placeholder="confirm password"
-                                    value={this.state.ConfirmPassword}
-                                    onChange={this.handleChange}
-                                />
-                                
-                            </div>
-                            <div style={{ fontSize: 12, color: "red" }}>
-                                {this.state.CPwErr}
-                            </div>
-                            <button type="submit" className="btn btn-outline-secondary">Sign up</button>
-                            </div>
-                        </form>
-                        </div>
-                        
+
+
                         </>
                     )
                 }
@@ -198,7 +199,3 @@ handleSubmit =(addUser)=> (e) => {
 
 export default SignForm;
 
-{/* <div className="row">
-{value.state.searchResult.map(e => <BookCard key={e.id} title={e.title} id={e.id} src={e.cover} className="col-sm-4"
-  
-/>)} */}

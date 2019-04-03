@@ -14,6 +14,8 @@ const NavBar = () => {
                     <Nav.Link></Nav.Link><Link to="/authors" style={{ textDecoration: 'none' }} className="Nav-title">Authors</Link>
                     <Nav.Link></Nav.Link><Link to="/books" style={{ textDecoration: 'none' }}  className="Nav-title"  >Books</Link>
                     <Nav.Link></Nav.Link><Link to="/mybooks" style={{ textDecoration: 'none' }}  className="Nav-title" >My Books</Link>
+                    <Nav.Link></Nav.Link><Link to="/login" style={{ textDecoration: 'none' }}  className=" nav-login" >Login</Link>
+                    <Nav.Link></Nav.Link><Link to="/signup" style={{ textDecoration: 'none' }}  className=" nav-login" >Sign Up</Link>
                 </Nav>
             </Navbar.Collapse>
             <SearchBar/>
