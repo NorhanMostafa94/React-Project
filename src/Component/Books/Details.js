@@ -3,7 +3,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Rating from './Rating';
 import Reviews from './Reviews'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { books } from '../../data';
 // const BDETAILS_URL = ' http://localhost:3004/AllBooks';
 class BookDetails extends Component {
@@ -21,12 +21,12 @@ class BookDetails extends Component {
         const foundedBook = this.state.books.filter((book) => {
             return book.id === Number(ID)
         })
-       
+
         this.setState(
             { book: foundedBook[0] }
         )
     }
- 
+
 
     render() {
         return (
@@ -59,7 +59,7 @@ class BookDetails extends Component {
                         </div>
                         <div className="col-lg-7 col-sm-12 desc-block">
                             <h5 className="bookTitle">{this.state.book.title}</h5>
-                           <h7 style={{display: 'block'}}><Link to={`/authors/${this.state.book.authorID}`} className="author-name" > by {this.state.book.author}</Link> </h7> 
+                            <h7 style={{ display: 'block' }}><Link to={`/authors/${this.state.book.authorID}`} className="author-name" > by {this.state.book.author}</Link> </h7>
                             <Link to={`/categories/${this.state.book.categoryID}`} className="book-category"  >{this.state.book.category}</Link>
 
                             {/* <h6>{this.state.book.author}</h6>
@@ -68,13 +68,14 @@ class BookDetails extends Component {
                                 {<Rating rating={this.state.book.rating} />}
                                 <span className="avgRate">{this.state.book.avgrating}</span>
                             </span>
-                            <p>
+                            <p className="bio">
                                 {this.state.book.description}
                             </p>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-12">
+                            <h4 className="reviews-header">COMMUNITY REVIEWS</h4>
                             {<Reviews reviews={this.state.book.reviews} />}
 
                         </div>
