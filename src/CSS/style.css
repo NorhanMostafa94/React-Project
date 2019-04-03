@@ -1,17 +1,16 @@
-body {
+body{
     /* background-color: #f8faff !important; */
 }
 
-nav {
+nav{
     background-color: white;
     padding: 30px !important;
 }
-
-a {
+a{
     color: #404044 !important;
 }
 
-.card-container {
+.card-container{
     position: relative;
     display: flex;
     flex-direction: row;
@@ -29,18 +28,18 @@ a {
     /* transition: 0.3s all 0s ease-in-out; */
     border: 0 !important;
     /* background-color: transparent !important; */
-
+    
 }
 
 
 
 
-.card-item:hover {
+.card-item:hover{
     /* margin-top: -5px; */
     /* transition: 0.3s all 0s ease-in-out; */
 }
 
-.link-btn {
+.link-btn{
     /* background-color: #FC6377; */
     /* border-radius: 50px; */
     /* padding: 8px 50px 8px 50px; */
@@ -53,13 +52,23 @@ a {
 
 
 /* Category */
-.cat-header {
-    background-image: url(http://subsolardesigns.com/odrin/demo1/wp-content/uploads/sites/8/2017/08/shop_header-1.jpg);
+.cat-btn{
+    background-color: #C09F80;
+    border-radius: 50px;
+    padding: 10px 50px 10px 50px;
+    width: 250px !important;
+    font-size: 18px;
+    color: #76323F !important;
+    margin: 22px;
+    text-align: center;
+}
+.cat-header{
+    background-image: url(https://i.pinimg.com/564x/c1/a9/3d/c1a93d35aa2691440f55de964684149a.jpg);
     width: 100%;
     background-size: cover 100% 100%;
     height: 605px;
     text-align: center;
-    color: white;
+    color: #C09F80;
 }
 
 .cat-header-text{
@@ -76,24 +85,12 @@ a {
 }
 
 .books_title-header {
-
-    font-family: 'Indie Flower', cursive;
-    font-weight: 700;
-    color: #76323F;
+    font-family: "Merriweather";
 }
 
 .bookshelves {
-    background: beige;
+    /* margin-top: 1rem; */
     /* margin-left: 8.3rem; */
-}
-
-.bookshelves-title {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 509;
-    font-size: 17px;
-    color: #76323F;
-    margin-top: 9px;
-    margin-bottom: 10px;
 }
 
 .listing {
@@ -104,10 +101,6 @@ a {
     background: none;
     border: none;
     outline: none;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    /* font-size: 17px; */
-    color: #76323F;
 
 }
 
@@ -118,17 +111,8 @@ a {
 }
 
 .table_header {
-    font-family: 'Raleway', sans-serif;
+    font-family: cursive;
     font-size: 20px;
-    font-weight: 700;
-    color: #76323F !important;
-}
-
-.myBook-bokTitle {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    color: #76323F !important;
 }
 
 .table__title {
@@ -137,13 +121,6 @@ a {
 
 .rating {
     color: #F5A623;
-    font-size: 10px;
-}
-
-.drobDWON {
-    background: #C09F80 !important;
-    border-color: #C09F80 !important;
-    font-size: 13px !important;
 }
 
 .image-listing {
@@ -153,16 +130,10 @@ a {
 .table thead th {
     border-bottom: none !important;
     border-top: none !important;
-
 }
 
 .paging {
     margin-left: 17rem;
-}
-
-.page-item.active .page-link {
-    background: #C09F80 !important;
-    border-color: #C09F80 !important;
 }
 
 .book-details-block {
@@ -175,29 +146,19 @@ a {
     width: 211px;
 }
 
-.book-category {
-    margin-right: 31px;
-    color: #C09F80 !important;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700
+.desc-block {
+    margin-left: -46px;
 }
 
 .book-details-dropdwn {
     width: 194px;
     margin-top: 11px;
-    margin-left: 14px;
-
+    margin-left: 9px;
 }
 
 .bookTitle {
-    font-weight: 800;
-    font-family: 'Raleway', sans-serif;
-    color: #76323F !important;
-}
-
-.author-name {
-    color: #76323F !important;
-
+    font-weight: 700;
+    font-family: "Merriweather";
 }
 
 .avgRate {
@@ -206,59 +167,51 @@ a {
 }
 
 .rate-header {
-    margin-left: 72px;
-    margin-top: 10px;
-    color: #76323F;
-    font-family: 'Raleway', sans-serif;
+    margin-left: 52px;
 }
 
 .book-details-stars {
-    margin-left: 72px;
+    margin-left: 3.5rem;
     color: lightgray;
 }
 
 
 /*--------------------*/
 /*login*/
-.login-cont {
+.login-cont{
     width: 50% !important;
     justify-self: center !important;
     /* margin-left: 5rem !important ; */
 }
-
-.login-container {
+.login-container{
     display: flex;
     justify-items: center !important;
     align-self: center !important;
-
+    
 }
-
-.avatar {
-
+.avatar{
+    
     height: 2.5rem;
     background-color: #282c34;
     border: 1px solid green;
     border-radius: 50%;
-}
-
-.log-btn {
-    width: 5rem;
-    justify-self: center !important;
-    background-color: #61dafb;
-    color: black;
-    border-bottom-left-radius: 20%;
-    border-top-right-radius: 20%;
-
-}
-
-.log-btn:hover {
-    background-color: pink;
-}
-
-/*signup*/
-.btn-sign {
-    background-color: #FC6377;
-
+  }
+  .log-btn{
+  width: 5rem;
+  justify-self: center !important;
+  background-color: #61dafb;
+  color: black;
+  border-bottom-left-radius: 20%;
+  border-top-right-radius: 20%;
+  
+  }
+  .log-btn:hover{
+  background-color: pink;
+  }
+  /*signup*/
+  .btn-sign{
+      background-color: #FC6377;
+     
     /* width:50%; */
   }
   .sign-cont{
@@ -320,34 +273,18 @@ a {
     top: -4.1rem;
     left: 18rem;
 }
-
-.author-details-bok-title {
+.author-details-bok-title{
+    text-decoration: none;
     font-size: 20px;
-    font-weight: 600;
-    font-family: 'Raleway', sans-serif;
-    color: #76323F !important;
+    font-weight: 700;
 }
-
-.author-details-author-title {
+.author-details-author-title{
     font-size: 13px;
-    font-family: 'Raleway', sans-serif;
-    color: #76323F !important;
 }
-
-.author-details-book-rating {
+.author-details-book-rating{
     margin-left: 3px;
 }
-
-.author-details-book-AVGrating {
+.author-details-book-AVGrating{
     position: absolute;
     margin-left: 12px;
-}
-
-.title {
-    font-family: 'Raleway', sans-serif;
-    color: #76323F !important;
-}
-.bio{
-    margin-top: 10px;
-    font-family: 'Raleway', sans-serif;
 }
