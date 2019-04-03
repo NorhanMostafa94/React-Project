@@ -130,7 +130,7 @@ export const authors = [
                 rating: "3",
             }
         ]
-       
+
     },
     {
         id: 2,
@@ -365,7 +365,22 @@ export const AllBooks = [
         categoryID: 1,
         avgrating: "4.6",
         rating: "5 ",
-        status: "to-read"
+        status: "to-read",
+        description: "Big Little Lies follows three women, each at a crossroads:Madeline is a force to be reckoned with. She’s funny and biting, passionate, she remembers everything and forgives no one. Her ex-husband and his yogi new wife have moved into her beloved beachside community, and their daughter is in the same kindergarten class as Madeline’s youngest (how is this possible?). And to top it all off, Madeline’s teenage daughter seems to be choosing Madeline’s ex-husband over her. (How. Is. This. Possible?).",
+        reviews: [
+            {
+                name: "RandomAnthony",
+                cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
+                rate: "4",
+                review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two.",
+            },
+            {
+                name: "Emily May",
+                cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
+                rate: "4",
+                review: "There is something deeply unhealthy about this book. It's in the characters, in the story, in the relationships, in the sex, and just in the general mood of the novel. Reading this made me feel a little unwell, both physically and mentally, but I am glad I did. If you know me, you'll know I love complex characters with issues that feel raw and real, rather than melodramatic. The people in this novel are majorly fucked up, no one is without a dark past and everyone, it seems, has a horror story.",
+            }
+        ]
     },
     {
         id: 2,
@@ -377,7 +392,22 @@ export const AllBooks = [
         categoryID: 1,
         avgrating: "3.76",
         rating: "3 ",
-        status: "to-read"
+        status: "to-read",
+        description: "Big Little Lies follows three women, each at a crossroads:Madeline is a force to be reckoned with. She’s funny and biting, passionate, she remembers everything and forgives no one. Her ex-husband and his yogi new wife have moved into her beloved beachside community, and their daughter is in the same kindergarten class as Madeline’s youngest (how is this possible?). And to top it all off, Madeline’s teenage daughter seems to be choosing Madeline’s ex-husband over her. (How. Is. This. Possible?).",
+        reviews: [
+            {
+                name: "RandomAnthony",
+                cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
+                rate: "4",
+                review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two.",
+            },
+            {
+                name: "Emily May",
+                cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
+                rate: "4",
+                review: "There is something deeply unhealthy about this book. It's in the characters, in the story, in the relationships, in the sex, and just in the general mood of the novel. Reading this made me feel a little unwell, both physically and mentally, but I am glad I did. If you know me, you'll know I love complex characters with issues that feel raw and real, rather than melodramatic. The people in this novel are majorly fucked up, no one is without a dark past and everyone, it seems, has a horror story.",
+            }
+        ]
     },
     {
         id: 3,
@@ -389,7 +419,22 @@ export const AllBooks = [
         categoryID: 1,
         avgrating: "4.11",
         rating: "3",
-        status: "read"
+        status: "read",
+        description: "Big Little Lies follows three women, each at a crossroads:Madeline is a force to be reckoned with. She’s funny and biting, passionate, she remembers everything and forgives no one. Her ex-husband and his yogi new wife have moved into her beloved beachside community, and their daughter is in the same kindergarten class as Madeline’s youngest (how is this possible?). And to top it all off, Madeline’s teenage daughter seems to be choosing Madeline’s ex-husband over her. (How. Is. This. Possible?).",
+        reviews: [
+            {
+                name: "RandomAnthony",
+                cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
+                rate: "4",
+                review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two.",
+            },
+            {
+                name: "Emily May",
+                cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
+                rate: "4",
+                review: "There is something deeply unhealthy about this book. It's in the characters, in the story, in the relationships, in the sex, and just in the general mood of the novel. Reading this made me feel a little unwell, both physically and mentally, but I am glad I did. If you know me, you'll know I love complex characters with issues that feel raw and real, rather than melodramatic. The people in this novel are majorly fucked up, no one is without a dark past and everyone, it seems, has a horror story.",
+            }
+        ]
     },
     {
         id: 4,
@@ -413,10 +458,25 @@ export const AllBooks = [
         categoryID: 1,
         avgrating: "3.54",
         rating: "3",
-        "status": "currently-reading"
+        "status": "currently-reading",
+        description: "Big Little Lies follows three women, each at a crossroads:Madeline is a force to be reckoned with. She’s funny and biting, passionate, she remembers everything and forgives no one. Her ex-husband and his yogi new wife have moved into her beloved beachside community, and their daughter is in the same kindergarten class as Madeline’s youngest (how is this possible?). And to top it all off, Madeline’s teenage daughter seems to be choosing Madeline’s ex-husband over her. (How. Is. This. Possible?).",
+        reviews: [
+            {
+                name: "RandomAnthony",
+                cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
+                rate: "4",
+                review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two.",
+            },
+            {
+                name: "Emily May",
+                cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
+                rate: "4",
+                review: "There is something deeply unhealthy about this book. It's in the characters, in the story, in the relationships, in the sex, and just in the general mood of the novel. Reading this made me feel a little unwell, both physically and mentally, but I am glad I did. If you know me, you'll know I love complex characters with issues that feel raw and real, rather than melodramatic. The people in this novel are majorly fucked up, no one is without a dark past and everyone, it seems, has a horror story.",
+            }
+        ]
     },
     {
-        id: 6,
+        id: 11,
         cover: "https://images.gr-assets.com/books/1328559506s/13335037.jpg",
         title: "Divergent",
         author: "Roth, Veronica ",
@@ -425,7 +485,22 @@ export const AllBooks = [
         categoryID: 1,
         avgrating: "5",
         rating: "5",
-        "status": "currently-reading"
+        "status": "currently-reading",
+        description: "Big Little Lies follows three women, each at a crossroads:Madeline is a force to be reckoned with. She’s funny and biting, passionate, she remembers everything and forgives no one. Her ex-husband and his yogi new wife have moved into her beloved beachside community, and their daughter is in the same kindergarten class as Madeline’s youngest (how is this possible?). And to top it all off, Madeline’s teenage daughter seems to be choosing Madeline’s ex-husband over her. (How. Is. This. Possible?).",
+        reviews: [
+            {
+                name: "RandomAnthony",
+                cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
+                rate: "4",
+                review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two.",
+            },
+            {
+                name: "Emily May",
+                cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
+                rate: "4",
+                review: "There is something deeply unhealthy about this book. It's in the characters, in the story, in the relationships, in the sex, and just in the general mood of the novel. Reading this made me feel a little unwell, both physically and mentally, but I am glad I did. If you know me, you'll know I love complex characters with issues that feel raw and real, rather than melodramatic. The people in this novel are majorly fucked up, no one is without a dark past and everyone, it seems, has a horror story.",
+            }
+        ]
     },
 
     {
@@ -463,10 +538,24 @@ export const AllBooks = [
         avgrating: "4.54",
         rating: "4 ",
         status: "to-read",
-        description: "Big Little Lies follows three women, each at a crossroads:Madeline is a force to be reckoned with. She’s funny and biting, passionate, she remembers everything and forgives no one. Her ex-husband and his yogi new wife have moved into her beloved beachside community, and their daughter is in the same kindergarten class as Madeline’s youngest (how is this possible?). And to top it all off, Madeline’s teenage daughter seems to be choosing Madeline’s ex-husband over her. (How. Is. This. Possible?)."
+        description: "Big Little Lies follows three women, each at a crossroads:Madeline is a force to be reckoned with. She’s funny and biting, passionate, she remembers everything and forgives no one. Her ex-husband and his yogi new wife have moved into her beloved beachside community, and their daughter is in the same kindergarten class as Madeline’s youngest (how is this possible?). And to top it all off, Madeline’s teenage daughter seems to be choosing Madeline’s ex-husband over her. (How. Is. This. Possible?).",
+        reviews: [
+            {
+                name: "RandomAnthony",
+                cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
+                rate: "4",
+                review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two.",
+            },
+            {
+                name: "Emily May",
+                cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
+                rate: "4",
+                review: "There is something deeply unhealthy about this book. It's in the characters, in the story, in the relationships, in the sex, and just in the general mood of the novel. Reading this made me feel a little unwell, both physically and mentally, but I am glad I did. If you know me, you'll know I love complex characters with issues that feel raw and real, rather than melodramatic. The people in this novel are majorly fucked up, no one is without a dark past and everyone, it seems, has a horror story.",
+            }
+        ]
     },
     {
-        id: 11,
+        id: 6,
         cover: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1475695315i/18045891._SY180_.jpg",
         title: "Sharp Objects",
         author: "by Gillian Flynn",
