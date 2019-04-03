@@ -12,8 +12,8 @@ class Books extends Component {
                 value => (
                    // console.log(value.state.searchResult)
                   (value.state.searchResult) ?
-            <div>
-            {value.state.searchResult.map(e => <BookCard key={e.id} title={e.title} id={e.id} src={e.cover}
+            <div className="row">
+            {value.state.searchResult.map(e => <BookCard key={e.id} title={e.title} id={e.id} src={e.cover} className="col-sm-4"
               
            />)}
           </div>

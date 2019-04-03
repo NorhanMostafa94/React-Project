@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import uuidv4 from 'uuid/v4';
+import {validateEmail,isEmpty,length} from '../../Component/Forms/Validator';
+import BookCard from '../Search/BookCard';
 import {Context} from '../../App';
 
 const initialState={
@@ -13,7 +15,10 @@ const initialState={
     lnameErr: '',
     PwErr: '',
     CPwErr: '',
-    emailErr:''
+    emailErr:'',
+     validateEmail:validateEmail,
+     isEmpty:isEmpty,
+     length:length
 }
 
 
@@ -26,10 +31,10 @@ class SignForm extends Component {
     const value = e.target.value;
     this.setState({ [name]: value })
 }
-validateEmail=(emailVal) =>{ 
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(emailVal);
-    }
+// validateEmail=(emailVal) =>{ 
+//     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//     return re.test(emailVal);
+//     }
 
 validate = () => {
     let fnameErr = "";
@@ -37,27 +42,24 @@ validate = () => {
     let PwErr = "";
     let CPwErr = "";
     let emailErr="";
-    //const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
-    //
-    if (!this.state.firstname||this.state.firstname.length<3) {
-      fnameErr = "name cannot be blank or less  than 3 letters";
-    }
-    // 
-       if (!this.state.lastname|| this.state.lastname.length<3){
-        lnameErr = "name cannot be blank or less  than 3 letters";
-      }
 
-      if (!this.state.password|| this.state.password.length<3){
-        PwErr = "password cannot be blank or less  than 3 letters";
-      }
-      if (this.state.ConfirmPassword!== this.state.password){
-        CPwErr = "please confirm with the same password";
-      }
-       const m=this.validateEmail(this.state.email)
-      if(!m){
-          emailErr="please enter a valid email";
-      }
+    if(isEmpty(this.state.firstname)||!length(this.state.firstname)){
+        fnameErr = "name cannot be blank or contain spaces or less  than 3 letters ";
+    }
+    if(isEmpty(this.state.lastname)||!length(this.state.lastname)){
+        lnameErr = "name cannot be blank or contain spaces or less  than 3 letters";
+    }
+    if(isEmpty(this.state.password)||!length(this.state.password)){
+        PwErr = "password cannot be blank or contain spaces or less  than 3 letters";
+    }
+    if (this.state.ConfirmPassword!== this.state.password){
+            CPwErr = "please confirm with the same password";
+          }
+    if (!validateEmail(this.state.email)){
+        emailErr="please enter a valid email";
+    }
+  
       
 
     if (fnameErr||lnameErr|| PwErr ||CPwErr||emailErr) {
@@ -90,13 +92,30 @@ handleSubmit =(addUser)=> (e) => {
             <Context.Consumer>
                 {
                     value => (
-                        <div className="container text-center">
-                        <form className=" row card text-center sign-cont " onSubmit={this.handleSubmit(value.addUser)}>
+                       <>
+                        
+                        {console.log(value.state.popBooks)}
+
+                        <div className="row">
+                        <div className="col-md-6 ml-1">
+                            { value.state.popBooks.map(
+
+                                e => 
+                               
+                                <BookCard key={e.id} title={e.title} id={e.id} src={e.cover}  />
+                               
+                                            )}
+                            </div> 
+                           
+
+                        
+                        <form  onSubmit={this.handleSubmit(value.addUser)} className="col-md-4 m-3 text-center">
+                        <div className="form-group ">
                         <h4><div className="card-title mb-4">Sign Up</div></h4>
                             <div>
                                 
                                 <input
-                                className="grey-text my-2 mx-4 "
+                                className="form-control my-2"
                                     type="text"
                                     name="firstname"
                                     placeholder="First Name"
@@ -110,7 +129,7 @@ handleSubmit =(addUser)=> (e) => {
                             </div>
                             <div>
                            <input
-                                    className="my-2 mx-4"
+                                    className="form-control my-2"
                                     type="text"
                                     name="lastname"
                                     placeholder="Last Name"
@@ -124,7 +143,7 @@ handleSubmit =(addUser)=> (e) => {
                             </div>
                             <div>
                            <input
-                                    className="my-2 mx-4"
+                                    className="form-control my-2"
                                     type="text"
                                     name="email"
                                     placeholder="E-mail"
@@ -138,7 +157,7 @@ handleSubmit =(addUser)=> (e) => {
                             </div>
                             <div>
                              <input
-                                    className="my-2 mx-4"
+                                    className="form-control my-2"
                                     type="password"
                                     name="password"
                                     placeholder="password"
@@ -152,7 +171,7 @@ handleSubmit =(addUser)=> (e) => {
                             </div>
                             <div>
                             <input
-                                    className="my-2 mx-4"
+                                    className="form-control my-2"
                                     type="password"
                                     name="ConfirmPassword"
                                     placeholder="confirm password"
@@ -164,9 +183,12 @@ handleSubmit =(addUser)=> (e) => {
                             <div style={{ fontSize: 12, color: "red" }}>
                                 {this.state.CPwErr}
                             </div>
-                            <button type="submit" className="btn-sign">Sign up</button>
+                            <button type="submit" className="btn btn-outline-secondary">Sign up</button>
+                            </div>
                         </form>
                         </div>
+                        
+                        </>
                     )
                 }
             </Context.Consumer>
@@ -175,3 +197,8 @@ handleSubmit =(addUser)=> (e) => {
 }
 
 export default SignForm;
+
+{/* <div className="row">
+{value.state.searchResult.map(e => <BookCard key={e.id} title={e.title} id={e.id} src={e.cover} className="col-sm-4"
+  
+/>)} */}

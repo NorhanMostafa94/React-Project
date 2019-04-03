@@ -26,7 +26,10 @@ class App extends Component {
     authors: authors,
     books: books,
     users:users,
-    searchResult:[]
+    searchResult:[],
+    popBooks:[books.filter(e=>e.rating==='5')]
+
+    
   }
 
   getCategories = categories => {
@@ -36,8 +39,6 @@ class App extends Component {
     console.log(this.state.categories);
   };
   addUser = user => {
-    //const  userData  = this.state.users;
-   // this.setState({ userData: userData.concat(user) })
    this.setState({ users: users.concat(user) })
    }
     SearchRes=(books)=>{

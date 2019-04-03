@@ -39,36 +39,76 @@ class Login extends Component {
         )
     }
     search(users) {
-        const adminUsers = users.filter(user => user.admin === true);
-        console.log(adminUsers)
+        let userErr = "";
+        let pwErr = "";
         
-        adminUsers.map(item => {
-           
-            if (item.firstname !== this.state.username) {
-                this.setState({ userErr: "check the name", pwErr:"" ,result:0},()=>{
-                    console.log(this.state.result)  
-                 
+        const usersFound=users.filter(user=>user.firstname === this.state.username && user.password === this.state.password)
+        if(usersFound.length!=0){
+            this.setState({userErr: "", pwErr: "", result:usersFound.id},()=>{
+            console.log(this.state.result)
+            usersFound.map(user => user.firstname === this.state.username && user.password === this.state.password&&user.admin === true ?
+                this.props.history.push(`/admin/${usersFound.id}`)
+                : this.props.history.push(`/user/${usersFound.id}`)
+                )
             })
         }
-            if (item.password !== this.state.password) {
-                this.setState({ userErr: " ", pwErr: "check the password" ,result:0 } ,()=>{
-                   console.log(this.state.result)  
+        else{
+            users.filter(user=>(user.firstname !== this.state.username)?
+            userErr= "check the name" 
+            :( user.firstname === this.state.username && user.password !== this.state.password)?
+            pwErr= "check the password"
+            :userErr= " " ,pwErr= " "
+            )
+        //     if(usersFound.firstname !== this.state.username){
+        //         userErr= "check the name"
+        //        }
+        //     else if( usersFound.firstname == this.state.username && usersFound.password !== this.state.password){
+        //     pwErr= "check the password"
+        //    }
+         
+            //     userErr= "check the name"
+            // :((usersFound.password == this.state.password) ?
+            // pwErr= ""
+            // : pwErr= "check the password" )
+            if (userErr||pwErr) {
+                this.setState({userErr:userErr,pwErr:pwErr,result:0 })
+                return false
+            }
+        }
+                       
+        
+        
+     
+        // const adminUsers = users.filter(user => user.admin === true);
+        // console.log(adminUsers)
+        
+        // adminUsers.map(item => {
+           
+        //     if (item.firstname !== this.state.username) {
+        //         this.setState({ userErr: "check the name", pwErr:"" ,result:0},()=>{
+        //             console.log(this.state.result)  
+                 
+        //     })
+        // }
+        //     if (item.password !== this.state.password) {
+        //         this.setState({ userErr: " ", pwErr: "check the password" ,result:0 } ,()=>{
+        //            console.log(this.state.result)  
                   
-                })
+        //         })
               
-            }
-            if (item.firstname === this.state.username && item.password === this.state.password) {
-                this.setState({userErr: "", pwErr: "", result:item.id},()=>{
-                      console.log(this.state.result)
+        //     }
+        //     if (item.firstname === this.state.username && item.password === this.state.password) {
+        //         this.setState({userErr: "", pwErr: "", result:item.id},()=>{
+        //               console.log(this.state.result)
                   
-               this.props.history.push("/authors")
-                    } )
+        //        this.props.history.push("/authors")
+        //             } )
                 
-            }
+        //     }
 
-           // this.setState(intState)
+        //    // this.setState(intState)
 
-        });
+        // });
       // 
     }
   
@@ -76,7 +116,7 @@ class Login extends Component {
    
     
     handleSubmit=(value)=>(e)=>{
-        console.log("hiiiiiii")
+        //console.log("hiiiiiii")
         e.preventDefault();
         this.search(value)
         

@@ -489,4 +489,5 @@ export const users = [
     { firstname: 'Sarah', lastname: 'Refaat', password: '12345', admin: true, id: 1 }
     ,
     { firstname: 'Mohammad', lastname: 'Refaat', password: '1234', admin: false, id: 2 },
+    { firstname: 'Aya', lastname: 'Refaat', password: '123456', admin: true, id: 3 },
 ]

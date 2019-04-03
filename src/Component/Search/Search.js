@@ -14,7 +14,8 @@ class SearchBar extends Component {
     }
     state = { 
         search:'',
-        book:[]
+        book:[],
+        nores:''
      }
      handleChange=(books,res)=>(e)=>{
         const name = e.target.name;
@@ -22,18 +23,35 @@ class SearchBar extends Component {
         
         
         if(value===''){
-            this.setState({ book: [], search:''});
+            this.setState({ book: [], search:''},()=>{
+                res([])
+                this.props.history.goBack();
+            });
+           
         }
+        
         else{
             this.setState({ [name]: value },()=>{
                 console.log(this.state)
             const choosedBook=  books.filter(m => m.title.toLowerCase().includes(value.toLowerCase()))
-            this.setState({ book: choosedBook, search:value},()=>{
-                res(choosedBook)
-                console.log(choosedBook)
-                this.props.history.push("/results")
-            });
+            // this.setState({ book: choosedBook, search:value},()=>{
+            //     res(choosedBook)
+            //     console.log(choosedBook)
+            //     this.props.history.push("/results")
+            // });
             //this.props.searchResult=this.state.book;
+            // if()
+                //const notFound=  books.filter(m => !m.title.toLowerCase().includes(value.toLowerCase()))
+              if(choosedBook.length!=0){
+                this.setState({ book: choosedBook, search:value},()=>{
+                        res(choosedBook)
+                        console.log(choosedBook)
+                        this.props.history.push("/results")
+                    });
+              }
+              else{
+                  this.setState({nores:'not found'})
+              }
           
             }
         
