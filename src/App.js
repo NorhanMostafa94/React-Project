@@ -37,13 +37,15 @@ class App extends Component {
     console.log(this.state.categories)
   }
   addUser=(user)=>{
-    const  userData  = this.state.userData;
-    this.setState({ userData: userData.concat(user) })
+    //const  userData  = this.state.users;
+   // this.setState({ userData: userData.concat(user) })
+   this.setState({ users: users.concat(user) })
    }
   render() {
     const value = {
       state: this.state,
-      getCategories: this.getCategories
+      getCategories: this.getCategories,
+      addUser:this.addUser
     }
     return (
        //<BookDetails />

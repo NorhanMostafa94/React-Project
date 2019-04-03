@@ -112,7 +112,7 @@ export const authors = [
                 rating: "3",
             }
         ]
-
+       
     },
     {
         id: 2,
