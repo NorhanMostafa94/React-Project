@@ -38,8 +38,8 @@ class CategoryItem extends Component {
                         value.state.categories.filter(e => e.id === Number(id)).map(t =>
                             <div key={t.id}>
                                     <div className="cat-header">
-                                <h1>{t.name}</h1>
-                                    fgghjlkjhgghjjhghjjhhhjjjhhjjkjhhjkj</div>
+                                <h1 className="cat-header-text">{t.name}</h1>
+                                </div>
                                 <Container className="card-container" >
                                     <Row className="justify-content-md-center">
                                         {t.books.map(c => <Book key={c.id} {...c}></Book>)}

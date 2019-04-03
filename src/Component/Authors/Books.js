@@ -1,6 +1,6 @@
 import React from 'react';
 import Rating from '../Books/Rating';
-import Dropdown from 'react-bootstrap/Dropdown';
+// import Dropdown from 'react-bootstrap/Dropdown';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 const BookAuthor = (props) => {

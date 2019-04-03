@@ -7,17 +7,20 @@ export const categories = [
                 id: 7,
                 title: "حلقة الرعب",
                 author: "احمد خالد توفيق",
+                cover: "https://images.gr-assets.com/books/1359823945s/6004909.jpg",
 
             },
             {
                 id: 8,
                 title: "يوتوبيا ",
                 author: "احمد خالد توفيق",
+                cover: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1214056271i/3503947._SX50_.jpg",
             },
             {
                 id: 9,
                 title: "السنجة",
                 author: "احمد خالد توفيق",
+                cover: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1349778839i/16076787._SY75_.jpg",
             }
         ]
     },
@@ -28,17 +31,20 @@ export const categories = [
             {
                 id: 1,
                 title: 'Gingerbread',
-                author: 'Helen Oyeyemi'
+                author: 'Helen Oyeyemi',
+                cover: "https://images.gr-assets.com/books/1549556368l/40634915.jpg",
             },
             {
                 id: 2,
                 title: 'The Once and Future King',
-                author: 'Helen Oyeyemi'
+                author: 'Helen Oyeyemi',
+                cover: "https://images.gr-assets.com/books/1338741283l/43545.jpg",
             },
             {
                 id: 3,
                 title: 'The Bird King',
-                author: 'Helen Oyeyemi'
+                author: 'Helen Oyeyemi',
+                cover: "https://images.gr-assets.com/books/1530540458l/40642333.jpg",
             },
         ]
     },
@@ -50,16 +56,20 @@ export const categories = [
                 id: 4,
                 title: 'Superman: Dawnbreaker',
                 author: 'Matt de la Pena ',
+                cover: 'https://images.gr-assets.com/books/1529962084l/29749094.jpg',
             },
             {
                 id: 5,
                 title: 'Poison Study',
                 author: 'Matt de la Pena',
+                cover: "https://images.gr-assets.com/books/1535002553s/32075671.jpg",
             },
             {
                 id: 6,
                 title: "Sharp Objects",
                 author: 'Matt de la Pena',
+                cover: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1475695315i/18045891._SY180_.jpg",
+
             }
         ]
     },
