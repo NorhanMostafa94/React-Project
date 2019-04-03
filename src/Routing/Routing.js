@@ -13,6 +13,7 @@ import BookDetails from '../Component/Books/Details';
 
 import SearchBar from '../Component/Search/Search';
 import Login from '../Component/Forms/login';
+import SignForm from '../Component/Forms/SignUp';
 
 
 const Routing = () => {
@@ -30,6 +31,7 @@ const Routing = () => {
             <Route path='/books' component={BooksList} />
             <Route path='/mybooks' component={MainPage} />
             <Route path='/login' component={Login} />
+            <Route path='/signup' component={SignForm} />
             <Route path='/' component={SearchBar} />
             
         </Switch>

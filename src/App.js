@@ -3,6 +3,7 @@ import { BrowserRouter} from 'react-router-dom';
 // import '../public/Css/syle.css'
 import '../src/CSS/style.css'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 // import MainPage from '../src/Component/MyBooks/MainPage'
 // import BookDetails from './Component/Books/Details';
 
@@ -36,13 +37,15 @@ class App extends Component {
     console.log(this.state.categories)
   }
   addUser=(user)=>{
-    const  userData  = this.state.userData;
-    this.setState({ userData: userData.concat(user) })
+    //const  userData  = this.state.users;
+   // this.setState({ userData: userData.concat(user) })
+   this.setState({ users: users.concat(user) })
    }
   render() {
     const value = {
       state: this.state,
-      getCategories: this.getCategories
+      getCategories: this.getCategories,
+      addUser:this.addUser
     }
     return (
        //<BookDetails />
