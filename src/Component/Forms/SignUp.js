@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import uuidv4 from 'uuid/v4';
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
 import {Context} from '../../App';
 
 const initialState={
