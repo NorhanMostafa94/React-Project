@@ -29,7 +29,16 @@ class AddEditBookForm extends Component {
   }
 
   handleClose() {
-    this.setState({ show: false });
+    this.setState({
+      currentBook: {
+        id: Number,
+        title: "",
+        category: "",
+        author: "",
+        cover: ""
+      },
+      show: false
+    });
   }
 
   handleShow() {
@@ -58,37 +67,12 @@ class AddEditBookForm extends Component {
   saveBook() {
     const { id } = this.state.currentBook;
     if (isNaN(id)) {
-      this.setState(
-        {
-          count: this.state.count + 1
-        },
-        () => {
-          this.setState(
-            {
-              currentBook: { ...this.state.currentBook, id: this.state.count }
-            },
-            () => {
-              this.setState(
-                {
-                  books: [...this.state.books, this.state.currentBook]
-                },
-                () => {
-                  this.setState({
-                    currentBook: {
-                      id: Number,
-                      title: "",
-                      category: "",
-                      author: "",
-                      cover: ""
-                    }
-                  });
-                  console.log(this.state.books);
-                }
-              );
-            }
-          );
-        }
-      );
+      this.setState({
+        books: [
+          ...this.state.books,
+          { ...this.state.currentBook, id: this.state.books.length + 1 }
+        ]
+      });
     } else {
       this.state.books.find(element => {
         if (this.state.currentBook.id === element.id) {
@@ -96,7 +80,6 @@ class AddEditBookForm extends Component {
           return element;
         } else return this.state.currentBook;
       });
-      console.log(this.state.books);
     }
 
     this.handleClose();
