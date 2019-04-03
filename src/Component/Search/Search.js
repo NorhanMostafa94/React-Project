@@ -1,18 +1,22 @@
 import React, { Component }  from 'react';
 // import BooksList from './BooksList';
 import BookCard from './BookCard';
-// import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 // import categories from '../../data';
+import { withRouter} from 'react-router';
 import {Context} from '../../App';
 
 
 
 class SearchBar extends Component {
+    constructor(props){
+        super(props);
+    }
     state = { 
         search:'',
         book:[]
      }
-     handleChange=(books)=>(e)=>{
+     handleChange=(books,res)=>(e)=>{
         const name = e.target.name;
         const value = e.target.value;
         
@@ -21,10 +25,19 @@ class SearchBar extends Component {
             this.setState({ book: [], search:''});
         }
         else{
-            this.setState({ [name]: value })
-        const choosedBook=  books.filter(m => m.name.toLowerCase().includes(value.toLowerCase()))
-            this.setState({ book: choosedBook, search:value});
-        }
+            this.setState({ [name]: value },()=>{
+                console.log(this.state)
+            const choosedBook=  books.filter(m => m.title.toLowerCase().includes(value.toLowerCase()))
+            this.setState({ book: choosedBook, search:value},()=>{
+                res(choosedBook)
+                console.log(choosedBook)
+                this.props.history.push("/results")
+            });
+            //this.props.searchResult=this.state.book;
+          
+            }
+        
+            )}
        
      }
 
@@ -37,13 +50,17 @@ class SearchBar extends Component {
                 value => (
                    <>
                    <div>
-                    <input type="Text" placeholder="search books" onChange={this.handleChange(value.state.books)} name="search"/>
+                    <input type="Text" placeholder="search books" value={this.state.search} onChange={this.handleChange(value.state.books,value.SearchRes)} name="search"/>
                     </div>
-                    <div>
-                      {this.state.book.map(e => <BookCard key={e.id} name={e.name} id={e.id} 
+                    {/* <div>
+                      {this.state.book.map(e => <BookCard className="sch-result" key={e.id} title={e.title} id={e.id} src={e.cover}
                        
                      />)}
-                    </div>
+                    </div> */}
+                    
+                    {/* <div>
+                    <Link to ={"/results"}>Your Search Results </Link> 
+                    </div> */}
                    
                    </> 
                 )
@@ -53,4 +70,4 @@ class SearchBar extends Component {
     }
 }
  
-export default SearchBar;
+export default withRouter (SearchBar);
