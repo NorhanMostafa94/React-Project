@@ -14,7 +14,7 @@ class AuthorsList extends Component {
 
                         // this.get(value.getCategories),
                         <Container className="card-container" >
-                            <Row className="justify-content-md-center">
+                            <Row className="justify-content-md-center" className="authors-list">
                                 {value.state.authors.map(d =>
                                     <Author key={d.id} {...d}></Author>
                                     // <Book key={d.id} {...d}></Book>

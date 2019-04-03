@@ -1,10 +1,23 @@
 body {
     /* background-color: #f8faff !important; */
+    background: transparent !important;
+
 }
 
-nav {
-    background-color: #C09F80;
+.navbar {
+    /* background-color: #C09F80; */
     padding: 30px !important;
+    
+}
+.Nav-title{
+    font-family: 'Raleway', sans-serif;
+    color: #76323F !important;
+    font-weight: 500 !important;
+    font-size: 20px !important
+}
+.navbar a:hover{
+    /* color: #D7CEC7  !important; */
+    color: #DCC7AA !important
 }
 
 a {
@@ -21,17 +34,14 @@ a {
 
 .card-item {
     position: absolute;
-    /* width: 250px; */
-    /* height: 450px; */
-    /* margin: 2px; */
+    margin-right: 27px;
     overflow: hidden;
     text-align: center;
     /* transition: 0.3s all 0s ease-in-out; */
     border: 0 !important;
-    /* background-color: transparent !important; */
+    background-color: transparent !important;
 
 }
-
 
 
 
@@ -90,6 +100,7 @@ a {
 
     font-weight: 700;
     color: #76323F;
+    font-family: 'Indie Flower', cursive;
 }
 
 .bookshelves {
@@ -393,4 +404,7 @@ a {
     margin-left: -58px;
     margin-top: 0px;
     margin-right: 10px;
+}
+.authors-list{
+    margin-top: 16px;
 }
