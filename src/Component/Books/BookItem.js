@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
@@ -9,15 +9,17 @@ class Book extends Component {
         const { id, title, author, cover,authorID } = this.props;
         // console.log(this.props)
         return (
-            <Card className="card-item" key={id} >
+            // <Col sm={3}>
+            <Card className="card-item col-sm-3" key={id} >
                 <Card.Body>
                     <Card.Img style={{ height: '300px', boxShadow: '0px 3px 5px 0px #adadab' }} variant="top" src={cover} />
-                        <Link to={`/authors/${authorID}`} style={{ textDecoration: 'none', color: 'black', fontSize: '20px' }}>{author}</Link>
+                        <Link className="author-details-bok-title" to={`/books/${id}`} style={{ textDecoration: 'none' }}>{title}</Link>
                     <div>
-                        <Link className="link-btn" to={`/books/${id}`} style={{ textDecoration: 'none' }}>{title}</Link>
+                        <Link className="author-details-author-title" to={`/authors/${authorID}`} style={{ textDecoration: 'none' }}>{author}</Link>
                     </div>
                 </Card.Body>
             </Card>
+            // </Col>
         );
     }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import BookAuthor from '../Authors/Books'
 import { authors } from '../../data';
-import { Container,Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 
 
 class AuthorDetails extends Component {
@@ -55,20 +55,17 @@ class AuthorDetails extends Component {
                     </div>
                     <div className="row">
                         <div className="col-12">
-
-                            <Container className="card-container" >
-                                <Row className="justify-content-md-center">
+                            <Row className="justify-content-md-center">
                                 {<BookAuthor books={this.state.author.authorBooks} />}
-                                </Row>
-                                </Container>
+                            </Row>
                         </div>
-                        </div>
-
                     </div>
+
+                </div>
 
 
             </>
-                )
-            }
-        }
+        )
+    }
+}
 export default AuthorDetails;

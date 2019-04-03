@@ -20,9 +20,9 @@ a{
 
 .card-item {
     position: absolute;
-    width: 250px;
-    height: 450px;
-    margin: 2px;
+    /* width: 250px; */
+    /* height: 450px; */
+    /* margin: 2px; */
     overflow: hidden;
     text-align: center;
     /* transition: 0.3s all 0s ease-in-out; */
@@ -45,13 +45,25 @@ a{
     /* padding: 8px 50px 8px 50px; */
     /* width: 50px !important; */
     /* font-size: 18px; */
-    color: white;
+    /* color: white; */
 }
 
 
+
+
 /* Category */
+.cat-btn{
+    background-color: #76323F;
+    border-radius: 50px;
+    padding: 10px 50px 10px 50px;
+    width: 250px !important;
+    font-size: 18px;
+    color: white !important;
+    margin: 22px;
+    text-align: center;
+}
 .cat-header{
-    background-image: url(http://subsolardesigns.com/odrin/demo1/wp-content/uploads/sites/8/2017/08/shop_header-1.jpg);
+    background-image: url(https://i.pinimg.com/564x/c1/a9/3d/c1a93d35aa2691440f55de964684149a.jpg);
     width: 100%;
     background-size: cover 100% 100%;
     height: 620px;
