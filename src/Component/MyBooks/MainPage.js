@@ -48,7 +48,7 @@ class MainPage extends Component {
                 </div>
                 <div className="row">
                     <div className="col-2 bookshelves">
-                        <h6>Bookshelves </h6>
+                        <h6 className="bookshelves-title">Bookshelves </h6>
                         <button onClick={this.handleClick} name="all" className="books-link">All</button>
                         <br />
                         <button onClick={this.handleClick} name="read" className="books-link">Read</button>
