@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import BookAuthor from '../Authors/Books'
 import { authors } from '../../data';
-import { Container, Row } from 'react-bootstrap';
+import {  Row } from 'react-bootstrap';
 
 
 class AuthorDetails extends Component {

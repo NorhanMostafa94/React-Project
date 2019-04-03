@@ -1,7 +1,6 @@
 import React, { Component }  from 'react';
 // import BooksList from './BooksList';
-import BookCard from './BookCard';
-import { Link} from 'react-router-dom';
+
 // import categories from '../../data';
 import { withRouter} from 'react-router';
 import {Context} from '../../App';
