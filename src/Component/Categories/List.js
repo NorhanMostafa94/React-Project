@@ -11,14 +11,17 @@ class CategoriesList extends Component {
             <Context.Consumer>
                 {
                     value => (
-                        <Container className="card-container" style={{marginTop:'200px'}}>
-                            <Row className="justify-content-md-center">
+                            <div className="cat-header">
+                        <Container className="card-container" >
+                            <Row className="justify-content-md-center" style={{marginTop:'200px'}}>
+                            
                                 {value.state.categories.map(d =>
                                     <Link className="cat-btn" to={`/categories/${d.id}`} key={d.id}>
                                         <div>{d.name}</div>
                                     </Link>)}
                             </Row>
                         </Container>
+                                    </div>
                     )
                 }
             </Context.Consumer>

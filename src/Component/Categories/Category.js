@@ -13,20 +13,6 @@ class CategoryItem extends Component {
         category: categories
     }
 
-    componentDidMount() {
-        // fetch(`http://localhost:3000/Categories/${id}`, { method: 'GET' })
-        //     .then(res => res.json())
-        //     .then(json => {
-        //         // console.log(json)
-        //         this.setState({ category: json })
-        //     })
-        // const id = this.props.match.params.id;
-        // console.log(this.state.category)
-        // const newData = this.state.category.filter(e => e.id === id).map(t => console.log(t.name))
-        // this.setState({category:newData})
-        // console.log(newData)
-
-    }
 
     render() {
         const id = this.props.match.params.id;
@@ -37,8 +23,8 @@ class CategoryItem extends Component {
                     value => (
                         value.state.categories.filter(e => e.id === Number(id)).map(t =>
                             <div key={t.id}>
-                                    <div className="cat-header">
-                                <h1 className="cat-header-text">{t.name}</h1>
+                                <div className="cat-header">
+                                    <h1 className="cat-header-text">{t.name}</h1>
                                 </div>
                                 <Container className="card-container" >
                                     <Row className="justify-content-md-center">
