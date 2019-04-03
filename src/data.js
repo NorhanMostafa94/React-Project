@@ -138,7 +138,7 @@ export const authors = [
         Born: "June 10, 1962 ",
         Website: "http://aktowfik.blogspot.com/",
         Genre: "Fantasy, Horror, Science Fiction",
-        cover: "https://images.gr-assets.com/authors/1483988647p5/4579328.jpg",
+        cover: "https://static01.nyt.com/images/2016/03/20/books/review/20VanDenBerg/20VanDenBerg-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
         bio: "Helen Oyeyemi is the New York Times best-selling, Newbery-medal-winning author of six young adult novels and four picture books. Matt received his MFA in creative writing from San Diego State University and his BA from the University of the Pacific, where he attended school on a full athletic scholarship for basketball. de la Peña currently lives in Brooklyn, NY. He teaches creative writing and visits high schools and colleges throughout the country.",
         authorBooks: [
             {
@@ -184,7 +184,7 @@ export const authors = [
         Born: "June 10, 1962 ",
         Website: "http://aktowfik.blogspot.com/",
         Genre: "Fantasy, Horror, Science Fiction",
-        cover: "https://images.gr-assets.com/authors/1383138905p5/204966.jpg",
+        cover: "http://farm4.staticflickr.com/3376/4568691577_11049c0b05_o.jpg",
         bio: "Matt de la Pena is the New York Times best-selling, Newbery-medal-winning author of six young adult novels and four picture books. Matt received his MFA in creative writing from San Diego State University and his BA from the University of the Pacific, where he attended school on a full athletic scholarship for basketball. de la Peña currently lives in Brooklyn, NY. He teaches creative writing and visits high schools and colleges throughout the country.",
         authorBooks: [
             {
