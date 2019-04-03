@@ -3,7 +3,7 @@ body {
 }
 
 nav {
-  background-color: white;
+  background-color: #c09f80;
   padding: 30px !important;
 }
 
@@ -78,7 +78,6 @@ a {
 }
 
 .books_title-header {
-  font-family: "Indie Flower", cursive;
   font-weight: 700;
   color: #76323f;
 }
@@ -145,6 +144,10 @@ a {
   font-size: 13px !important;
 }
 
+.btn-success:focus {
+  box-shadow: 0 0 0 0.2rem #c09f80 !important;
+}
+
 .image-listing {
   width: 50px;
 }
@@ -208,8 +211,9 @@ a {
 }
 
 .book-details-stars {
-  margin-left: 72px;
+  margin-left: 89px;
   color: lightgray;
+  font-size: 11px;
 }
 
 /*--------------------*/
@@ -351,4 +355,28 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.reviews-header {
+  font-size: 14px;
+  /* font-family: 'Indie Flower', cursive; */
+  font-family: "Raleway", sans-serif;
+  color: #76323f;
+  font-weight: 700;
+  margin-top: 38px;
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 20px;
+}
+
+.reader-name {
+  font-size: 14px;
+  font-family: "Indie Flower", cursive;
+  position: absolute;
+  left: 82px;
+}
+
+.reader-rate {
+  margin-left: -58px;
+  margin-top: 0px;
+  margin-right: 10px;
 }

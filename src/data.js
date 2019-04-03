@@ -240,12 +240,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id: 1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id: 2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -266,12 +268,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id: 1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id: 2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -293,12 +297,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id: 1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id: 2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -320,12 +326,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id: 1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id: 2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -346,12 +354,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id: 1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id: 2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -372,12 +382,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id: 1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id: 2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -398,12 +410,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id: 1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id: 2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -424,12 +438,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id: 1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id: 2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -450,12 +466,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id:1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id:2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -476,12 +494,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id:1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id:2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -502,12 +522,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id:1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id:2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -528,12 +550,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id:1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id:2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -554,12 +578,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id:1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id:2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -580,12 +606,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id:1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id:2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -606,12 +634,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id:1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id:2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -632,12 +662,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id:1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id:2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -658,12 +690,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id:1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id:2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -684,12 +718,14 @@ export const books = [
         description: "Fresh from a brief stay at a psych hospital, reporter Camille Preaker faces a troubling assignment: she must return to her tiny hometown to cover the murders of two preteen girls. For years, Camille has hardly spoken to her neurotic, hypochondriac mother or to the half-sister she barely knows: a beautiful thirteen-year-old with an eerie grip on the town. Now, installed in her old bedroom in her family's Victorian mansion, Camille finds herself identifying with the young victims—a bit too strongly. Dogged by her own demons, she must unravel the psychological puzzle of her own past if she wants to get the story—and survive this homecoming.",
         reviews: [
             {
+                id:1,
                 name: "RandomAnthony",
                 cover: "https://images.gr-assets.com/users/1470919631p2/721021.jpg",
                 rate: "4",
                 review: "Last week I read the fuck out of Gillian Flynn's catalog. Three novels in eight days while my wife and kids were out of town and a sweltering late July marooned me in one of the house's two air conditioned rooms. So although this review is primarily for Sharp Objects, my favorite of Flynn's trio, let me go on record with Gone Girl (four stars, go read another of the zillion of reviews) and Dark Places (three stars, maybe too many narratives perspectives and too willing to wallow in the muck) as well, but I'm not writing reviews for those two."
             },
             {
+                id:2,
                 name: "Emily May",
                 cover: "https://images.gr-assets.com/users/1528390751p2/4622890.jpg",
                 rate: "4",
@@ -710,7 +746,8 @@ export const AllBooks = [
         categoryID: 2,
         avgrating: "4.6",
         rating: "5 ",
-        status: "to-read"
+        status: "to-read",
+       
     },
     {
         id: 11,
@@ -722,7 +759,8 @@ export const AllBooks = [
         categoryID: 2,
         avgrating: "3.76",
         rating: "3 ",
-        status: "to-read"
+        status: "to-read",
+       
     },
     {
         id: 12,
@@ -734,7 +772,8 @@ export const AllBooks = [
         categoryID: 3,
         avgrating: "4.11",
         rating: "3",
-        status: "read"
+        status: "read",
+       
     },
     {
         id: 13,
@@ -746,7 +785,8 @@ export const AllBooks = [
         categoryID: 3,
         avgrating: "4",
         rating: "4 ",
-        status: "currently-reading"
+        status: "currently-reading",
+      
     },
     {
         id: 14,
@@ -758,7 +798,7 @@ export const AllBooks = [
         categoryID: 3,
         avgrating: "3.54",
         rating: "3",
-        status: "currently-reading"
+        status: "currently-reading",
     },
     {
         id: 15,
@@ -819,8 +859,8 @@ export const AllBooks = [
         categoryID: 1,
         avgrating: "4.54",
         rating: "5",
-        status:"read"
-      
+        status: "read"
+
     }
 ]
 
