@@ -39,6 +39,9 @@ class CategoryItem extends Component {
                             <div key={t.id}>
                                 <h1>{t.name}</h1>
                                 <Container className="card-container" >
+                                <Row>
+                                    <div className="cat-header"></div>
+                                </Row>
                                     <Row className="justify-content-md-center">
                                         {t.books.map(c => <Book key={c.id} {...c}></Book>)}
                                     </Row>
