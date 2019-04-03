@@ -11,7 +11,6 @@ const Rating = (props) => {
         return stars
     }
 
-
     return (
        <>
         { ratting(props)}

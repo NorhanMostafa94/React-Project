@@ -49,9 +49,9 @@ class App extends Component {
     const value = {
       state: this.state,
       getCategories: this.getCategories,
-      addUser:this.addUser,
-      SearchRes:this.SearchRes
-    }
+      addUser: this.addUser,
+      SearchRes: this.SearchRes
+    };
     return (
       //<BookDetails />
       //<MainPage />
