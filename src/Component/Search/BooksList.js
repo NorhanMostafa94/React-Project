@@ -3,16 +3,17 @@ import BookCard from './BookCard';
 import {Context} from '../../App';
 
 
-class BooksList extends Component {
+class Books extends Component {
     state = {  }
     render() { 
         return ( 
             <Context.Consumer>
             {
                 value => (
-                  (value.state.searhResult) ?
+                   // console.log(value.state.searchResult)
+                  (value.state.searchResult) ?
             <div>
-            {value.state.searhResult.map(e => <BookCard key={e.id} name={e.name} id={e.id} by={e.by} desc={e.desc}imgsrc={e.imgsrc}
+            {value.state.searchResult.map(e => <BookCard key={e.id} title={e.title} id={e.id} src={e.cover}
               
            />)}
           </div>
@@ -24,4 +25,4 @@ class BooksList extends Component {
     }
 }
  
-export default BooksList;
+export default Books;

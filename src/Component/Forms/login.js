@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Link} from 'react-router-dom';
+import { withRouter} from 'react-router';
 import {Context} from '../../App';
 import img from '../../assets/images/7.png';
-import AuthorsList from '../../Component/Authors/List';
-import MainPage from '../../Component/MyBooks/MainPage';
-import {Redirect } from 'react-router';
+// import AuthorsList from '../../Component/Authors/List';
+// import MainPage from '../../Component/MyBooks/MainPage';
+// import {Redirect } from 'react-router';
 
 
 const intState={
@@ -21,8 +21,12 @@ class Login extends Component {
         super(props)
         
     }
-   history  = this.props;
+  // history  = this.props;
     state = intState;
+    // user:this.props.location.state? 
+    //  this.props.history.push("/")
+
+    
    
     handleChange=(e)=>{
         const name = e.target.name;
@@ -43,30 +47,21 @@ class Login extends Component {
             if (item.firstname !== this.state.username) {
                 this.setState({ userErr: "check the name", pwErr:"" ,result:0},()=>{
                     console.log(this.state.result)  
-                   // return  <Link to ={"/admin"}> </Link> 
-                //    browserHistory.push('/login');
-                 // (<Redirect to="/login"/>) 
-                
+                 
             })
         }
             if (item.password !== this.state.password) {
                 this.setState({ userErr: " ", pwErr: "check the password" ,result:0 } ,()=>{
                    console.log(this.state.result)  
-                   // return  <Link to ={"/authors"}> </Link>
                   
-                  //browserHistory.push('/mybooks');
-                 // (<Redirect to="/mybooks"/>) 
                 })
               
             }
             if (item.firstname === this.state.username && item.password === this.state.password) {
                 this.setState({userErr: "", pwErr: "", result:item.id},()=>{
                       console.log(this.state.result)
-                   //  return <Link to = {"/mybooks"}></Link>  
-                  // {return <AuthorsList/>} 
-                //   browserHistory.push('/authors');
-                // (<Redirect to="/authors"/>) 
-               // history.push('/authors');
+                  
+               this.props.history.push("/authors")
                     } )
                 
             }
@@ -124,4 +119,4 @@ class Login extends Component {
     }
 }
  
-export default Login;
+export default withRouter(Login);

@@ -195,6 +195,27 @@ a{
      
     /* width:50%; */
   }
+  .sign-cont{
+      /* background-color: #404044; */
+
+  }
+
+  .search-cont{
+      position:relative;
+      top:-0.5rem;
+  }
+  .sch-result{
+    /* z-index:500; */
+    background: white;
+    border: 1px solid #80B6E1;
+    padding: 4px;
+    /* float:bottom; */
+    /* margin-top:5px; */
+    width:10rem;
+    /* position:relative; */
+    /* left:-11rem;
+    top:4.8rem; */
+  }
 /***********/
 .author-bio {
     margin-left: 5.1rem !important;

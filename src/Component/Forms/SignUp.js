@@ -91,13 +91,13 @@ handleSubmit =(addUser)=> (e) => {
             <Context.Consumer>
                 {
                     value => (
-
-                        <form className="card text-center" onSubmit={this.handleSubmit(value.addUser)}>
+                        <div className="container text-center">
+                        <form className=" row card text-center sign-cont " onSubmit={this.handleSubmit(value.addUser)}>
                         <h4><div className="card-title mb-4">Sign Up</div></h4>
                             <div>
                                 
                                 <input
-                                className="grey-text"
+                                className="grey-text my-2 mx-4 "
                                     type="text"
                                     name="firstname"
                                     placeholder="First Name"
@@ -111,6 +111,7 @@ handleSubmit =(addUser)=> (e) => {
                             </div>
                             <div>
                            <input
+                                    className="my-2 mx-4"
                                     type="text"
                                     name="lastname"
                                     placeholder="Last Name"
@@ -124,6 +125,7 @@ handleSubmit =(addUser)=> (e) => {
                             </div>
                             <div>
                            <input
+                                    className="my-2 mx-4"
                                     type="text"
                                     name="email"
                                     placeholder="E-mail"
@@ -137,6 +139,7 @@ handleSubmit =(addUser)=> (e) => {
                             </div>
                             <div>
                              <input
+                                    className="my-2 mx-4"
                                     type="password"
                                     name="password"
                                     placeholder="password"
@@ -150,6 +153,7 @@ handleSubmit =(addUser)=> (e) => {
                             </div>
                             <div>
                             <input
+                                    className="my-2 mx-4"
                                     type="password"
                                     name="ConfirmPassword"
                                     placeholder="confirm password"
@@ -163,7 +167,7 @@ handleSubmit =(addUser)=> (e) => {
                             </div>
                             <button type="submit" className="btn-sign">Sign up</button>
                         </form>
-
+                        </div>
                     )
                 }
             </Context.Consumer>
