@@ -31,18 +31,9 @@ a{
     
 }
 
-.card-item:hover {
-    margin-top: -5px;
-    transition: 0.3 all 0s;
-}
 
-.link-btn {
-    background-color: #FC6377;
-    border-radius: 50px;
-    padding: 8px 50px 8px 50px;
-    width: 50px !important;
-    font-size: 18px;
-}
+
+
 .card-item:hover{
     /* margin-top: -5px; */
     /* transition: 0.3s all 0s ease-in-out; */
@@ -183,13 +174,29 @@ a{
 }
 
 .book_avg {
-    position: absolute;
+    /* position: absolute;
     left: 11rem;
-    top: 3.5rem;
+    top: 3.5rem; */
+    /* text-align: center; */
 }
 
 .author_drodwn {
     position: absolute;
     top: -4.1rem;
     left: 18rem;
+}
+.author-details-bok-title{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+.author-details-author-title{
+    font-size: 13px;
+}
+.author-details-book-rating{
+    margin-left: 3px;
+}
+.author-details-book-AVGrating{
+    position: absolute;
+    margin-left: 12px;
 }

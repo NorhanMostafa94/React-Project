@@ -3,6 +3,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Rating from './Rating';
 import Reviews from './Reviews'
+import {Link} from 'react-router-dom'
 import { books } from '../../data';
 // const BDETAILS_URL = ' http://localhost:3004/AllBooks';
 class BookDetails extends Component {
@@ -58,8 +59,11 @@ class BookDetails extends Component {
                         </div>
                         <div className="col-7 desc-block">
                             <h5 className="bookTitle">{this.state.book.title}</h5>
-                            <h6>{this.state.book.author}</h6>
-                            <h6>{this.state.book.category}</h6>
+                            <Link to={`/authors/${this.state.book.authorID}`} style={{ textDecoration: 'none', color: 'black', fontSize: '20px' }}>{this.state.book.author}</Link>
+                            <Link to={`/categories/${this.state.book.categoryID}`} style={{ textDecoration: 'none', color: 'black', fontSize: '20px' }}>{this.state.book.category}</Link>
+
+                            {/* <h6>{this.state.book.author}</h6>
+                            <h6>{this.state.book.category}</h6> */}
                             <span>
                                 {<Rating rating={this.state.book.rating} />}
                                 <span className="avgRate">{this.state.book.avgrating}</span>
