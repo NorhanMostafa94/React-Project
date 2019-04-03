@@ -16,7 +16,7 @@ class AddEditBookForm extends Component {
       show: false,
       newBook: false,
       categories: [],
-      author: [],
+      authors: [],
       currentBook: {
         id: Number,
         title: "",
@@ -41,16 +41,28 @@ class AddEditBookForm extends Component {
     });
   }
 
-  handleShow() {
+  handleShow(newBook, book) {
+    if (newBook) {
+      book = {
+        id: Number,
+        title: "",
+        category: "",
+        author: "",
+        cover: ""
+      };
+    }
     this.setState(
       {
-        newBook: this.props.newBook,
-        currentBook: this.props.currentBook,
+        newBook: newBook,
+        currentBook: book,
         categories: this.props.categories,
-        author: this.props.author,
-        books: this.props.books
+        authors: this.props.authors
+        // books: this.props.books
       },
-      this.setState({ show: true })
+      () => {
+        console.log(this.state);
+        this.setState({ show: true });
+      }
     );
   }
 
@@ -142,7 +154,7 @@ class AddEditBookForm extends Component {
                     this.state.newBook ? "" : this.state.currentBook.author
                   }
                 >
-                  {this.state.author.map(author => (
+                  {this.state.authors.map(author => (
                     <option key={author.id}>{author.name}</option>
                   ))}
                 </Form.Control>
