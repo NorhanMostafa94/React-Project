@@ -45,9 +45,10 @@ class AddEditCategoryForm extends Component {
       this.state.categories.map(cat => {
         if (this.state.category.name === cat.name) {
           invalid = true;
-        }
+          return cat;
+        } else return "";
       });
-      if (!invalid && this.state.category.name != "") {
+      if (!invalid && this.state.category.name !== "") {
         this.setState({
           categories: [
             ...this.state.categories,

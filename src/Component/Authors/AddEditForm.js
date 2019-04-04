@@ -48,7 +48,8 @@ class AddEditAuthorForm extends Component {
       this.state.authors.map(auth => {
         if (auth.name === this.state.author.name) {
           invalid = true;
-        }
+          return auth;
+        } else return "";
       });
       if (
         !invalid &&
