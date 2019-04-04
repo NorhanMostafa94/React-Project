@@ -10,7 +10,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 //Json
 // import DB from './db'
 // Component
-import NavBar from "./Component/Navbar/Navbar";
+import NavBar from "./Component/shared/Navbar";
 import Routing from "./Routing/Routing";
 
 import { categories, authors, books, users } from "./data";

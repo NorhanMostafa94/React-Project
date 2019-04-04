@@ -18,7 +18,7 @@ const NavBar = () => {
             </Navbar.Collapse>
             <SearchBar/>
         </Navbar>
-    )
+    ) 
 }
 
 export default NavBar;

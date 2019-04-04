@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Table from 'react-bootstrap/Table';
 import Dropdown from 'react-bootstrap/Dropdown';
-import Paging from './Pagination';
+import Paging from '../shared/Pagination';
 import Rating from '../Books/Rating';
 import {Link} from 'react-router-dom'
 const Listing = (props) => {

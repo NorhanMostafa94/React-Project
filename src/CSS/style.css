@@ -34,7 +34,6 @@ a {
 
 .card-item {
     position: absolute;
-    margin-right: 27px;
     overflow: hidden;
     text-align: center;
     /* transition: 0.3s all 0s ease-in-out; */

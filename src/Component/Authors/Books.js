@@ -1,6 +1,5 @@
 import React from 'react';
 import Rating from '../Books/Rating';
-// import Dropdown from 'react-bootstrap/Dropdown';
 import { Card,Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 const BookAuthor = (props) => {
@@ -21,7 +20,7 @@ const BookAuthor = (props) => {
                                     {/* <div >
                                             <Link to={`/authors/${book.authorID} `}style={{ textDecoration: 'none', color: 'black', fontSize: '20px' }}>{book.author}</Link>
                                         </div> */}
-                                    <h6 className="author-details-author-title">{book.author}</h6>
+                                      <h6 className="author-details-author-title">{book.author}</h6>
 
                                     <span className="book-details-stars author-details-book-rating " >
                                         {<Rating rating={book.rating} />}
