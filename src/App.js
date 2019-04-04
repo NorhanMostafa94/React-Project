@@ -65,7 +65,7 @@ class App extends Component {
 
       <Context.Provider value={value}>
         <BrowserRouter>
-          <NavBar />
+          {/* <NavBar /> */}
 
           <Routing />
         </BrowserRouter>

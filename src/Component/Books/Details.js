@@ -5,6 +5,8 @@ import Rating from './Rating';
 import Reviews from './Reviews'
 import { Link } from 'react-router-dom'
 import { books } from '../../data';
+import NavBar from '../shared/Navbar'
+
 // const BDETAILS_URL = ' http://localhost:3004/AllBooks';
 class BookDetails extends Component {
     constructor(props) {
@@ -31,6 +33,7 @@ class BookDetails extends Component {
     render() {
         return (
             <>
+            <NavBar/>
                 <div className="container book-details-block">
                     <div className="row">
                         <div className="col-lg-3 col-sm-12">

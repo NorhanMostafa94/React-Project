@@ -4,6 +4,7 @@ import { Container, Row } from 'react-bootstrap';
 import { Context } from '../../App';
 import Book from './BookItem'
 import Paging from '../shared/Pagination';
+import NavBar from '../shared/Navbar'
 
 
 class BooksList extends Component {
@@ -13,6 +14,8 @@ class BooksList extends Component {
             <Context.Consumer>
                 {
                     value => (
+                        <>
+                        <NavBar/>
                         <Container className="card-container" >
                             <Row className="justify-content-md-center">
                                 {value.state.books.map(d =>
@@ -20,6 +23,7 @@ class BooksList extends Component {
                             </Row>
                             <Paging/>
                         </Container>
+                        </>
                     )
                 }
             </Context.Consumer>

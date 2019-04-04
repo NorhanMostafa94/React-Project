@@ -3,6 +3,8 @@ import Listing from './Listing'
 import {AllBooks} from '../../data'
 // const URL_ALL_BOOKS = ' http://localhost:3004/AllBooks';
 
+import NavBar from '../shared/Navbar'
+
 class MainPage extends Component {
     constructor(props) {
         super(props)
@@ -39,6 +41,8 @@ class MainPage extends Component {
     render() {
 
         return (
+            <>
+            <NavBar />
 
             <div className="container">
                 <div className="row books-header">
@@ -62,6 +66,7 @@ class MainPage extends Component {
                     </div>
                 </div>
             </div>
+            </>
 
         )
     }

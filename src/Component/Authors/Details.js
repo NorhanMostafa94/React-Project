@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import BookAuthor from '../Authors/Books'
 import { authors } from '../../data';
-import { Row } from 'react-bootstrap';
+import { Row, Navbar } from 'react-bootstrap';
 
-import Book from "../Books/BookItem"
+import Book from "../Books/BookItem";
+import NavBar from '../shared/Navbar';
 
 class AuthorDetails extends Component {
     constructor(props) {
@@ -31,6 +32,7 @@ class AuthorDetails extends Component {
     render() {
         return (
             <>
+            <NavBar/>
                 <div className="container book-details-block">
                     <div className="row">
                         <div className="col-lg-3 col-sm-12">
