@@ -23,6 +23,12 @@ class CategoryAdmin extends Component {
     });
   };
 
+  updateCategories = newCategories => {
+    this.setState({
+      categories: newCategories
+    });
+  };
+
   categoryform(formType, category) {
     this.setState(
       {
@@ -63,7 +69,7 @@ class CategoryAdmin extends Component {
             </tr>
           </thead>
           <tbody>
-            {categories.map(category => {
+            {this.state.categories.map(category => {
               return (
                 <tr key={category.id}>
                   <td>{category.id}</td>
@@ -90,6 +96,7 @@ class CategoryAdmin extends Component {
             show={this.state.show}
             categories={this.state.categories}
             handleClose={this.handleClose}
+            updateCategories={this.updateCategories}
           />
         )}
       </>

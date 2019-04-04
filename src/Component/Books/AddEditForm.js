@@ -16,7 +16,7 @@ class AddEditBookForm extends Component {
       categories: this.props.categories,
       authors: this.props.authors,
       currentBook: this.props.book,
-      books: []
+      books: this.props.books
     };
   }
 
@@ -34,6 +34,8 @@ class AddEditBookForm extends Component {
       },
       () => {
         this.props.handleClose();
+        console.log(this.state.books);
+        this.props.updateBooks(this.state.books);
       }
     );
   }
@@ -42,10 +44,13 @@ class AddEditBookForm extends Component {
     e.persist();
     const name = e.target.name;
     const value = e.target.value;
-    this.setState({
-      newBook: false,
-      currentBook: { ...this.state.currentBook, [name]: value }
-    });
+    this.setState(
+      {
+        newBook: false,
+        currentBook: { ...this.state.currentBook, [name]: value }
+      },
+      () => console.log(this.state.currentBook)
+    );
   }
 
   saveBook() {
@@ -61,14 +66,16 @@ class AddEditBookForm extends Component {
         () => console.log(this.state.books)
       );
     } else {
-      this.state.books.find(element => {
-        if (this.state.currentBook.id === element.id) {
-          element = this.state.currentBook;
-          return element;
-        } else return this.state.currentBook;
+      this.state.books.find(book => {
+        if (this.state.currentBook.id === book.id) {
+          book.title = this.state.currentBook.title;
+          book.category = this.state.currentBook.category;
+          book.author = this.state.currentBook.author;
+          book.cover = this.state.currentBook.cover;
+          return true;
+        } else return false;
       });
     }
-
     this.handleClose();
   }
 

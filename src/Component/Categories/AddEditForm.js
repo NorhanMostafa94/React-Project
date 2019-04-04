@@ -13,10 +13,11 @@ class AddEditCategoryForm extends Component {
 
     this.state = {
       show: this.props.show,
-      validated: false,
+      validated: true,
       newCategory: this.props.newCategory,
       category: this.props.category,
-      categories: this.props.categories
+      categories: this.props.categories,
+      errmsg: ""
     };
   }
 
@@ -24,7 +25,6 @@ class AddEditCategoryForm extends Component {
     this.setState(
       {
         show: false,
-        validated: true,
         category: {
           id: Number,
           name: ""
@@ -32,6 +32,7 @@ class AddEditCategoryForm extends Component {
       },
       () => {
         this.props.handleClose();
+        this.props.updateCategories(this.state.categories);
       }
     );
   }
@@ -46,15 +47,21 @@ class AddEditCategoryForm extends Component {
   // }
 
   onSubmit(event) {
+    console.log(this.state.category);
     event.preventDefault();
     const form = event.currentTarget;
     const { id } = this.state.category;
+    console.log(id);
+    let invalid = false;
     if (isNaN(id)) {
       this.state.categories.map(cat => {
-        if (cat.name === this.state.category.name) {
-          this.state.validated = "false";
-        } else {
-          this.setState({
+        if (this.state.category.name === cat.name) {
+          invalid = true;
+        }
+      });
+      if (!invalid) {
+        this.setState(
+          {
             categories: [
               ...this.state.categories,
               {
@@ -62,32 +69,19 @@ class AddEditCategoryForm extends Component {
                 name: this.state.category.name
               }
             ]
-          });
-        }
-      });
+          },
+          () => console.log(this.state.categories, this.state.categories.length)
+        );
+      }
     } else {
-      const exist = this.state.categories.find(category => {
+      this.state.categories.find(category => {
         if (this.state.category.id === category.id) {
           category.name = this.state.category.name;
           return true;
         } else return false;
       });
-      if (exist);
-      else
-        this.setState(
-          {
-            categories: [
-              ...this.state.categories,
-              {
-                id: this.state.category.id,
-                name: this.state.category.name
-              }
-            ]
-          },
-          () => console.log(this.state.categories)
-        );
     }
-    if (form.checkValidity() === false) {
+    if (form.checkValidity() === false || invalid) {
       event.stopPropagation();
     } else {
       this.handleClose();
@@ -100,11 +94,12 @@ class AddEditCategoryForm extends Component {
     const value = e.target.value;
     this.setState({
       newCategory: false,
-      category: { [name]: value }
+      category: { ...this.state.category, [name]: value }
     });
   }
 
   render() {
+    console.log(this.state.category);
     return (
       <Modal show={this.state.show} onHide={this.handleClose}>
         <Modal.Header closeButton>
@@ -130,10 +125,8 @@ class AddEditCategoryForm extends Component {
                   name="name"
                   value={this.state.newCategory ? "" : this.state.category.name}
                 />
-              </Col>
-              <Col sm={{ span: 6, offset: 3 }}>
                 <Form.Control.Feedback type="invalid">
-                  Invalid Category Name
+                  "invalid category name"
                 </Form.Control.Feedback>
               </Col>
             </Form.Group>

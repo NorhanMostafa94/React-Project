@@ -14,13 +14,20 @@ class BookAdmin extends Component {
       authors: authors,
       newBook: false,
       book: {},
-      show: false
+      show: false,
+      books: books
     };
   }
 
   handleClose = () => {
     this.setState({
       show: false
+    });
+  };
+
+  updateBooks = newBooks => {
+    this.setState({
+      books: newBooks
     });
   };
 
@@ -71,7 +78,7 @@ class BookAdmin extends Component {
             </tr>
           </thead>
           <tbody>
-            {books.map(book => {
+            {this.state.books.map(book => {
               return (
                 <tr key={book.id}>
                   <td>{book.id}</td>
@@ -108,6 +115,8 @@ class BookAdmin extends Component {
             categories={this.state.categories}
             authors={this.state.authors}
             handleClose={this.handleClose}
+            updateBooks={this.updateBooks}
+            books={this.state.books}
           />
         )}
       </>
