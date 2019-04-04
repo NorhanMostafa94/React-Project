@@ -1,6 +1,7 @@
 import React from "react";
 import { Tab, Tabs } from "react-bootstrap";
 import BookAdmin from "../Books/Admin";
+import AuthorAdmin from "../Authors/Admin"
 
 const AdminPanel = () => {
   return (
@@ -12,7 +13,7 @@ const AdminPanel = () => {
         <BookAdmin />
       </Tab>
       <Tab eventKey="Authors" title="Authors">
-        {/* <Sonnet /> */}
+      <AuthorAdmin/>
       </Tab>
     </Tabs>
   );

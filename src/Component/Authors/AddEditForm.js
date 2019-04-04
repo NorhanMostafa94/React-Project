@@ -6,14 +6,21 @@ class AddEditAuthorForm extends Component {
   constructor(props, context) {
     super(props, context);
 
-    this.handleShow = this.handleShow.bind(this);
+    // this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      show: false,
-      newAuthor: false,
+      show: this.props.show,
+      newAuthor: this.props.newAuthor,
+      authors:[],
+      author: this.props.author,
+    };
+  }
+
+  handleClose() {
+    this.setState({
       author: {
         id: Number,
         name: "",
@@ -22,40 +29,13 @@ class AddEditAuthorForm extends Component {
         bio: "",
         Website: ""
       },
-      authors: [
-        {
-          id: 1,
-          name: "first author",
-          cover: "link",
-          Born: "8/10/2019",
-          bio: "great author",
-          Website: "www"
-        }
-      ]
-    };
-  }
-
-  handleClose() {
-    this.setState({
       show: false,
-      author: {
-        id: Number,
-        name: "",
-        cover: "",
-        Born: "",
-        bio: "",
-        Website: ""
-      }
-    });
+    },
+      () => {
+        this.props.handleClose();
+      });
   }
 
-  handleShow() {
-    this.setState({
-      newAuthor: this.props.newAuthor,
-      author: this.props.author,
-      show: true
-    });
-  }
 
   onSubmit(event) {
     event.preventDefault();
