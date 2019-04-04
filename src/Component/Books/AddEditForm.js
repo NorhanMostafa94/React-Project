@@ -51,12 +51,15 @@ class AddEditBookForm extends Component {
   saveBook() {
     const { id } = this.state.currentBook;
     if (isNaN(id)) {
-      this.setState({
-        books: [
-          ...this.state.books,
-          { ...this.state.currentBook, id: this.state.books.length + 1 }
-        ]
-      });
+      this.setState(
+        {
+          books: [
+            ...this.state.books,
+            { ...this.state.currentBook, id: this.state.books.length + 1 }
+          ]
+        },
+        () => console.log(this.state.books)
+      );
     } else {
       this.state.books.find(element => {
         if (this.state.currentBook.id === element.id) {
@@ -88,7 +91,7 @@ class AddEditBookForm extends Component {
                   placeholder="Add Book Title"
                   onChange={this.handlechange}
                   name="title"
-                  value={this.props.newBook ? "" : this.state.currentBook.title}
+                  value={this.state.newBook ? "" : this.state.currentBook.title}
                 />
               </Col>
             </Form.Group>

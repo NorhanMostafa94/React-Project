@@ -9,7 +9,7 @@ class SearchBar extends Component {
     state = { 
         search:'',
         book:[],
-       
+       lastSearch:[]
         
      }
      handleChange=(books,res)=>(e)=>{
@@ -18,11 +18,15 @@ class SearchBar extends Component {
         
         
         if(value===''){
+            const lastSearch=this.state.lastSearch;
+            (this.state.lastSearch.length===0)?
             this.setState({ book: [], search:''},()=>{
                 res([])
                 this.props.history.goBack();
-            });
-           
+            })
+           : this.setState({ book:lastSearch, search:''},()=>{
+           this.props.history.push("/results")
+           })
         }
         
         else{
@@ -31,14 +35,14 @@ class SearchBar extends Component {
             let choosedBook=  books.filter(m => m.title.toLowerCase().includes(value.toLowerCase()))
            
               if(choosedBook.length!==0){
-                this.setState({ book: choosedBook, search:value},()=>{
+                this.setState({ book: choosedBook, search:value,lastSearch:choosedBook},()=>{
                     res(this.state.book)
                         console.log(choosedBook)
                         this.props.history.push("/results")
                     });
               }
               else{
-                  this.setState({book: [], search:value},()=>{
+                  this.setState({book: [], search:value,lastSearch:[]},()=>{
                     res(this.state.book)
                     console.log(choosedBook)
                     // (lastSearch.length!==0)?

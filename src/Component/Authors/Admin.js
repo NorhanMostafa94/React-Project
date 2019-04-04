@@ -12,7 +12,7 @@ class AuthorAdmin extends Component {
     this.state = {
       authors: authors,
       newAuthor: false,
-      author:{},
+      author: {},
       show: false
     };
   }
@@ -38,6 +38,17 @@ class AuthorAdmin extends Component {
       <>
         <Table hover>
           <thead>
+            <tr>
+              <th
+                style={{
+                  position: "absolute",
+                  right: "0rem",
+                  fontSize: "20px"
+                }}
+              >
+                <i className="fas fa-plus-circle" />
+              </th>
+            </tr>
             <tr>
               <th>ID</th>
               <th>Photo</th>
