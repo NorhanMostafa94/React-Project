@@ -36,6 +36,17 @@ class AddEditCategoryForm extends Component {
     );
   }
 
+  handleChange(e) {
+    e.persist();
+    const name = e.target.name;
+    const value = e.target.value;
+    this.setState({
+      validated: true,
+      newCategory: false,
+      category: { ...this.state.category, [name]: value }
+    });
+  }
+
   onSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -45,9 +56,10 @@ class AddEditCategoryForm extends Component {
       this.state.categories.map(cat => {
         if (this.state.category.name === cat.name) {
           invalid = true;
-        }
+          return cat;
+        } else return "";
       });
-      if (!invalid && this.state.category.name != "") {
+      if (!invalid && this.state.category.name !== "") {
         this.setState({
           categories: [
             ...this.state.categories,
@@ -73,19 +85,7 @@ class AddEditCategoryForm extends Component {
     }
   }
 
-  handleChange(e) {
-    e.persist();
-    const name = e.target.name;
-    const value = e.target.value;
-    this.setState({
-      validated: true,
-      newCategory: false,
-      category: { ...this.state.category, [name]: value }
-    });
-  }
-
   render() {
-    console.log(this.state.category);
     return (
       <Modal show={this.state.show} onHide={this.handleClose}>
         <Modal.Header closeButton>
