@@ -3,6 +3,9 @@ import { Context } from '../../App';
 import { Container, Row } from 'react-bootstrap';
 
 import Author from './Author'
+import Paging from '../shared/Pagination';
+import NavBar from '../shared/Navbar'
+
 // import Book from '../Books/BookItem'
 class AuthorsList extends Component {
 
@@ -11,22 +14,25 @@ class AuthorsList extends Component {
             <Context.Consumer>
                 {
                     value => (
-
-                        // this.get(value.getCategories),
-                        <Container className="card-container" >
-                            <Row className="justify-content-md-center" className="authors-list">
-                                {value.state.authors.map(d =>
-                                    <Author key={d.id} {...d}></Author>
-                                    // <Book key={d.id} {...d}></Book>
+                        <>
+                        <NavBar/>
+                            {/* // this.get(value.getCategories) */}
+                            <Container className="card-container" >
+                                <Row className="justify-content-md-center" className="authors-list">
+                                    {value.state.authors.map(d =>
+                                        <Author key={d.id} {...d}></Author>
+                                        // <Book key={d.id} {...d}></Book>
                                     )
                                     }
-                            </Row>
-                        </Container>
+                                </Row>
+                                <Paging />
+                            </Container>
+                            </>
+                            )
+                        }
+            </Context.Consumer>
                     )
                 }
-            </Context.Consumer>
-        )
-    }
-}
-
+                }
+                
 export default AuthorsList;

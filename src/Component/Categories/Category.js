@@ -6,6 +6,8 @@ import { Context } from '../../App';
 
 import Book from '../Books/BookItem'
 import { categories } from '../../data';
+import Paging from '../shared/Pagination';
+
 
 
 class CategoryItem extends Component {
@@ -30,6 +32,7 @@ class CategoryItem extends Component {
                                     <Row className="justify-content-md-center">
                                         {t.books.map(c => <Book key={c.id} {...c}></Book>)}
                                     </Row>
+                                <Paging/>
                                 </Container>
                             </div>
                         )
