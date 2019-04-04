@@ -14,8 +14,9 @@ class AddEditAuthorForm extends Component {
     this.state = {
       show: this.props.show,
       newAuthor: this.props.newAuthor,
-      authors:[],
+      authors: [],
       author: this.props.author,
+      validated: false
     };
   }
 
@@ -83,6 +84,7 @@ class AddEditAuthorForm extends Component {
     } else {
       this.handleClose();
     }
+    this.setState({ validated: true });
   }
 
   handleChange(e) {
@@ -115,6 +117,7 @@ class AddEditAuthorForm extends Component {
               noValidate
               validated={this.state.validated}
               style={{ padding: "1rem" }}
+              
             >
               <Form.Group as={Row} controlId="formAuthorName">
                 <Form.Label column sm={4}>
@@ -164,7 +167,8 @@ class AddEditAuthorForm extends Component {
                 </Form.Label>
                 <Col sm={8}>
                   <Form.Control
-                    type="text"
+                  required
+                    type="date"
                     placeholder="Enter Author Birthdate"
                     onChange={this.handleChange}
                     name="Born"
@@ -179,6 +183,7 @@ class AddEditAuthorForm extends Component {
                 </Form.Label>
                 <Col sm={8}>
                   <Form.Control
+                  required
                     type="text"
                     placeholder="Enter Author Biography"
                     onChange={this.handleChange}
@@ -193,6 +198,7 @@ class AddEditAuthorForm extends Component {
                 </Form.Label>
                 <Col sm={8}>
                   <Form.Control
+                  required
                     type="text"
                     placeholder="Enter Author Website"
                     onChange={this.handleChange}
