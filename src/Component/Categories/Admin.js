@@ -17,14 +17,9 @@ class CategoryAdmin extends Component {
     };
   }
 
-  handleClose = () => {
+  handleClose = newCategories => {
     this.setState({
-      show: false
-    });
-  };
-
-  updateCategories = newCategories => {
-    this.setState({
+      show: false,
       categories: newCategories
     });
   };
@@ -96,7 +91,6 @@ class CategoryAdmin extends Component {
             show={this.state.show}
             categories={this.state.categories}
             handleClose={this.handleClose}
-            updateCategories={this.updateCategories}
           />
         )}
       </>

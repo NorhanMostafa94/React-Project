@@ -13,7 +13,7 @@ class AddEditCategoryForm extends Component {
 
     this.state = {
       show: this.props.show,
-      validated: true,
+      validated: false,
       newCategory: this.props.newCategory,
       category: this.props.category,
       categories: this.props.categories,
@@ -31,27 +31,15 @@ class AddEditCategoryForm extends Component {
         }
       },
       () => {
-        this.props.handleClose();
-        this.props.updateCategories(this.state.categories);
+        this.props.handleClose(this.state.categories);
       }
     );
   }
 
-  // handleShow() {
-  //   this.setState({
-  //     newCategory: this.props.newCategory,
-  //     category: this.props.category,
-  //     validated: false,
-  //     show: true
-  //   });
-  // }
-
   onSubmit(event) {
-    console.log(this.state.category);
     event.preventDefault();
     const form = event.currentTarget;
     const { id } = this.state.category;
-    console.log(id);
     let invalid = false;
     if (isNaN(id)) {
       this.state.categories.map(cat => {
@@ -59,19 +47,16 @@ class AddEditCategoryForm extends Component {
           invalid = true;
         }
       });
-      if (!invalid) {
-        this.setState(
-          {
-            categories: [
-              ...this.state.categories,
-              {
-                id: this.state.categories.length + 1,
-                name: this.state.category.name
-              }
-            ]
-          },
-          () => console.log(this.state.categories, this.state.categories.length)
-        );
+      if (!invalid && this.state.category.name != "") {
+        this.setState({
+          categories: [
+            ...this.state.categories,
+            {
+              id: this.state.categories.length + 1,
+              name: this.state.category.name
+            }
+          ]
+        });
       }
     } else {
       this.state.categories.find(category => {
@@ -93,6 +78,7 @@ class AddEditCategoryForm extends Component {
     const name = e.target.name;
     const value = e.target.value;
     this.setState({
+      validated: true,
       newCategory: false,
       category: { ...this.state.category, [name]: value }
     });
