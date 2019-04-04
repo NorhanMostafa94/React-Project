@@ -6,62 +6,34 @@ class AddEditBookForm extends Component {
   constructor(props, context) {
     super(props, context);
 
-    this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handlechange = this.handlechange.bind(this);
     this.saveBook = this.saveBook.bind(this);
 
     this.state = {
-      count: 0,
-      show: false,
-      newBook: false,
-      categories: [],
-      authors: [],
-      currentBook: {
-        id: Number,
-        title: "",
-        category: "",
-        author: "",
-        cover: ""
-      },
+      show: this.props.show,
+      newBook: this.props.newBook,
+      categories: this.props.categories,
+      authors: this.props.authors,
+      currentBook: this.props.book,
       books: []
     };
   }
 
   handleClose() {
-    this.setState({
-      currentBook: {
-        id: Number,
-        title: "",
-        category: "",
-        author: "",
-        cover: ""
-      },
-      show: false
-    });
-  }
-
-  handleShow(newBook, book) {
-    if (newBook) {
-      book = {
-        id: Number,
-        title: "",
-        category: "",
-        author: "",
-        cover: ""
-      };
-    }
     this.setState(
       {
-        newBook: newBook,
-        currentBook: book,
-        categories: this.props.categories,
-        authors: this.props.authors
-        // books: this.props.books
+        currentBook: {
+          id: Number,
+          title: "",
+          category: "",
+          author: "",
+          cover: ""
+        },
+        show: false
       },
       () => {
-        console.log(this.state);
-        this.setState({ show: true });
+        this.props.handleClose();
       }
     );
   }
