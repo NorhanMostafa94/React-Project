@@ -5,22 +5,25 @@ import {Context} from '../../App';
 
 
 class SearchBar extends Component {
-   
+    constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+      }
     state = { 
         search:'',
         book:[],
        lastSearch:[]
         
      }
-    handleChange = (books, res) => (e)=> {
+    handleChange = (books, res,e)=> {
         const name = e.target.name;
         const value = e.target.value;
         
             if(value !== '') {
-                this.setState({ [name]: value }
-                   ,()=>{
-                //  this.setState({ search: value })
-                //, () => {
+                // this.setState({ [name]: value }
+                //    ,()=>{
+                 this.setState({ search: value }
+                , () => {
                    // lastSearch: choosedBook
                     console.log(this.state)
                     let choosedBook = books.filter(m => m.title.toLowerCase().includes(value.toLowerCase()))
@@ -45,7 +48,8 @@ class SearchBar extends Component {
 
                 }
 
-                )
+                 )
+            
             }
 
             else {
@@ -76,7 +80,7 @@ class SearchBar extends Component {
                         <div className=" h-100">
                             <div className="d-flex justify-content-center h-100">
                                 <div className="searchbar">
-                                    <input className="search_input" type="Text" placeholder="search books" value={this.state.search} onChange={this.handleChange(value.state.books,value.SearchRes)} name="search"/>
+                                    <input className="search_input" type="Text" placeholder="search books" value={this.state.search} onChange={e=>this.handleChange(value.state.books,value.SearchRes,e)} name="search"/>
                                         <a href="#" className="search_icon"><i className="fas fa-search"></i></a>
                                 </div>
                             </div>
