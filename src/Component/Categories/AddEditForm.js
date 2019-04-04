@@ -85,7 +85,6 @@ class AddEditCategoryForm extends Component {
   }
 
   render() {
-    console.log(this.state.category);
     return (
       <Modal show={this.state.show} onHide={this.handleClose}>
         <Modal.Header closeButton>

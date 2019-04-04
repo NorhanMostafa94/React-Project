@@ -14,211 +14,203 @@ class AddEditAuthorForm extends Component {
     this.state = {
       show: this.props.show,
       newAuthor: this.props.newAuthor,
-      authors: [],
+      authors: this.props.authors,
       author: this.props.author,
       validated: false
     };
   }
 
   handleClose() {
-    this.setState({
-      author: {
-        id: Number,
-        name: "",
-        cover: "",
-        Born: "",
-        bio: "",
-        Website: ""
+    this.setState(
+      {
+        author: {
+          id: Number,
+          name: "",
+          cover: "",
+          Born: "",
+          bio: "",
+          Website: ""
+        },
+        show: false
       },
-      show: false,
-    },
       () => {
-        this.props.handleClose();
-      });
+        this.props.handleClose(this.state.authors);
+      }
+    );
   }
-
 
   onSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
-    const { id } = this.state.author.id;
-    console.log(this.state.authors);
+    const { id } = this.state.author;
+    let invalid = false;
     if (isNaN(id)) {
       this.state.authors.map(auth => {
         if (auth.name === this.state.author.name) {
-          this.state.validated = "false";
-        } else {
-          this.setState(
-            {
-              authors: [
-                ...this.state.authors,
-                {
-                  ...this.state.author,
-                  id: this.state.authors.length + 1
-                }
-              ]
-            },
-            () => {
-              console.log(this.state.authors);
-            }
-          );
+          invalid = true;
         }
       });
+      if (
+        !invalid &&
+        !(
+          this.state.author.name === "" ||
+          this.state.author.cover === "" ||
+          this.state.author.Born === "" ||
+          this.state.author.bio === "" ||
+          this.state.author.Website === ""
+        )
+      ) {
+        this.setState({
+          authors: [
+            ...this.state.authors,
+            {
+              ...this.state.author,
+              id: this.state.authors.length + 1
+            }
+          ]
+        });
+      }
     } else {
-      const exist = this.state.authors.find(author => {
+      this.state.authors.find(author => {
         if (this.state.author.id === author.id) {
-          author = this.state.author;
+          author.name = this.state.author.name;
+          author.cover = this.state.author.cover;
+          author.bio = this.state.author.bio;
+          author.Born = this.state.author.Born;
+          author.Website = this.state.author.Website;
           return true;
         } else return false;
       });
-      if (!exist)
-        this.setState(
-          {
-            authors: [...this.state.authors, this.state.author]
-          },
-          () => console.log(this.state.authors)
-        );
     }
-    if (form.checkValidity() === false) {
+    if (form.checkValidity() === false || invalid) {
       event.stopPropagation();
     } else {
       this.handleClose();
     }
-    this.setState({ validated: true });
   }
 
   handleChange(e) {
     e.persist();
     const name = e.target.name;
     const value = e.target.value;
-    this.setState(
-      {
-        newAuthor: false,
-        author: { ...this.state.author, [name]: value }
-      },
-      () => console.log(this.state.author)
-    );
+    this.setState({
+      validated: true,
+      newAuthor: false,
+      author: { ...this.state.author, [name]: value }
+    });
   }
 
   render() {
     return (
-      <>
-        <Button variant="primary" onClick={this.handleShow}>
-          Launch demo modal
-        </Button>
-        <Modal show={this.state.show} onHide={this.handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Author</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Form
-              className="author-form"
-              onSubmit={this.onSubmit}
-              noValidate
-              validated={this.state.validated}
-              style={{ padding: "1rem" }}
-              
-            >
-              <Form.Group as={Row} controlId="formAuthorName">
-                <Form.Label column sm={4}>
-                  Author Name:
-                </Form.Label>
-                <Col sm={8}>
-                  <Form.Control
-                    required
-                    type="text"
-                    placeholder="Enter Author name"
-                    onChange={this.handleChange}
-                    name="name"
-                    value={this.state.newAuthor ? "" : this.state.author.name}
-                  />
-                </Col>
-                <Col sm={{ span: 6, offset: 3 }}>
-                  <Form.Control.Feedback type="invalid">
-                    Invalid Category Name
-                  </Form.Control.Feedback>
-                </Col>
-              </Form.Group>
-
-              <Form.Group as={Row} controlId="formAuthorCover">
-                <Form.Label column sm={4}>
-                  Image:
-                </Form.Label>
-                <Col sm={8}>
-                  <Form.Control
-                    required
-                    type="text"
-                    placeholder="Enter Author image"
-                    onChange={this.handleChange}
-                    name="cover"
-                    value={this.state.newAuthor ? "" : this.state.author.cover}
-                  />
-                </Col>
-                <Col sm={{ span: 6, offset: 3 }}>
-                  <Form.Control.Feedback type="invalid">
-                    Invalid Image
-                  </Form.Control.Feedback>
-                </Col>
-              </Form.Group>
-
-              <Form.Group as={Row} controlId="formAuthorBD">
-                <Form.Label column sm={4}>
-                  Author BirthDate:
-                </Form.Label>
-                <Col sm={8}>
-                  <Form.Control
+      <Modal show={this.state.show} onHide={this.handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Author</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form
+            className="author-form"
+            onSubmit={this.onSubmit}
+            noValidate
+            validated={this.state.validated}
+            style={{ padding: "1rem" }}
+          >
+            <Form.Group as={Row} controlId="formAuthorName">
+              <Form.Label column sm={4}>
+                Author Name:
+              </Form.Label>
+              <Col sm={8}>
+                <Form.Control
                   required
-                    type="date"
-                    placeholder="Enter Author Birthdate"
-                    onChange={this.handleChange}
-                    name="Born"
-                    value={this.state.newAuthor ? "" : this.state.author.Born}
-                  />
-                </Col>
-              </Form.Group>
-
-              <Form.Group as={Row} controlId="formAuthorBIO">
-                <Form.Label column sm={4}>
-                  Author BIO:
-                </Form.Label>
-                <Col sm={8}>
-                  <Form.Control
-                  required
-                    type="text"
-                    placeholder="Enter Author Biography"
-                    onChange={this.handleChange}
-                    name="bio"
-                    value={this.state.newAuthor ? "" : this.state.author.bio}
-                  />
-                </Col>
-              </Form.Group>
-              <Form.Group as={Row} controlId="formAuthorWS">
-                <Form.Label column sm={4}>
-                  Author Website:
-                </Form.Label>
-                <Col sm={8}>
-                  <Form.Control
-                  required
-                    type="text"
-                    placeholder="Enter Author Website"
-                    onChange={this.handleChange}
-                    name="Website"
-                    value={
-                      this.state.newAuthor ? "" : this.state.author.Website
-                    }
-                  />
-                </Col>
-              </Form.Group>
-
-              <Col sm={{ span: 4, offset: 4 }}>
-                <Button variant="primary" type="submit">
-                  Add
-                </Button>
+                  type="text"
+                  placeholder="Enter Author name"
+                  onChange={this.handleChange}
+                  name="name"
+                  value={this.state.newAuthor ? "" : this.state.author.name}
+                />
               </Col>
-            </Form>
-          </Modal.Body>
-        </Modal>
-      </>
+              <Col sm={{ span: 6, offset: 3 }}>
+                <Form.Control.Feedback type="invalid">
+                  Invalid Category Name
+                </Form.Control.Feedback>
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} controlId="formAuthorCover">
+              <Form.Label column sm={4}>
+                Image:
+              </Form.Label>
+              <Col sm={8}>
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="Enter Author image"
+                  onChange={this.handleChange}
+                  name="cover"
+                  value={this.state.newAuthor ? "" : this.state.author.cover}
+                />
+              </Col>
+              <Col sm={{ span: 6, offset: 3 }}>
+                <Form.Control.Feedback type="invalid">
+                  Invalid Image
+                </Form.Control.Feedback>
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} controlId="formAuthorBD">
+              <Form.Label column sm={4}>
+                Author BirthDate:
+              </Form.Label>
+              <Col sm={8}>
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="Enter Author Birthdate"
+                  onChange={this.handleChange}
+                  name="Born"
+                  value={this.state.newAuthor ? "" : this.state.author.Born}
+                />
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} controlId="formAuthorBIO">
+              <Form.Label column sm={4}>
+                Author BIO:
+              </Form.Label>
+              <Col sm={8}>
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="Enter Author Biography"
+                  onChange={this.handleChange}
+                  name="bio"
+                  value={this.state.newAuthor ? "" : this.state.author.bio}
+                />
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} controlId="formAuthorWS">
+              <Form.Label column sm={4}>
+                Author Website:
+              </Form.Label>
+              <Col sm={8}>
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="Enter Author Website"
+                  onChange={this.handleChange}
+                  name="Website"
+                  value={this.state.newAuthor ? "" : this.state.author.Website}
+                />
+              </Col>
+            </Form.Group>
+
+            <Col sm={{ span: 4, offset: 4 }}>
+              <Button variant="primary" type="submit">
+                Add
+              </Button>
+            </Col>
+          </Form>
+        </Modal.Body>
+      </Modal>
     );
   }
 }

@@ -17,9 +17,10 @@ class AuthorAdmin extends Component {
     };
   }
 
-  handleClose = () => {
+  handleClose = newAuthors => {
     this.setState({
-      show: false
+      show: false,
+      authors: newAuthors
     });
   };
 
@@ -46,7 +47,19 @@ class AuthorAdmin extends Component {
                   fontSize: "20px"
                 }}
               >
-                <i className="fas fa-plus-circle" />
+                <i
+                  className="fas fa-plus-circle"
+                  onClick={() =>
+                    this.authorform(true, {
+                      id: Number,
+                      name: "",
+                      cover: "",
+                      Born: "",
+                      bio: "",
+                      Website: ""
+                    })
+                  }
+                />
               </th>
             </tr>
             <tr>
@@ -57,7 +70,7 @@ class AuthorAdmin extends Component {
             </tr>
           </thead>
           <tbody>
-            {authors.map(author => {
+            {this.state.authors.map(author => {
               return (
                 <tr key={author.id}>
                   <td>{author.id}</td>
