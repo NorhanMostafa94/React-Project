@@ -95,7 +95,7 @@ handleSubmit =(addUser)=> (e) => {
                         <>
                             <div className="row mt-5">
                                 <div className="col-md-7 popular text-center mx-3 ">
-                                    {console.log(value.state.popBooks)}
+                                    {/* {console.log(value.state.popBooks)} */}
                                     <div className="col-md-12 ml-1 popular" >
 
 
@@ -103,7 +103,7 @@ handleSubmit =(addUser)=> (e) => {
                                         {value.state.popBooks.map(
 
                                             e =>
-                                                <BookCard key={e.id} title={e.title} id={e.id} src={e.cover} />
+                                                <BookCard key={uuidv4()} title={e.title} id={e.id} src={e.cover} />
 
                                         )}
                                     </div>
