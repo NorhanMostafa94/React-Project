@@ -20,14 +20,9 @@ class BookAdmin extends Component {
     };
   }
 
-  handleClose = () => {
+  handleClose = newBooks => {
     this.setState({
-      show: false
-    });
-  };
-
-  updateBooks = newBooks => {
-    this.setState({
+      show: false,
       books: newBooks
     });
   };
@@ -120,14 +115,12 @@ class BookAdmin extends Component {
         </Table>
         {this.state.show && (
           <AddEditBookForm
-            // ref={this.BookModalRef}
             newBook={this.state.newBook}
             book={this.state.book}
             show={this.state.show}
             categories={this.state.categories}
             authors={this.state.authors}
             handleClose={this.handleClose}
-            updateBooks={this.updateBooks}
             books={this.state.books}
           />
         )}

@@ -39,6 +39,17 @@ class AddEditAuthorForm extends Component {
     );
   }
 
+  handleChange(e) {
+    e.persist();
+    const name = e.target.name;
+    const value = e.target.value;
+    this.setState({
+      validated: true,
+      newAuthor: false,
+      author: { ...this.state.author, [name]: value }
+    });
+  }
+
   onSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -90,17 +101,6 @@ class AddEditAuthorForm extends Component {
     }
   }
 
-  handleChange(e) {
-    e.persist();
-    const name = e.target.name;
-    const value = e.target.value;
-    this.setState({
-      validated: true,
-      newAuthor: false,
-      author: { ...this.state.author, [name]: value }
-    });
-  }
-
   render() {
     return (
       <Modal show={this.state.show} onHide={this.handleClose}>
@@ -128,8 +128,6 @@ class AddEditAuthorForm extends Component {
                   name="name"
                   value={this.state.newAuthor ? "" : this.state.author.name}
                 />
-              </Col>
-              <Col sm={{ span: 6, offset: 3 }}>
                 <Form.Control.Feedback type="invalid">
                   Invalid Category Name
                 </Form.Control.Feedback>
@@ -149,8 +147,6 @@ class AddEditAuthorForm extends Component {
                   name="cover"
                   value={this.state.newAuthor ? "" : this.state.author.cover}
                 />
-              </Col>
-              <Col sm={{ span: 6, offset: 3 }}>
                 <Form.Control.Feedback type="invalid">
                   Invalid Image
                 </Form.Control.Feedback>

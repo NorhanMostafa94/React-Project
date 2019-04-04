@@ -36,6 +36,17 @@ class AddEditCategoryForm extends Component {
     );
   }
 
+  handleChange(e) {
+    e.persist();
+    const name = e.target.name;
+    const value = e.target.value;
+    this.setState({
+      validated: true,
+      newCategory: false,
+      category: { ...this.state.category, [name]: value }
+    });
+  }
+
   onSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -72,17 +83,6 @@ class AddEditCategoryForm extends Component {
     } else {
       this.handleClose();
     }
-  }
-
-  handleChange(e) {
-    e.persist();
-    const name = e.target.name;
-    const value = e.target.value;
-    this.setState({
-      validated: true,
-      newCategory: false,
-      category: { ...this.state.category, [name]: value }
-    });
   }
 
   render() {
