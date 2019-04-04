@@ -8,6 +8,7 @@ class BookAdmin extends Component {
     super(props);
 
     this.bookform = this.bookform.bind(this);
+    this.deleteBook = this.deleteBook.bind(this);
 
     this.state = {
       categories: categories,
@@ -41,6 +42,14 @@ class BookAdmin extends Component {
       () => console.log(this.state)
     );
   }
+
+  deleteBook(bookId) {
+    const newbooks = this.state.books;
+    const index = newbooks.findIndex(bk => bk.id === bookId);
+    newbooks.splice(index, 1);
+    this.setState({ books: newbooks });
+  }
+
   render() {
     return (
       <>
@@ -98,7 +107,10 @@ class BookAdmin extends Component {
                         className="fas fa-pen"
                         onClick={() => this.bookform(false, book)}
                       />
-                      <i className="fas fa-eraser" />
+                      <i
+                        className="fas fa-eraser"
+                        onClick={() => this.deleteBook(book.id)}
+                      />
                     </div>
                   </td>
                 </tr>

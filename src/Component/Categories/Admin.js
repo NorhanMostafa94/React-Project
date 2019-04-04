@@ -8,6 +8,7 @@ class CategoryAdmin extends Component {
     super(props);
 
     this.categoryform = this.categoryform.bind(this);
+    this.deleteCategory = this.deleteCategory.bind(this);
 
     this.state = {
       categories: categories,
@@ -34,6 +35,14 @@ class CategoryAdmin extends Component {
       () => console.log(this.state)
     );
   }
+
+  deleteCategory(categoryId) {
+    const newcategories = this.state.categories;
+    const index = newcategories.findIndex(cat => cat.id === categoryId);
+    newcategories.splice(index, 1);
+    this.setState({ categories: newcategories });
+  }
+
   render() {
     return (
       <>
@@ -75,7 +84,10 @@ class CategoryAdmin extends Component {
                         className="fas fa-pen"
                         onClick={() => this.categoryform(false, category)}
                       />
-                      <i className="fas fa-eraser" />
+                      <i
+                        className="fas fa-eraser"
+                        onClick={() => this.deleteCategory(category.id)}
+                      />
                     </div>
                   </td>
                 </tr>

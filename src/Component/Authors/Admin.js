@@ -8,6 +8,7 @@ class AuthorAdmin extends Component {
     super(props);
 
     this.authorform = this.authorform.bind(this);
+    this.deleteAuthor = this.deleteAuthor.bind(this);
 
     this.state = {
       authors: authors,
@@ -34,6 +35,14 @@ class AuthorAdmin extends Component {
       () => console.log(this.state)
     );
   }
+
+  deleteAuthor(authorId) {
+    const newauthors = this.state.authors;
+    const index = newauthors.findIndex(auth => auth.id === authorId);
+    newauthors.splice(index, 1);
+    this.setState({ authors: newauthors });
+  }
+
   render() {
     return (
       <>
@@ -89,7 +98,10 @@ class AuthorAdmin extends Component {
                         className="fas fa-pen"
                         onClick={() => this.authorform(false, author)}
                       />
-                      <i className="fas fa-eraser" />
+                      <i
+                        className="fas fa-eraser"
+                        onClick={() => this.deleteAuthor(author.id)}
+                      />
                     </div>
                   </td>
                 </tr>
