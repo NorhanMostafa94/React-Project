@@ -16,7 +16,7 @@ import Routing from "./Routing/Routing";
 import { categories, authors, books, users } from "./data";
 
 import "./App.css";
-import SearchBar from "./Component/Search/Search";
+
 
 export const Context = React.createContext();
 
@@ -25,9 +25,12 @@ class App extends Component {
     categories: categories,
     authors: authors,
     books: books,
-    users: users,
-    searchResult: []
-  };
+    users:users,
+    searchResult:[],
+    popBooks:books.filter(e=>Number(e.avgrating)>4 && e.reviews.length>1)
+
+    
+  }
 
   getCategories = categories => {
     // console.log(1)
@@ -36,19 +39,25 @@ class App extends Component {
     console.log(this.state.categories);
   };
   addUser = user => {
-    //const  userData  = this.state.users;
-    // this.setState({ userData: userData.concat(user) })
-    this.setState({ users: users.concat(user) });
-  };
-  SearchRes = books => {
-    this.setState({ searchResult: books });
-  };
+   this.setState({ users: users.concat(user) })
+   }
+    SearchRes=(books)=>{
+      const popBooks= this.state.popBooks;
+    this.setState({searchResult:books,popBooks:popBooks.concat(books)})
+  }
+  
+    // const popBooks=books.filter(e=>e.rating==='5')
+    // this.setState({popBooks:popBooks})
+  
   render() {
+    
     const value = {
       state: this.state,
       getCategories: this.getCategories,
       addUser: this.addUser,
-      SearchRes: this.SearchRes
+      SearchRes: this.SearchRes,
+      
+      
     };
     return (
       //<BookDetails />
