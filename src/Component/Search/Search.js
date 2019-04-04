@@ -12,31 +12,21 @@ class SearchBar extends Component {
        lastSearch:[]
         
      }
-    handleChange = (books, res) => (e) => {
+    handleChange = (books, res) => (e)=> {
         const name = e.target.name;
         const value = e.target.value;
-        // this.setState({ [name]: value }) 
-            
-            if (value === '') {
-                let lastSearch = this.state.lastSearch
-                    (this.state.lastSearch.length < 1) ?
-                    this.setState({ book: [], search: value }, () => {
-                        res([])
-                        this.props.history.goBack();
-                    })
-                    : this.setState({ book: lastSearch, search: value }, () => {
-                        this.props.history.push("/results")
-                    })
-            }
-
-            else {
+        
+            if(value !== '') {
+                this.setState({ [name]: value }
+                   ,()=>{
                 //  this.setState({ search: value })
                 //, () => {
+                   // lastSearch: choosedBook
                     console.log(this.state)
                     let choosedBook = books.filter(m => m.title.toLowerCase().includes(value.toLowerCase()))
 
                     if (choosedBook.length !== 0) {
-                        this.setState({ book: choosedBook, search: value, lastSearch: choosedBook }, () => {
+                        this.setState({ book: choosedBook, search: value }, () => {
                             console.log(this.state)
                             res(this.state.book)
                             console.log(choosedBook, this.state.search)
@@ -53,16 +43,24 @@ class SearchBar extends Component {
                         })
                     }
 
-                // }
+                }
 
-                // )
+                )
             }
 
+            else {
+                console.log(this.state.lastSearch) ;
+                //let s=this.state.lastSearch
+                    // (this.state.lastSearch.length ===0) ?
+                    this.setState({ book: [], search: '' }, () => {
+                        res([])
+                        this.props.history.goBack();
+                    })
+                    // : this.setState({ book: this.state.lastSearch, search: '' }, () => {
+                    //     this.props.history.push("/results")
+                    // })
+            }
 
-
-
-        
-    
 
      }
 
