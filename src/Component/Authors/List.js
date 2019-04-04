@@ -3,6 +3,8 @@ import { Context } from '../../App';
 import { Container, Row } from 'react-bootstrap';
 
 import Author from './Author'
+import Paging from '../shared/Pagination';
+
 // import Book from '../Books/BookItem'
 class AuthorsList extends Component {
 
@@ -21,6 +23,7 @@ class AuthorsList extends Component {
                                     )
                                     }
                             </Row>
+                            <Paging/>
                         </Container>
                     )
                 }

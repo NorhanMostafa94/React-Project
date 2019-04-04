@@ -59,7 +59,7 @@ class BookDetails extends Component {
                         </div>
                         <div className="col-lg-7 col-sm-12 desc-block">
                             <h5 className="bookTitle">{this.state.book.title}</h5>
-                            <h7 style={{ display: 'block' }}><Link to={`/authors/${this.state.book.authorID}`} className="author-name" > by {this.state.book.author}</Link> </h7>
+                            <h6 style={{ display: 'block' }}><Link to={`/authors/${this.state.book.authorID}`} className="author-name" > by {this.state.book.author}</Link> </h6>
                             <Link to={`/categories/${this.state.book.categoryID}`} className="book-category"  >{this.state.book.category}</Link>
 
                             {/* <h6>{this.state.book.author}</h6>
