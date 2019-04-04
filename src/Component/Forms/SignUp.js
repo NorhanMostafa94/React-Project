@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import uuidv4 from 'uuid/v4';
 import {validateEmail,isEmpty,length} from '../../Component/Forms/Validator';
 import BookCard from '../Search/BookCard';
+import SearchBar from '../../Component/Search/Search';
 import {Context} from '../../App';
 
 const initialState={
@@ -93,6 +94,7 @@ handleSubmit =(addUser)=> (e) => {
                 {
                     value => (
                         <>
+                        <SearchBar/>
                             <div className="row mt-5">
                                 <div className="col-md-7 popular text-center mx-3 ">
                                     {/* {console.log(value.state.popBooks)} */}
@@ -103,7 +105,7 @@ handleSubmit =(addUser)=> (e) => {
                                         {value.state.popBooks.map(
 
                                             e =>
-                                                <BookCard key={uuidv4()} title={e.title} id={e.id} src={e.cover} />
+                                                <BookCard key={uuidv4()+e.id} title={e.title} id={e.id} src={e.cover} />
 
                                         )}
                                     </div>
@@ -187,9 +189,7 @@ handleSubmit =(addUser)=> (e) => {
                                     </div>
                                 </form>
                             </div>
-
-
-                        </>
+                         </>                   
                     )
                 }
             </Context.Consumer>
