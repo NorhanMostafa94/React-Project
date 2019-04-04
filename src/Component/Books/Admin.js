@@ -11,15 +11,28 @@ class BookAdmin extends Component {
 
     this.state = {
       categories: categories,
-      authors: authors
+      authors: authors,
+      newBook: false,
+      book: {},
+      show: false
     };
   }
-  BookModalRef = ({ handleShow }) => {
-    this.showModal = handleShow;
+
+  handleClose = () => {
+    this.setState({
+      show: false
+    });
   };
 
   bookform(formType, book) {
-    this.showModal(formType, book);
+    this.setState(
+      {
+        newBook: formType,
+        book: book,
+        show: true
+      },
+      () => console.log(this.state)
+    );
   }
   render() {
     return (
@@ -53,10 +66,10 @@ class BookAdmin extends Component {
                   <td>
                     <div className="tdFlex">
                       <i
-                        class="fas fa-pen"
+                        className="fas fa-pen"
                         onClick={() => this.bookform(false, book)}
                       />
-                      <i class="fas fa-eraser" />
+                      <i className="fas fa-eraser" />
                     </div>
                   </td>
                 </tr>
@@ -64,11 +77,17 @@ class BookAdmin extends Component {
             })}
           </tbody>
         </Table>
-        <AddEditBookForm
-          ref={this.BookModalRef}
-          categories={this.state.categories}
-          authors={this.state.authors}
-        />
+        {this.state.show && (
+          <AddEditBookForm
+            // ref={this.BookModalRef}
+            newBook={this.state.newBook}
+            book={this.state.book}
+            show={this.state.show}
+            categories={this.state.categories}
+            authors={this.state.authors}
+            handleClose={this.handleClose}
+          />
+        )}
       </>
     );
   }
