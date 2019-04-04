@@ -922,20 +922,20 @@ export const users = [
     lastname: "Refaat",
     password: "12345",
     admin: true,
-    id: 1
+    id:1
   },
   {
     firstname: "Mohammad",
     lastname: "Refaat",
     password: "1234",
     admin: false,
-    id: 2
+    id:2
   },
   {
     firstname: "Aya",
     lastname: "Refaat",
     password: "123456",
     admin: true,
-    id: 3
+    id:3
   }
 ];

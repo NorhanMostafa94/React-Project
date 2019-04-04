@@ -9,7 +9,8 @@ class SearchBar extends Component {
     state = { 
         search:'',
         book:[],
-        nores:''
+       
+        
      }
      handleChange=(books,res)=>(e)=>{
         const name = e.target.name;
@@ -27,7 +28,7 @@ class SearchBar extends Component {
         else{
             this.setState({ [name]: value },()=>{
                 console.log(this.state)
-            const choosedBook=  books.filter(m => m.title.toLowerCase().includes(value.toLowerCase()))
+            let choosedBook=  books.filter(m => m.title.toLowerCase().includes(value.toLowerCase()))
            
               if(choosedBook.length!==0){
                 this.setState({ book: choosedBook, search:value},()=>{
@@ -40,7 +41,9 @@ class SearchBar extends Component {
                   this.setState({book: [], search:value},()=>{
                     res(this.state.book)
                     console.log(choosedBook)
+                    // (lastSearch.length!==0)?
                     this.props.history.push("/results")
+                    
                 })
               }
           

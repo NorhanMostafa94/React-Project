@@ -5,7 +5,7 @@ import {Context} from '../../App';
 
 
 class Books extends Component {
-    state = {  }
+   
     render() { 
         return ( 
             <Context.Consumer>

@@ -37,8 +37,9 @@ class Login extends Component {
         
         const usersFound=users.filter(user=>user.firstname === this.state.username && user.password === this.state.password)
         if(usersFound.length!==0){
-            this.setState({userErr: "", pwErr: "", result:usersFound.id},()=>{
-            console.log(this.state.result)
+            const userId=Number(usersFound.map(u=>u.id).toString())
+            this.setState({userErr: "", pwErr: "", result:userId},()=>{
+                console.log(this.state.result)
             usersFound.map(user => user.firstname === this.state.username && user.password === this.state.password&&user.admin === true ?
                 this.props.history.push("/admin")
                 : this.props.history.push("/")
