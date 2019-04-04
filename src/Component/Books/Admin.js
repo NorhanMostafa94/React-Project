@@ -4,16 +4,21 @@ import { books, categories, authors } from "../../data";
 import AddEditBookForm from "./AddEditForm";
 
 class BookAdmin extends Component {
-  state = {
-    categories: categories,
-    authors: authors
-  };
+  constructor(props) {
+    super(props);
+
+    this.bookform = this.bookform.bind(this);
+
+    this.state = {
+      categories: categories,
+      authors: authors
+    };
+  }
   BookModalRef = ({ handleShow }) => {
     this.showModal = handleShow;
   };
 
   bookform(formType, book) {
-    // debugger;
     this.showModal(formType, book);
   }
   render() {
