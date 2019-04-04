@@ -1,19 +1,16 @@
 import React, { Component }  from 'react';
-// import BooksList from './BooksList';
-
-// import categories from '../../data';
 import { withRouter} from 'react-router';
 import {Context} from '../../App';
 
 
 
 class SearchBar extends Component {
-    constructor(props){
-        super(props);
-    }
+   
     state = { 
         search:'',
-        book:[]
+        book:[],
+       lastSearch:[]
+        
      }
      handleChange=(books,res)=>(e)=>{
         const name = e.target.name;
@@ -21,18 +18,38 @@ class SearchBar extends Component {
         
         
         if(value===''){
-            this.setState({ book: [], search:''});
+            const lastSearch=this.state.lastSearch;
+            (this.state.lastSearch.length===0)?
+            this.setState({ book: [], search:''},()=>{
+                res([])
+                this.props.history.goBack();
+            })
+           : this.setState({ book:lastSearch, search:''},()=>{
+           this.props.history.push("/results")
+           })
         }
+        
         else{
             this.setState({ [name]: value },()=>{
                 console.log(this.state)
-            const choosedBook=  books.filter(m => m.title.toLowerCase().includes(value.toLowerCase()))
-            this.setState({ book: choosedBook, search:value},()=>{
-                res(choosedBook)
-                console.log(choosedBook)
-                this.props.history.push("/results")
-            });
-            //this.props.searchResult=this.state.book;
+            let choosedBook=  books.filter(m => m.title.toLowerCase().includes(value.toLowerCase()))
+           
+              if(choosedBook.length!==0){
+                this.setState({ book: choosedBook, search:value,lastSearch:choosedBook},()=>{
+                    res(this.state.book)
+                        console.log(choosedBook)
+                        this.props.history.push("/results")
+                    });
+              }
+              else{
+                  this.setState({book: [], search:value,lastSearch:[]},()=>{
+                    res(this.state.book)
+                    console.log(choosedBook)
+                    // (lastSearch.length!==0)?
+                    this.props.history.push("/results")
+                    
+                })
+              }
           
             }
         
@@ -48,18 +65,17 @@ class SearchBar extends Component {
             {
                 value => (
                    <>
-                   <div>
+                   {/* <div>
                     <input type="Text" placeholder="search books" value={this.state.search} onChange={this.handleChange(value.state.books,value.SearchRes)} name="search"/>
-                    </div>
-                    {/* <div>
-                      {this.state.book.map(e => <BookCard className="sch-result" key={e.id} title={e.title} id={e.id} src={e.cover}
-                       
-                     />)}
                     </div> */}
-                    
-                    {/* <div>
-                    <Link to ={"/results"}>Your Search Results </Link> 
-                    </div> */}
+                        <div className=" h-100">
+                            <div className="d-flex justify-content-center h-100">
+                                <div className="searchbar">
+                                    <input className="search_input"  placeholder="search books" value={this.state.search} onChange={this.handleChange(value.state.books,value.SearchRes)} name="search"/>
+                                        <a href="#" className="search_icon"><i className="fas fa-search"></i></a>
+                                </div>
+                            </div>
+                        </div>
                    
                    </> 
                 )

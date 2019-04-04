@@ -1,19 +1,18 @@
 import React, { Component } from "react";
 import { Table } from "react-bootstrap";
-import { books, categories, authors } from "../../data";
-import AddEditBookForm from "./AddEditForm";
+import { authors } from "../../data";
+import AddEditAuthorForm from "./AddEditForm";
 
-class BookAdmin extends Component {
+class AuthorAdmin extends Component {
   constructor(props) {
     super(props);
 
-    this.bookform = this.bookform.bind(this);
+    this.authorform = this.authorform.bind(this);
 
     this.state = {
-      categories: categories,
       authors: authors,
-      newBook: false,
-      book: {},
+      newAuthor: false,
+      author: {},
       show: false
     };
   }
@@ -24,11 +23,11 @@ class BookAdmin extends Component {
     });
   };
 
-  bookform(formType, book) {
+  authorform(formType, author) {
     this.setState(
       {
-        newBook: formType,
-        book: book,
+        newAuthor: formType,
+        author: author,
         show: true
       },
       () => console.log(this.state)
@@ -47,49 +46,35 @@ class BookAdmin extends Component {
                   fontSize: "20px"
                 }}
               >
-                <i
-                  className="fas fa-plus-circle"
-                  onClick={() =>
-                    this.bookform(true, {
-                      id: Number,
-                      title: "",
-                      category: "",
-                      author: "",
-                      cover: ""
-                    })
-                  }
-                />
+                <i className="fas fa-plus-circle" />
               </th>
             </tr>
             <tr>
               <th>ID</th>
               <th>Photo</th>
               <th>Name</th>
-              <th>Category</th>
-              <th>Author Name</th>
-              <th />
+              <th>Born</th>
             </tr>
           </thead>
           <tbody>
-            {books.map(book => {
+            {authors.map(author => {
               return (
-                <tr key={book.id}>
-                  <td>{book.id}</td>
+                <tr key={author.id}>
+                  <td>{author.id}</td>
                   <td>
                     <img
-                      src={book.cover}
+                      src={author.cover}
                       style={{ width: "100px", height: "150px" }}
-                      alt={book.name}
+                      alt={author.name}
                     />
                   </td>
-                  <td>{book.title}</td>
-                  <td>{book.category}</td>
-                  <td>{book.author}</td>
+                  <td>{author.name}</td>
+                  <td>{author.Born}</td>
                   <td>
                     <div className="tdFlex">
                       <i
                         className="fas fa-pen"
-                        onClick={() => this.bookform(false, book)}
+                        onClick={() => this.authorform(false, author)}
                       />
                       <i className="fas fa-eraser" />
                     </div>
@@ -100,12 +85,11 @@ class BookAdmin extends Component {
           </tbody>
         </Table>
         {this.state.show && (
-          <AddEditBookForm
+          <AddEditAuthorForm
             // ref={this.BookModalRef}
-            newBook={this.state.newBook}
-            book={this.state.book}
+            newAuthor={this.state.newAuthor}
+            author={this.state.author}
             show={this.state.show}
-            categories={this.state.categories}
             authors={this.state.authors}
             handleClose={this.handleClose}
           />
@@ -114,4 +98,4 @@ class BookAdmin extends Component {
     );
   }
 }
-export default BookAdmin;
+export default AuthorAdmin;

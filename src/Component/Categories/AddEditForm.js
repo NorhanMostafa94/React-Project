@@ -6,47 +6,44 @@ class AddEditCategoryForm extends Component {
   constructor(props, context) {
     super(props, context);
 
-    this.handleShow = this.handleShow.bind(this);
+    // this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      show: false,
+      show: this.props.show,
       validated: false,
-      newCategory: false,
-      category: {
-        id: Number,
-        name: ""
-      },
-      categories: [
-        {
-          id: 1,
-          name: "sports"
-        }
-      ]
+      newCategory: this.props.newCategory,
+      category: this.props.category,
+      categories: this.props.categories
     };
   }
 
   handleClose() {
-    this.setState({
-      show: false,
-      validated: true,
-      category: {
-        id: Number,
-        name: ""
+    this.setState(
+      {
+        show: false,
+        validated: true,
+        category: {
+          id: Number,
+          name: ""
+        }
+      },
+      () => {
+        this.props.handleClose();
       }
-    });
+    );
   }
 
-  handleShow() {
-    this.setState({
-      newCategory: this.props.newCategory,
-      category: this.props.category,
-      validated: false,
-      show: true
-    });
-  }
+  // handleShow() {
+  //   this.setState({
+  //     newCategory: this.props.newCategory,
+  //     category: this.props.category,
+  //     validated: false,
+  //     show: true
+  //   });
+  // }
 
   onSubmit(event) {
     event.preventDefault();
@@ -57,18 +54,15 @@ class AddEditCategoryForm extends Component {
         if (cat.name === this.state.category.name) {
           this.state.validated = "false";
         } else {
-          this.setState(
-            {
-              categories: [
-                ...this.state.categories,
-                {
-                  id: this.state.categories.length + 1,
-                  name: this.state.category.name
-                }
-              ]
-            },
-            () => console.log(this.state.categories)
-          );
+          this.setState({
+            categories: [
+              ...this.state.categories,
+              {
+                id: this.state.categories.length + 1,
+                name: this.state.category.name
+              }
+            ]
+          });
         }
       });
     } else {

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import BookAuthor from '../Authors/Books'
+// import BookAuthor from '../Authors/Books'
 import { authors } from '../../data';
-import {  Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
+import Book from "../Books/BookItem"
 
 class AuthorDetails extends Component {
     constructor(props) {
@@ -56,7 +57,11 @@ class AuthorDetails extends Component {
                     <div className="row">
                         <div className="col-12">
                             <Row className="justify-content-md-center">
-                                {<BookAuthor books={this.state.author.authorBooks} />}
+                                {/* {<BookAuthor books={this.state.author.authorBooks} />} */}
+                                {this.state.author.authorBooks === undefined ? "":
+                                    this.state.author.authorBooks.map(d =>
+                                    <Book key={d.id} {...d} />
+                                )}
                             </Row>
                         </div>
                     </div>

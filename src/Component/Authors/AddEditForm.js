@@ -6,14 +6,22 @@ class AddEditAuthorForm extends Component {
   constructor(props, context) {
     super(props, context);
 
-    this.handleShow = this.handleShow.bind(this);
+    // this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      show: false,
-      newAuthor: false,
+      show: this.props.show,
+      newAuthor: this.props.newAuthor,
+      authors: [],
+      author: this.props.author,
+      validated: false
+    };
+  }
+
+  handleClose() {
+    this.setState({
       author: {
         id: Number,
         name: "",
@@ -22,40 +30,13 @@ class AddEditAuthorForm extends Component {
         bio: "",
         Website: ""
       },
-      authors: [
-        {
-          id: 1,
-          name: "first author",
-          cover: "link",
-          Born: "8/10/2019",
-          bio: "great author",
-          Website: "www"
-        }
-      ]
-    };
-  }
-
-  handleClose() {
-    this.setState({
       show: false,
-      author: {
-        id: Number,
-        name: "",
-        cover: "",
-        Born: "",
-        bio: "",
-        Website: ""
-      }
-    });
+    },
+      () => {
+        this.props.handleClose();
+      });
   }
 
-  handleShow() {
-    this.setState({
-      newAuthor: this.props.newAuthor,
-      author: this.props.author,
-      show: true
-    });
-  }
 
   onSubmit(event) {
     event.preventDefault();
@@ -103,6 +84,7 @@ class AddEditAuthorForm extends Component {
     } else {
       this.handleClose();
     }
+    this.setState({ validated: true });
   }
 
   handleChange(e) {
@@ -135,6 +117,7 @@ class AddEditAuthorForm extends Component {
               noValidate
               validated={this.state.validated}
               style={{ padding: "1rem" }}
+              
             >
               <Form.Group as={Row} controlId="formAuthorName">
                 <Form.Label column sm={4}>
@@ -184,7 +167,8 @@ class AddEditAuthorForm extends Component {
                 </Form.Label>
                 <Col sm={8}>
                   <Form.Control
-                    type="text"
+                  required
+                    type="date"
                     placeholder="Enter Author Birthdate"
                     onChange={this.handleChange}
                     name="Born"
@@ -199,6 +183,7 @@ class AddEditAuthorForm extends Component {
                 </Form.Label>
                 <Col sm={8}>
                   <Form.Control
+                  required
                     type="text"
                     placeholder="Enter Author Biography"
                     onChange={this.handleChange}
@@ -213,6 +198,7 @@ class AddEditAuthorForm extends Component {
                 </Form.Label>
                 <Col sm={8}>
                   <Form.Control
+                  required
                     type="text"
                     placeholder="Enter Author Website"
                     onChange={this.handleChange}

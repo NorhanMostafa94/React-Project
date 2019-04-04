@@ -6,62 +6,34 @@ class AddEditBookForm extends Component {
   constructor(props, context) {
     super(props, context);
 
-    this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handlechange = this.handlechange.bind(this);
     this.saveBook = this.saveBook.bind(this);
 
     this.state = {
-      count: 0,
-      show: false,
-      newBook: false,
-      categories: [],
-      authors: [],
-      currentBook: {
-        id: Number,
-        title: "",
-        category: "",
-        author: "",
-        cover: ""
-      },
+      show: this.props.show,
+      newBook: this.props.newBook,
+      categories: this.props.categories,
+      authors: this.props.authors,
+      currentBook: this.props.book,
       books: []
     };
   }
 
   handleClose() {
-    this.setState({
-      currentBook: {
-        id: Number,
-        title: "",
-        category: "",
-        author: "",
-        cover: ""
-      },
-      show: false
-    });
-  }
-
-  handleShow(newBook, book) {
-    if (newBook) {
-      book = {
-        id: Number,
-        title: "",
-        category: "",
-        author: "",
-        cover: ""
-      };
-    }
     this.setState(
       {
-        newBook: newBook,
-        currentBook: book,
-        categories: this.props.categories,
-        authors: this.props.authors
-        // books: this.props.books
+        currentBook: {
+          id: Number,
+          title: "",
+          category: "",
+          author: "",
+          cover: ""
+        },
+        show: false
       },
       () => {
-        console.log(this.state);
-        this.setState({ show: true });
+        this.props.handleClose();
       }
     );
   }
@@ -79,12 +51,15 @@ class AddEditBookForm extends Component {
   saveBook() {
     const { id } = this.state.currentBook;
     if (isNaN(id)) {
-      this.setState({
-        books: [
-          ...this.state.books,
-          { ...this.state.currentBook, id: this.state.books.length + 1 }
-        ]
-      });
+      this.setState(
+        {
+          books: [
+            ...this.state.books,
+            { ...this.state.currentBook, id: this.state.books.length + 1 }
+          ]
+        },
+        () => console.log(this.state.books)
+      );
     } else {
       this.state.books.find(element => {
         if (this.state.currentBook.id === element.id) {
@@ -116,7 +91,7 @@ class AddEditBookForm extends Component {
                   placeholder="Add Book Title"
                   onChange={this.handlechange}
                   name="title"
-                  value={this.props.newBook ? "" : this.state.currentBook.title}
+                  value={this.state.newBook ? "" : this.state.currentBook.title}
                 />
               </Col>
             </Form.Group>

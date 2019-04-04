@@ -11,7 +11,7 @@ class CategoriesList extends Component {
             <Context.Consumer>
                 {
                     value => (
-                        <div className="cat-header">
+                        <div className="cat-header" style={{backgroundImage:'url(https://i.pinimg.com/564x/f7/70/4e/f7704e0755bcad2a4e9f308a8c74c31a.jpg)'}}>
                             <Container className="card-container" >
                                 <Row className="justify-content-md-center" style={{ marginTop: '200px' }}>
 
