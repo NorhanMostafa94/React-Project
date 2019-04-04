@@ -6,7 +6,7 @@ import SearchBar from "../Search/Search";
 const NavBar = () => {
     return (
         <Navbar bg="" variant="dark" expand="lg" style={ {marginLeft: '23rem'}}>
-            <Navbar.Toggle aria-controls="basic-navbar-nav"  style={{background:'gray',right:0,position:'absolute',}}/>
+            <Navbar.Toggle aria-controls="basic-navbar-nav"  style={{background:'gray',right:0,position:'absolute'}}/>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Link to="/" className="Nav-title" style={{ textDecoration: 'none' }} >Home</Link>

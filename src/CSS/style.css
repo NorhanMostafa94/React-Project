@@ -34,7 +34,7 @@ a {
 
 .card-item {
     position: absolute;
-    margin-right: 27px;
+    /* margin-right: 27px; */
     overflow: hidden;
     text-align: center;
     /* transition: 0.3s all 0s ease-in-out; */
@@ -69,6 +69,11 @@ a {
     color: white !important;
     margin: 22px;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none !important;
+}
+.cat-btn:hover{
+  background-color: #af957c;
 }
 
 .cat-header {
