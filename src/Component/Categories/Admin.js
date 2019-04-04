@@ -1,19 +1,18 @@
 import React, { Component } from "react";
 import { Table } from "react-bootstrap";
-import { books, categories, authors } from "../../data";
-import AddEditBookForm from "./AddEditForm";
+import { categories } from "../../data";
+import AddEditCategoryForm from "./AddEditForm";
 
-class BookAdmin extends Component {
+class CategoryAdmin extends Component {
   constructor(props) {
     super(props);
 
-    this.bookform = this.bookform.bind(this);
+    this.categoryform = this.categoryform.bind(this);
 
     this.state = {
       categories: categories,
-      authors: authors,
-      newBook: false,
-      book: {},
+      newCategory: false,
+      category: {},
       show: false
     };
   }
@@ -24,11 +23,11 @@ class BookAdmin extends Component {
     });
   };
 
-  bookform(formType, book) {
+  categoryform(formType, category) {
     this.setState(
       {
-        newBook: formType,
-        book: book,
+        newCategory: formType,
+        category: category,
         show: true
       },
       () => console.log(this.state)
@@ -50,12 +49,9 @@ class BookAdmin extends Component {
                 <i
                   className="fas fa-plus-circle"
                   onClick={() =>
-                    this.bookform(true, {
+                    this.categoryform(true, {
                       id: Number,
-                      title: "",
-                      category: "",
-                      author: "",
-                      cover: ""
+                      name: ""
                     })
                   }
                 />
@@ -63,33 +59,20 @@ class BookAdmin extends Component {
             </tr>
             <tr>
               <th>ID</th>
-              <th>Photo</th>
               <th>Name</th>
-              <th>Category</th>
-              <th>Author Name</th>
-              <th />
             </tr>
           </thead>
           <tbody>
-            {books.map(book => {
+            {categories.map(category => {
               return (
-                <tr key={book.id}>
-                  <td>{book.id}</td>
-                  <td>
-                    <img
-                      src={book.cover}
-                      style={{ width: "100px", height: "150px" }}
-                      alt={book.name}
-                    />
-                  </td>
-                  <td>{book.title}</td>
-                  <td>{book.category}</td>
-                  <td>{book.author}</td>
+                <tr key={category.id}>
+                  <td>{category.id}</td>
+                  <td>{category.name}</td>
                   <td>
                     <div className="tdFlex">
                       <i
                         className="fas fa-pen"
-                        onClick={() => this.bookform(false, book)}
+                        onClick={() => this.categoryform(false, category)}
                       />
                       <i className="fas fa-eraser" />
                     </div>
@@ -100,13 +83,12 @@ class BookAdmin extends Component {
           </tbody>
         </Table>
         {this.state.show && (
-          <AddEditBookForm
+          <AddEditCategoryForm
             // ref={this.BookModalRef}
-            newBook={this.state.newBook}
-            book={this.state.book}
+            newCategory={this.state.newCategory}
+            category={this.state.category}
             show={this.state.show}
             categories={this.state.categories}
-            authors={this.state.authors}
             handleClose={this.handleClose}
           />
         )}
@@ -114,4 +96,4 @@ class BookAdmin extends Component {
     );
   }
 }
-export default BookAdmin;
+export default CategoryAdmin;
