@@ -7,15 +7,17 @@ body {
 .navbar {
     /* background-color: #C09F80; */
     padding: 30px !important;
-    
+
 }
-.Nav-title{
+
+.Nav-title {
     font-family: 'Raleway', sans-serif;
     color: #76323F !important;
     font-weight: 500 !important;
     font-size: 20px !important
 }
-.navbar a:hover{
+
+.navbar a:hover {
     /* color: #D7CEC7  !important; */
     color: #DCC7AA !important
 }
@@ -72,8 +74,9 @@ a {
     font-family: 'Raleway', sans-serif;
     text-decoration: none !important;
 }
-.cat-btn:hover{
-  background-color: #af957c;
+
+.cat-btn:hover {
+    background-color: #af957c;
 }
 
 .cat-header {
@@ -239,13 +242,13 @@ a {
 /*--------------------*/
 /*login*/
 .login-cont {
-    
+
     background-image: url("../assets/images/90.jpg");
     background-position: center;
 }
 
 .login-container {
-   background-color: #d7ced7 !important;
+    background-color: #d7ced7 !important;
 }
 
 .avatar {
@@ -260,99 +263,115 @@ a {
     justify-self: center !important;
     background-color: #76323f !important;
     color: #DCC7AA !important;
-   
+
 }
 
 .log-btn:hover {
     background-color: #565656 !important;
-    
+
+}
+
+.signUpLink {
+    color: #76323f !important;
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    bottom: 47px;
+    right: 73px;
+
 }
 
 /*signup*/
 /* .btn-sign {
     background-color: #fc6377; */
 
-    /* width:50%; */
+/* width:50%; */
 /* } */
 
 .sign-cont {
-    border: solid 1px  #76323F  !important;
+    border: solid 1px #76323F !important;
     border-radius: 10% !important;
     font-family: 'Raleway', sans-serif;
     color: #76323F !important;
     font-weight: 700 !important;
     font-size: 20px !important;
-    background-color:#DCC7AA;
+    background-color: #DCC7AA;
 }
-.btn-secondary{
+
+.btn-secondary {
     background-color: #76323F !important;
-    color:#DCC7AA !important;
+    color: #DCC7AA !important;
 }
-.nav-login{
+
+.nav-login {
     /* background-color: #76323F !important; */
     color: #76323F !important;
     font-family: 'Raleway', sans-serif;
     font-size: 15px !important;
-    border-bottom:  1px dashed  #76323F !important ;
-   
+    border-bottom: 1px dashed #76323F !important;
+
     /* padding:0.05rem; */
-    
+
 
 }
-.nav-login:hover{
-    
-    color:#565656 !important;
-   
+
+.nav-login:hover {
+
+    color: #565656 !important;
+
 }
+
 .search-cont {
     position: relative;
     top: -0.5rem;
 }
-.pop-title,.no-result{
+
+.pop-title,
+.no-result {
     color: #76323F !important;
     font-weight: 700 !important;
     font-size: 25px !important;
     font-family: 'Raleway', sans-serif;
     margin-right: 10rem;
-    margin-left:12rem;
+    margin-left: 12rem;
 }
 
-.searchbar{
+.searchbar {
     margin-bottom: auto;
     margin-top: auto;
     height: 60px;
     background-color: #353b48;
     border-radius: 30px;
     padding: 10px;
-    }
+}
 
-    .search_input{
+.search_input {
     color: white;
     border: 0;
     outline: 0;
     background: none;
     width: 0;
-    caret-color:transparent;
+    caret-color: transparent;
     line-height: 40px;
     transition: width 0.4s linear;
-    background-color:#c09f80 !important;
+    background-color: #c09f80 !important;
     border-radius: 30px;
-    }
+}
 
-    .searchbar:hover > .search_input{
+.searchbar:hover>.search_input {
     padding: 0 10px;
     width: 250px;
-    caret-color:#76323F !important;
+    caret-color: #76323F !important;
     transition: width 0.4s linear;
-    
-    }
 
-    .searchbar:hover > .search_icon{
+}
+
+.searchbar:hover>.search_icon {
     background: white;
     color: #76323F !important;
-    }
+}
 
-    .search_icon{
+.search_icon {
     height: 40px;
     width: 40px;
     float: right;
@@ -360,9 +379,10 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color:white !important;
+    color: white !important;
     position: relative;
-    }
+}
+
 /* .sch-result {
     
     background: white;
@@ -372,11 +392,11 @@ a {
     width: 10rem;
     
 } */
-.popular{
-   display: flex !important;
-   flex-direction: row !important;
+.popular {
+    display: flex !important;
+    flex-direction: row !important;
     flex-wrap: wrap !important;
-  
+
 }
 
 /***********/
@@ -480,13 +500,16 @@ a {
     margin-top: 0px;
     margin-right: 10px;
 }
-.authors-list{
+
+.authors-list {
     margin-top: 16px;
 }
+
 /* author card */
-.card-team-section{
-  margin-top: 50px;
+.card-team-section {
+    margin-top: 50px;
 }
+
 .card-team {
     width: 15rem;
     height: 25rem;
