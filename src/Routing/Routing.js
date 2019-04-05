@@ -14,13 +14,14 @@ import BookDetails from "../Component/Books/Details";
 import Login from "../Component/Forms/login";
 import SignForm from "../Component/Forms/SignUp";
 import Books from "../Component/Search/BooksList";
-
+import NavBar from "../Component/shared/Navbar";
 import AdminPanel from "../Component/AdminPanel/AdminPanel";
 
 const Routing = () => {
   return (
     <Switch>
-      <Route exact path="/" component={MainPage} />
+      <Route exact  path="/admin" component={NavBar} />
+      {/* <Route exact path="/mybooks" component={NavBar} /> */}
       {/* <Route exact path="/books/:bookid" component={BookDetails}></Route> */}
       <Route path="/books/:id" component={BookDetails} />
       <Route path="/categories/:id" component={Category} />
@@ -28,9 +29,10 @@ const Routing = () => {
       <Route path="/categories" component={CategoriesList} />
       <Route path="/authors" component={AuthorsList} />
       <Route path="/books" component={BooksList} />
-      <Route path="/mybooks" component={MainPage} />
+      <Route exact path="/mybooks" component={MainPage} />
       <Route path="/login" component={Login} />
-      <Route path="/signup" component={SignForm} />
+      <Route exact path="/"  component={SignForm} />
+      <Route exact path="/signup"  component={SignForm} />
       <Route path="/results" component={Books} />
       <Route path="/admin" component={AdminPanel} />
 
