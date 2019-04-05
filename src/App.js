@@ -10,13 +10,12 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 //Json
 // import DB from './db'
 // Component
-import NavBar from "./Component/shared/Navbar";
+// import NavBar from "./Component/shared/Navbar";
 import Routing from "./Routing/Routing";
 
 import { categories, authors, books, users } from "./data";
 
 import "./App.css";
-
 
 export const Context = React.createContext();
 
@@ -25,12 +24,10 @@ class App extends Component {
     categories: categories,
     authors: authors,
     books: books,
-    users:users,
-    searchResult:[],
-    popBooks:books.filter(e=>Number(e.avgrating)>4 && e.reviews.length>1)
-
-    
-  }
+    users: users,
+    searchResult: [],
+    popBooks: books.filter(e => Number(e.avgrating) > 4 && e.reviews.length > 1)
+  };
 
   getCategories = categories => {
     // console.log(1)
@@ -39,25 +36,22 @@ class App extends Component {
     console.log(this.state.categories);
   };
   addUser = user => {
-   this.setState({ users: users.concat(user) })
-   }
-    SearchRes=(books)=>{
-      const popBooks= this.state.popBooks;
-    this.setState({searchResult:books,popBooks:popBooks.concat(books)})
-  }
-  
-    // const popBooks=books.filter(e=>e.rating==='5')
-    // this.setState({popBooks:popBooks})
-  
+    this.setState({ users: users.concat(user) });
+  };
+  SearchRes = books => {
+    const popBooks = this.state.popBooks;
+    this.setState({ searchResult: books, popBooks: popBooks.concat(books) });
+  };
+
+  // const popBooks=books.filter(e=>e.rating==='5')
+  // this.setState({popBooks:popBooks})
+
   render() {
-    
     const value = {
       state: this.state,
       getCategories: this.getCategories,
       addUser: this.addUser,
-      SearchRes: this.SearchRes,
-      
-      
+      SearchRes: this.SearchRes
     };
     return (
       //<BookDetails />

@@ -16,7 +16,8 @@ class AddEditCategoryForm extends Component {
       validated: false,
       newCategory: this.props.newCategory,
       category: this.props.category,
-      categories: this.props.categories
+      categories: this.props.categories,
+      errmsg: ""
     };
   }
 
@@ -24,74 +25,15 @@ class AddEditCategoryForm extends Component {
     this.setState(
       {
         show: false,
-        validated: true,
         category: {
           id: Number,
           name: ""
         }
       },
       () => {
-        this.props.handleClose();
+        this.props.handleClose(this.state.categories);
       }
     );
-  }
-
-  // handleShow() {
-  //   this.setState({
-  //     newCategory: this.props.newCategory,
-  //     category: this.props.category,
-  //     validated: false,
-  //     show: true
-  //   });
-  // }
-
-  onSubmit(event) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const { id } = this.state.category;
-    if (isNaN(id)) {
-      this.state.categories.map(cat => {
-        if (cat.name === this.state.category.name) {
-          this.state.validated = "false";
-        } else {
-          this.setState({
-            categories: [
-              ...this.state.categories,
-              {
-                id: this.state.categories.length + 1,
-                name: this.state.category.name
-              }
-            ]
-          });
-        }
-      });
-    } else {
-      const exist = this.state.categories.find(category => {
-        if (this.state.category.id === category.id) {
-          category.name = this.state.category.name;
-          return true;
-        } else return false;
-      });
-      if (exist);
-      else
-        this.setState(
-          {
-            categories: [
-              ...this.state.categories,
-              {
-                id: this.state.category.id,
-                name: this.state.category.name
-              }
-            ]
-          },
-          () => console.log(this.state.categories)
-        );
-    }
-    if (form.checkValidity() === false) {
-      event.stopPropagation();
-    } else {
-      this.handleClose();
-    }
   }
 
   handleChange(e) {
@@ -99,9 +41,48 @@ class AddEditCategoryForm extends Component {
     const name = e.target.name;
     const value = e.target.value;
     this.setState({
+      validated: true,
       newCategory: false,
-      category: { [name]: value }
+      category: { ...this.state.category, [name]: value }
     });
+  }
+
+  onSubmit(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const { id } = this.state.category;
+    let invalid = false;
+    if (isNaN(id)) {
+      this.state.categories.map(cat => {
+        if (this.state.category.name === cat.name) {
+          invalid = true;
+          return cat;
+        } else return "";
+      });
+      if (!invalid && this.state.category.name !== "") {
+        this.setState({
+          categories: [
+            ...this.state.categories,
+            {
+              id: this.state.categories.length + 1,
+              name: this.state.category.name
+            }
+          ]
+        });
+      }
+    } else {
+      this.state.categories.find(category => {
+        if (this.state.category.id === category.id) {
+          category.name = this.state.category.name;
+          return true;
+        } else return false;
+      });
+    }
+    if (form.checkValidity() === false || invalid) {
+      event.stopPropagation();
+    } else {
+      this.handleClose();
+    }
   }
 
   render() {
@@ -130,10 +111,8 @@ class AddEditCategoryForm extends Component {
                   name="name"
                   value={this.state.newCategory ? "" : this.state.category.name}
                 />
-              </Col>
-              <Col sm={{ span: 6, offset: 3 }}>
                 <Form.Control.Feedback type="invalid">
-                  Invalid Category Name
+                  "invalid category name"
                 </Form.Control.Feedback>
               </Col>
             </Form.Group>

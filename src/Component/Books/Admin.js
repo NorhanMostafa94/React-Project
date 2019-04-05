@@ -8,19 +8,22 @@ class BookAdmin extends Component {
     super(props);
 
     this.bookform = this.bookform.bind(this);
+    this.deleteBook = this.deleteBook.bind(this);
 
     this.state = {
       categories: categories,
       authors: authors,
       newBook: false,
       book: {},
-      show: false
+      show: false,
+      books: books
     };
   }
 
-  handleClose = () => {
+  handleClose = newBooks => {
     this.setState({
-      show: false
+      show: false,
+      books: newBooks
     });
   };
 
@@ -34,6 +37,14 @@ class BookAdmin extends Component {
       () => console.log(this.state)
     );
   }
+
+  deleteBook(bookId) {
+    const newbooks = this.state.books;
+    const index = newbooks.findIndex(bk => bk.id === bookId);
+    newbooks.splice(index, 1);
+    this.setState({ books: newbooks });
+  }
+
   render() {
     return (
       <>
@@ -71,7 +82,7 @@ class BookAdmin extends Component {
             </tr>
           </thead>
           <tbody>
-            {books.map(book => {
+            {this.state.books.map(book => {
               return (
                 <tr key={book.id}>
                   <td>{book.id}</td>
@@ -91,7 +102,10 @@ class BookAdmin extends Component {
                         className="fas fa-pen"
                         onClick={() => this.bookform(false, book)}
                       />
-                      <i className="fas fa-eraser" />
+                      <i
+                        className="fas fa-eraser"
+                        onClick={() => this.deleteBook(book.id)}
+                      />
                     </div>
                   </td>
                 </tr>
@@ -101,13 +115,13 @@ class BookAdmin extends Component {
         </Table>
         {this.state.show && (
           <AddEditBookForm
-            // ref={this.BookModalRef}
             newBook={this.state.newBook}
             book={this.state.book}
             show={this.state.show}
             categories={this.state.categories}
             authors={this.state.authors}
             handleClose={this.handleClose}
+            books={this.state.books}
           />
         )}
       </>
